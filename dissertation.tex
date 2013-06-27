@@ -32,10 +32,13 @@
 
     % These commands allow for a bibliography for each chapter
     %%\usepackage[sort&compress,comma,square]{natbib}
-    \usepackage[round]{natbib}
-    \usepackage{chapterbib}
-    \renewcommand{\bibsection}{\section{\bibname}}
+%    \usepackage[round]{natbib}
+%    \usepackage{chapterbib}
+%    \renewcommand{\bibsection}{\section{\bibname}}
+	\usepackage[]{natbib}
     \bibliographystyle{apj} % My personal style file for citations
+%	\renewcommand{\bibfont}{\singlespacing}
+% need this command to keep single spacing in the bibliography when using natbib
 
     % EXTREMELY COMMON LaTeX PACKAGES TO INCLUDE:
     \usepackage{amsmath,amsthm, amsfonts,amssymb} % For AMS Beautification
@@ -176,7 +179,7 @@
     
     \newcommand\ion[2]{#1$\;${\scshape{#2}}}
     
-    \bibpunct{(}{)}{;}{a}{}{,}
+%    \bibpunct{(}{)}{;}{a}{}{,}
     
     
     \def\aj{{AJ}}                   % Astronomical Journal
@@ -443,6 +446,6 @@
     %
     %\include{Index/index}
 
-
+\bibliography{dissertation}{}
 
 \end{document}
