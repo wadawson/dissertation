@@ -32,3 +32,5 @@
 *.tdo
 # Ignore other people's dissertation files
 OtherDissertations
+# ignore the pdf
+dissertation.pdf
