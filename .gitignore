@@ -30,3 +30,5 @@
 *.vrb
 *.xdy
 *.tdo
+# Ignore other people's dissertation files
+OtherDissertations
