@@ -48,8 +48,7 @@ It has recently been applied to several dissociative mergers, including the Bull
 N-body simulations of observed dissociative mergers have been limited to the Bullet Cluster (1ES 0657-558) and have come in two variants: hydrodynamic \citep{Springel:2007bg, Milosavljevic:2007hf, Mastropietro:2008fs}, and self interacting dark matter (SIDM) plus collisionless galaxy particles \citep{Randall:2008hs}.
 
 \begin{figure}
-\epsscale{1}
-\plotone{MergerDiagram_revC.png}
+\includegraphics{Chapter3/MergerDiagram_revC.png}
 \caption{The generic two-halo merger configuration assumed in this work.  Observable parameters are shown in dark blue, and include the mass of each halo ($M_i$), the  projected separation ($d_{\rm proj}$), and the line of sight (LOS) velocity components ($v_i$) as determined from the halo redshifts. 
 The generally unknown parameters of the mergers are shown in light blue, and include the angle of the merger axis with respect to the plane of the sky ($\alpha$), and the three-dimensional separation ($d_{\rm 3D}$) and velocity components ($v_{\rm 3D_i}$).
 Note that while just the outgoing scenario is shown in this figure, the method also considers the incoming scenario.
@@ -239,7 +238,7 @@ Note that the better agreement between the velocity estimates than between the T
 The results of this comparative study essentially validate many of the simplifying assumptions of the model (conservation of energy, and ignoring the affects of dynamical friction, tidal stripping of dark matter and gas during the collision).
 
 \begin{figure}
-\plotone{SFcomparison.png}
+\includegraphics{Chapter3/SFcomparison.png}
 \caption{
 Comparison of the model results (blue boxes) with the hydrodynamic simulation results of \citet[black circles;][]{Springel:2007bg} for the Bullet Cluster.  
 The top figure is a comparison of the velocity of the ``bullet'' relative to the ``main'' subcluster, with the subhalo separation (i.e. the three-dimensional separation of the ``main'' and ``bullet'' subclusters) as the independent variable.  
@@ -335,8 +334,7 @@ Parameter estimates converge to better than a fraction of a percent with only 20
 I run a factor of a hundred more since it was computationally inexpensive and it provides a data sample to which I can apply any number of conceivable posterior PDF's and still maintain sub-percent statistical accuracy.
 
 \begin{figure}
-\epsscale{1.15}
-\plotone{peakvalues_revB.png}
+\includegraphics[scale=1.15]{peakvalues_revB.png}
 \caption{
 The posterior of the Bullet Cluster's time-since-collision $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters is shown in grayscale with dark and light blue contours representing 68\% and 95\% confidence, respectively.
 The green-scale triangles are from a subsample of the Monte Carlo population, which jointly satisfies the requirement of being drawn from $\pm 0.01 \sigma$ of the mean of each of the input parameters, i.e. the ``most likely'' values for the input parameters. 
@@ -449,8 +447,7 @@ I chose a sigmoid function over a simple step function since the temperature boo
 This prior is coupled with the previously discussed $TSC$ prior (Equation \ref{eq_timeprior}).
 
 \begin{figure}
-\epsscale{1.15}
-\plotone{bullet_VvsTSC_addedprior.png}
+\includegraphics[scale=1.15]{bullet_VvsTSC_addedprior.png}
 \caption{
 The posterior of the Bullet Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters after application of an additional temporal prior based on X-ray observations of the Bullet Cluster (grayscale).  
 Dark and light blue contours representing 68\% and 95\% confidence, respectively.
@@ -495,22 +492,19 @@ The projected subcluster separation distribution, Figure \ref{musket_projinput},
 For each Monte Carlo realization individual values are drawn randomly from each of these distributions. 
 
 \begin{figure}
-\epsscale{1}
-\plotone{MusketBall_mass_input_revB.png}
+\includegraphics{Chapter3/MusketBall_mass_input_revB.png}
 \caption{Weak lensing mass PDF's of the Musket Ball subclusters \citep{Dawson:2012dl}. 
 \label{musket_massinput}}
 \end{figure}
 
 \begin{figure}
-\epsscale{1}
-\plotone{MusketBall_velocity_input_revB.png}
+\includegraphics{Chapter3/MusketBall_velocity_input_revB.png}
 \caption{Relative radial subcluster velocity PDF's inferred from spectroscopic redshifts the Musket Ball Cluster galaxies  \citep{Dawson:2012dl}. 
 \label{musket_vinput}}
 \end{figure}
 
 \begin{figure}
-\epsscale{1}
-\plotone{MusketBall_projsep_input_revB.png}
+\includegraphics{Chapter3/MusketBall_projsep_input_revB.png}
 \caption{Projected separation PDF of the Musket Ball subcluster galaxy density centroids \citep{Dawson:2012dl}. 
 \label{musket_projinput}}
 \end{figure}
@@ -529,8 +523,7 @@ Without running SIDM simulations it is difficult to know at what $TSC_0$ the off
 The complete Musket Ball Cluster parameter estimates are summarized in Table \ref{musketballresultparam} and plotted in Appendix \ref{sec_mbcresults}.
 
 \begin{figure}
-\epsscale{1}
-\plotone{MusketTSCwithBullet.png}
+\includegraphics{Chapter3/MusketTSCwithBullet.png}
 \caption{
 The posterior of the Musket Ball Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters is shown in grayscale with dark and light blue contours representing 68\% and 95\% confidence, respectively.
 For comparison the gray dashed contours are the Bullet Cluster's 68\% and 95\% confidence intervals copied from Figure \ref{fig_bcTSC_added}.
@@ -539,8 +532,7 @@ The Musket Ball Cluster occupies a much different region of merger phase than th
 \end{figure}
 
 \begin{figure}
-\epsscale{1}
-\plotone{TSC0subtraction.png}
+\includegraphics{Chapter3/TSC0subtraction.png}
 \caption{
 The histogram presents the $TSC_{\rm 0_{Musket}}-TSC_{\rm 0_{Bullet}}$ distribution from random draws of the respective marginalized $TSC_0$ distributions; showing that the Musket Ball Cluster merger is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the Bullet Cluster merger.
 The black dashed line is the biweight-statistic location \citep{Beers:1982dp}, the 
@@ -843,8 +835,7 @@ The \emph{Geometry} parameters consist of the randomly drawn $\alpha$, and calcu
 The calculated \emph{Velocity \& Time} parameters consist of:  $TSC_0$, $TSC_1$, and $T$.
 
 \begin{figure}[b]
-\epsscale{1}
-\plotone{ResultsArray_RevB.png}
+\includegraphics{Chapter3/ResultsArray_RevB.png}
 \caption{
 For ease of display the results array is divided into six subplots, Figures \ref{fig_bc_inin}--\ref{fig_bc_geovt}.
 The Input parameters consist of: M$_{200_1}$, M$_{200_2}$, $z_1$, $z_2$,	and $d_{\rm proj}$.
@@ -855,48 +846,42 @@ The calculated Velocity \& Time parameters consist of:  $v_{\rm 3D}(t_{\rm obs})
 \clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_input-input.png}
+\includegraphics{Chapter3/bullet_shockprior_input-input.png}
 \caption{Bullet Cluster marginalized \emph{Input vs.\,Input} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}. Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}. 
 \label{fig_bc_inin}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_input-geometry.png}
+\includegraphics{Chapter3/bullet_shockprior_input-geometry.png}
 \caption{Bullet Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_ingeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_input-vt.png}
+\includegraphics{Chapter3/bullet_shockprior_input-vt.png}
 \caption{Bullet Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_invt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_geometry-geometry.png}
+\includegraphics{Chapter3/bullet_shockprior_geometry-geometry.png}
 \caption{Bullet Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{fig_bc_geogeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_geometry-vt.png}
+\includegraphics{Chapter3/bullet_shockprior_geometry-vt.png}
 \caption{Bullet Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_geovt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{bullet_shockprior_vt-vt.png}
+\includegraphics{Chapter3/bullet_shockprior_vt-vt.png}
 \caption{Bullet Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{fig_bc_vtvt}}
 \end{figure}
@@ -912,48 +897,42 @@ The calculated \emph{Geometry} parameters consist of: $\alpha$, $d_{\rm 3D}$, an
 The calculated Velocity \& Time parameters consist of:  $v_{\rm 3D}(t_{\rm obs})$, $v_{\rm 3D}(t_{\rm col})$, $TSC_0$, $TSC_1$, and $T$.
 
 \begin{figure}[b]
-\epsscale{1}
-\plotone{run_v11_revB_input-input.png}
+\includegraphics{Chapter3/run_v11_revB_input-input.png}
 \caption{Musket Ball Cluster marginalized \emph{Input vs.\,Input} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_inin}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{run_v11_revB_input-geometry.png}
+\includegraphics{Chapter3/run_v11_revB_input-geometry.png}
 \caption{Musket Ball Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_ingeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{run_v11_revB_input-vt.png}
+\includegraphics{Chapter3/run_v11_revB_input-vt.png}
 \caption{Musket Ball Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_invt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{run_v11_revB_geometry-geometry.png}
+\includegraphics{Chapter3/run_v11_revB_geometry-geometry.png}
 \caption{Musket Ball Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_geogeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{run_v11_revB_geometry-vt.png}
+\includegraphics{Chapter3/run_v11_revB_geometry-vt.png}
 \caption{Musket Ball Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_geovt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\epsscale{1}
-\plotone{run_v11_revB_vt-vt.png}
+\includegraphics{Chapter3/run_v11_revB_vt-vt.png}
 \caption{Musket Ball Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_vtvt}}
 \end{figure}
