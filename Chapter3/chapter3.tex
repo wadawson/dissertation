@@ -11,7 +11,7 @@ To properly constrain the dark matter cross-section it is necessary to understan
 While the best understanding of merging system dynamics comes from N-body simulations, these are computationally intensive and often explore only a limited volume of the merger phase space allowed by observed parameter uncertainty.  
 Simple analytic models exist but the assumptions of these methods invalidate their results near the collision time, plus error propagation of the highly correlated merger parameters is unfeasible.
 To address these weaknesses I develop a Monte Carlo method to discern the properties of \emph{dissociative mergers} and propagate the uncertainty of the measured cluster parameters in an accurate and Bayesian manner.
-I introduce this method, verify it against an existing hydrodynamic N-body simulation, and apply it to two known dissociative mergers: \object{1ES 0657-558} (\object{Bullet Cluster}) and \object{DLSCL J0916.2+2951} (\object{Musket Ball Cluster}).
+I introduce this method, verify it against an existing hydrodynamic N-body simulation, and apply it to two known dissociative mergers: 1ES 0657-558 (Bullet Cluster) and DLSCL J0916.2+2951 (Musket Ball Cluster).
 I find that this method surpasses existing analytic models --- providing accurate (10\% level) dynamic parameter and uncertainty estimates throughout the merger history.
 This coupled with minimal required \emph{a priori} information (subcluster mass, redshift, and projected separation) and relatively fast computation ($\sim$6 CPU\,hours) makes this method ideal for large samples of dissociative merging clusters.
 
@@ -43,16 +43,16 @@ Observations are generally limited to: the subcluster projected separation ($d_{
 In addition to the obvious inability to measure a change in the merger state, it is difficult to constrain the dynamic parameters of interest even in the observed state. 
 This is due to the general inability to constrain the angle of the merger axis with respect to the plane of the sky ($\alpha$), see Figure \ref{fig_mergerdiagram}.
 
-For the \object{Bullet Cluster} it was originally thought that estimates of the Mach number of the cluster merger through X-ray observations of the gas shock feature \citep[e.g.][]{Markevitch:2006wv} could be used to estimate $v_{\rm 3D}$, and in conjunction with measurements of the relative LOS velocities then estimate $\alpha$.
+For the Bullet Cluster it was originally thought that estimates of the Mach number of the cluster merger through X-ray observations of the gas shock feature \citep[e.g.][]{Markevitch:2006wv} could be used to estimate $v_{\rm 3D}$, and in conjunction with measurements of the relative LOS velocities then estimate $\alpha$.
 Similarly, the gas pressure differential across cold front features seen in some merging clusters have also been used to estimate the Mach number of the cluster merger \citep[e.g.][]{Vikhlinin:2003wy}. 
-However, \citet{Springel:2007bg} showed that the Mach number only translates to an upper limit on $v_{\rm 3D}$, and in the case of the \object{Bullet Cluster} they showed that the Mach inferred velocity could be a factor of $\sim2$ larger than the true $v_{\rm 3D}$.
+However, \citet{Springel:2007bg} showed that the Mach number only translates to an upper limit on $v_{\rm 3D}$, and in the case of the Bullet Cluster they showed that the Mach inferred velocity could be a factor of $\sim2$ larger than the true $v_{\rm 3D}$.
 There is potential for constraining $\alpha$ using polarization measurements of radio relics \citep{Ensslin:1998tx}, which are associated with some cluster mergers \citep[e.g.\,][]{vanWeeren:2010dn} but not all \citep[e.g.\,][]{Russell:2011hn}. 
 Even if for some mergers radio relics provide constraints on $\alpha$, dynamic models are still needed in order to ascertain the dynamic properties of the merger throughout time.
 
 The two most prevalent methods for ascertaining the dynamics of observed merging systems are \emph{the timing argument} and N-body simulations.  
 The timing argument is based on the solution to the equations of motion of two gravitating point masses, with the cosmological constraint that as $z \rightarrow \infty$ the separation of the two masses $d_{\rm 3D} \rightarrow 0$ \citep[for an exposition of this method see][]{Peebles:1993vp}.  The timing argument was first used by \citet{Kahn:1959ds} to study the system of the Milky Way and M31, and first applied to binary cluster systems by \citet{Beers:1982dp}.
-It has recently been applied to several dissociative mergers, including the \object{Bullet Cluster} \citep{Barrena:2002dj}, \object{Abell 520} \citep{Girardi:2008gu},  \object{Abell 2163} \citep{Bourdin:2011gr}, and  \object{Abell 1758N} \citep{Boschin:2012he}.
-N-body simulations of observed dissociative mergers have been limited to the \object{Bullet Cluster} (\object{1ES 0657-558}) and have come in two variants: hydrodynamic \citep{Springel:2007bg, Milosavljevic:2007hf, Mastropietro:2008fs}, and self interacting dark matter (SIDM) plus collisionless galaxy particles \citep{Randall:2008hs}.
+It has recently been applied to several dissociative mergers, including the Bullet Cluster \citep{Barrena:2002dj}, Abell 520 \citep{Girardi:2008gu},  Abell 2163 \citep{Bourdin:2011gr}, and  Abell 1758N \citep{Boschin:2012he}.
+N-body simulations of observed dissociative mergers have been limited to the Bullet Cluster (1ES 0657-558) and have come in two variants: hydrodynamic \citep{Springel:2007bg, Milosavljevic:2007hf, Mastropietro:2008fs}, and self interacting dark matter (SIDM) plus collisionless galaxy particles \citep{Randall:2008hs}.
 
 \begin{figure}
 \epsscale{1}
@@ -83,10 +83,10 @@ Despite eleven currently confirmed dissociative mergers\footnote{(1) Bullet Clus
 (8) A1758N \citep{Ragozzine:2011jj}; 
 (9) Musket Ball Cluster \citep{Dawson:2012dl}; 
 (10) ACT-CL J0102−4915 \citep{Menanteau:2012bf}; 
-(11) MACS J0717.5+3745 \citep{Mroczkowski:2012vs}} only the \object{Bullet Cluster} has been modeled with N-body simulations, whereas most of these have been analyzed with the timing argument method.
+(11) MACS J0717.5+3745 \citep{Mroczkowski:2012vs}} only the Bullet Cluster has been modeled with N-body simulations, whereas most of these have been analyzed with the timing argument method.
 Existing N-body simulation strategies to ascertain the dynamic properties of mergers are incapable of keeping up with the current faster than exponential rate of discovery.
-Even for the case of the \object{Bullet Cluster} the N-body analyses have been limited as far as mapping out the merger dynamic phase space allowed by  the uncertainty of the observations, with at most 15 different scenarios being run \citep{Mastropietro:2008fs}.
-\citet{Gomez:2012ex} have come the closest to addressing this issue in their investigation of potential dissociative mergers (\object{A665} and \object{AS1063}) through the use of simplified scale-free numerical simulations of the mergers \citep[see][for details]{Gomez:2000kj}.  
+Even for the case of the Bullet Cluster the N-body analyses have been limited as far as mapping out the merger dynamic phase space allowed by  the uncertainty of the observations, with at most 15 different scenarios being run \citep{Mastropietro:2008fs}.
+\citet{Gomez:2012ex} have come the closest to addressing this issue in their investigation of potential dissociative mergers (A665 and AS1063) through the use of simplified scale-free numerical simulations of the mergers \citep[see][for details]{Gomez:2000kj}.  
 However, they have still had to severely limit the phase space probed (fixing merger parameters such as the initial relative velocity and subcluster-subcluster mass ratio); thus admittedly this approach enables construction of plausible models, but not a thorough accounting of possible or likely models.
 
 %%%% Task
@@ -98,7 +98,7 @@ My primary objectives are to 1) obtain a solution valid near the collision state
 
 In \S\ref{sec_method} I define a method for analyzing the dynamics of observed dissociative mergers.
 In \S\ref{sec_sfcomp} I verify this method with existing results from a hydrodynamic N-body simulation.
-In \S\ref{sec_bullet} I apply this method to the \object{Bullet Cluster} and in \S\ref{sec_musketball} I apply this method to the \object{Musket Ball Cluster} (\object{DLSCL J0816.2+2951}) and contrast its dynamics with those of the \object{Bullet Cluster}.
+In \S\ref{sec_bullet} I apply this method to the Bullet Cluster and in \S\ref{sec_musketball} I apply this method to the Musket Ball Cluster (DLSCL J0916.2+2951) and contrast its dynamics with those of the Bullet Cluster.
 Finally in \S \ref{summary} I summarize my findings, discuss their implications for the constraints on dark matter and suggest other science that will benefit from the introduced method.
 Throughout this paper I assume $\Omega_{\Lambda}=0.7$, $\Omega_m=0.3$, and $H=70$\,km\,s$^{-1}$\,Mpc$^{-1}$.
 
@@ -145,8 +145,8 @@ The model ignores the effects of surrounding large scale structure and simply tr
 As \citet{Nusser:2008iw} shows, a global overdense region (10 times denser than the background) engulfing the system only affects the dynamics substantially for extreme collision velocities ($\sim 4500$\,km\,s$^{-1}$).  While global overdensities may be disregarded it is not clear that the effects of nearby structures can be disregarded, e.g. as in the case three body systems.  Thus this method should be applied with caution to complex cluster mergers.
 
 The model also ignores dynamical friction.
-\citet{Farrar:2007fc} found that including dynamical friction accounted for an $\sim$10\% reduction in the inferred collision velocity of the \object{Bullet Cluster} in their analytic treatment.
-This is potentially concerning since dynamical friction is inversely proportional to the relative velocity of the merger, thus it may become even more important for mergers slower than the \object{Bullet Cluser}.
+\citet{Farrar:2007fc} found that including dynamical friction accounted for an $\sim$10\% reduction in the inferred collision velocity of the Bullet Cluster in their analytic treatment.
+This is potentially concerning since dynamical friction is inversely proportional to the relative velocity of the merger, thus it may become even more important for mergers slower than the Bullet Cluster.
 However in \S \ref{sec_sfcomp} I compare the results of my method with those from a hydrodynamic N-body simulation and show that the net effect of all simplifications (including ignoring dynamical friction, tidal stripping of mass and gas mass lost during the collision) are negligible, suggesting that dynamic friction is less important than the analytic estimates of \citet{Farrar:2007fc} suggest.
  
 
@@ -230,10 +230,10 @@ Finally to compact the results I use the biweight-statistic (generally more robu
 
 \subsection{Comparison with Hydrodynamic Simulations} \label{sec_sfcomp}
 
-For the purposes of checking the physical assumptions of the model I reanalyze the \citet{Springel:2007bg} model of the \object{Bullet Cluster}, comparing my dynamic parameter estimates with their hydrodynamic N-body simulation based estimates.
+For the purposes of checking the physical assumptions of the model I reanalyze the \citet{Springel:2007bg} model of the Bullet Cluster, comparing my dynamic parameter estimates with their hydrodynamic N-body simulation based estimates.
 For this analysis I run just their single case through the model (i.e.\,I do not perform a Monte Carlo analysis).
 They represent the ``main'' and ``bullet'' subclusters as NFW halos with  M$_{200_1} = 1.5\times 10^{15} $\,M$_\sun$, c$_1=1.94$, M$_{200_2} = 1.5\times 10^{14}$\,M$_\sun$, and c$_2=7.12$, respectively.
-They note that the gas properties of their simulation most closely match the observed \object{Bullet Cluster} gas properties for the time step corresponding to a subcluster separation of $d_{3D}=625$\,kpc and  relative velocity of $v_{\rm 3D}(t_{\rm obs})=2630$\,km\,s$^{-1}$.
+They note that the gas properties of their simulation most closely match the observed Bullet Cluster gas properties for the time step corresponding to a subcluster separation of $d_{3D}=625$\,kpc and  relative velocity of $v_{\rm 3D}(t_{\rm obs})=2630$\,km\,s$^{-1}$.
 I define this as the ``observed'' state (dashed line in Figure \ref{fig_SFcomparison}) and use the model discussed in \S \ref{sec_model} to extrapolate values of the relative subcluster velocities ($v_{\rm 3D}$) and time-since-observed state (TSO) before and after the observed state (left and right of the dashed line in Figure \ref{fig_SFcomparison}, respectively).
 The \citet{Springel:2007bg} simulation results (black circles) for these parameters are read directly from their Figure 4.
 
@@ -290,13 +290,13 @@ Thus the comparative results of Figure \ref{fig_SFcomparison} should be consider
 
 \section{Bullet Cluster Dynamics}\label{sec_bullet}
 
-The \object{Bullet Cluster} is the prime candidate for first application of the method as it is one of the best studied dissociative mergers.
+The Bullet Cluster is the prime candidate for first application of the method as it is one of the best studied dissociative mergers.
 It has a wealth of observational data necessary for input to the model, as discussed in \S\ref{sec_bc_obsprop}, plus supplementary data which enables additional posterior priors, as discussed in \S\ref{sec_addedprior}.
 %Additionally it has been studied using basic CDM N-body simulations, hydrodynamic simulations and SIDM simulations.
 
 \subsection{Bullet Cluster Observed System Properties}\label{sec_bc_obsprop}
 
-I summarize the observed \object{Bullet Cluster} parameters used as input to my analysis in Table \ref{bulletinputparam}.  
+I summarize the observed Bullet Cluster parameters used as input to my analysis in Table \ref{bulletinputparam}.  
 The full PDF's of these input parameters have not been published so I simply assume Gaussian distributions.
 I refer to the main subcluster as halo 1 and the ``bullet'' subcluster as halo 2.  
 For the mass and concentration of each subcluster I use the most recently reported estimates from \citet{Springel:2007bg}, based upon strong and weak lensing estimates \citep{Bradac:2006be}.
@@ -333,7 +333,7 @@ $d_{\rm proj}$		&	kpc	&	720	&	25	&	3	\\
 
 \subsection{Bullet Cluster System Dynamics Results} \label{bulletdynamics}
 
-I first analyze the \object{Bullet Cluster} with the Monte Carlo analysis method and default priors discussed in \S\ref{sec_method}, highlighting the complexity of merger dynamics and the inappropriateness of analyzing a small sample of select merger scenarios.
+I first analyze the Bullet Cluster with the Monte Carlo analysis method and default priors discussed in \S\ref{sec_method}, highlighting the complexity of merger dynamics and the inappropriateness of analyzing a small sample of select merger scenarios.
 In \S\ref{sec_addedprior} I incorporate  additional constraints provided by the observed strong X-ray shock front plus boosted temperature and luminosity.
 I discuss this prior information and apply it ex post facto to the default prior results of \S\ref{sec_defaultprior}.
 
@@ -375,7 +375,7 @@ The saturation of the circles increase with increasing mass.
 
 The inability to directly measure $\alpha$, coupled with its strong degree of correlation with the other dynamic parameters, makes it the dominant source of uncertainty. 
 While it was originally believed that the three-dimensional merger velocity as inferred from the X-ray shock feature could be coupled with the redshift determined radial velocity to measure $\alpha$, \citet{Springel:2007bg} showed that the X-ray shock inferred velocity significantly overestimates the true three-dimensional merger velocity.
-So at best this information can weakly constrain $\alpha$, and in the case of the \object{Bullet Cluster} the X-ray shock inferred velocity is significantly greater than the free-fall velocity, $v_{\rm 3D_{max}}$, thus it provides no additional constraining power.
+So at best this information can weakly constrain $\alpha$, and in the case of the Bullet Cluster the X-ray shock inferred velocity is significantly greater than the free-fall velocity, $v_{\rm 3D_{max}}$, thus it provides no additional constraining power.
 In \S\ref{sec_suggestions} I discuss how the results of this method can be used in conjunction with N-body simulations to limit the computational impact of accounting for the uncertainty in $\alpha$.
 
 
@@ -441,7 +441,7 @@ $T$	&	Gyr	&
 \subsubsection{Added Temporal Prior}\label{sec_addedprior}
 
 One of the advantages of this Monte Carlo method is that additional constraints are easily incorporated ex post facto.
-An example of such constraints in the case of the \object{Bullet Cluster} is the observed X-ray shock front and factor of 2.4 greater X-ray estimated mass to lensing estimated mass \citep{Markevitch:2006wv}, due to merger related X-ray temperature and luminosity boost.  
+An example of such constraints in the case of the Bullet Cluster is the observed X-ray shock front and factor of 2.4 greater X-ray estimated mass to lensing estimated mass \citep{Markevitch:2006wv}, due to merger related X-ray temperature and luminosity boost.  
 Hydrodynamic simulations of merging clusters \citep[e.g.][]{Ricker:2001ju,Randall:2002kk} suggest that such transient effects last of order the X-ray sound crossing time.
 Since simulations show negligible difference between the time scales of the two I chose to construct a prior based on the observed temperature boost.
 \citet{Randall:2002kk} find that the full-width-half-max (FWHM) duration of the temperature boost is $\sim 0.4 t_{\rm sc}$ with the entire boost duration being $\sim 1.4 t_{\rm sc}$, where $t_{\rm sc}$ is the sound crossing time of the more massive of the two subclusters.
@@ -482,22 +482,22 @@ Note that the general conclusion of \citet{Springel:2007bg}, that the  shock spe
 
 \section{Musket Ball Cluster Dynamics}\label{sec_musketball}
 
-I also apply the method to the \object{Musket Ball Cluster}, with the objective of updating an existing analysis and comparing this system with the \object{Bullet Cluster}.  
-A preliminary analysis of the system dynamics using a similar method \citep{Dawson:2012dl} suggested that the \object{Musket Ball Cluster} merger is $\sim$3--5 times further progressed than other confirmed dissociative mergers.
+I also apply the method to the Musket Ball Cluster, with the objective of updating an existing analysis and comparing this system with the Bullet Cluster.  
+A preliminary analysis of the system dynamics using a similar method \citep{Dawson:2012dl} suggested that the Musket Ball Cluster merger is $\sim$3--5 times further progressed than other confirmed dissociative mergers.
 However, that analysis treated the two merging subclusters as uniform density spheres   and also failed to account for the temporal phase-space PDF (Equation \ref{eq_timeprior}).
-Additionally the claim that the \object{Musket Ball Cluster} is both slower and further progressed than the \object{Bullet Cluster} was based on comparing the Musket Ball's $TSC_0$--$v_{\rm 3D}(t_{\rm col})$ PDF with that of the single point \citet{Springel:2007bg} estimate.
+Additionally the claim that the Musket Ball Cluster is both slower and further progressed than the Bullet Cluster was based on comparing the Musket Ball's $TSC_0$--$v_{\rm 3D}(t_{\rm col})$ PDF with that of the single point \citet{Springel:2007bg} estimate.
 As noted in \S\ref{sec_defaultprior} there is a large area of parameter space that the \citet{Springel:2007bg} result fails to represent.
 
-Similar to my analysis of the \object{Bullet Cluster} I perform the analysis with 2,000,000 Monte Carlo realizations.
+Similar to my analysis of the Bullet Cluster I perform the analysis with 2,000,000 Monte Carlo realizations.
 Parameter estimates converge to better than a fraction of a percent with only 20,000 realizations.
 
 \subsection{Musket Ball Observed System Properties}
 
-I show the observed \object{Musket Ball Cluster} parameter PDF's in Figures \ref{musket_massinput}--\ref{musket_projinput}, each the result of analyses presented by \citet{Dawson:2012dl}.  
+I show the observed Musket Ball Cluster parameter PDF's in Figures \ref{musket_massinput}--\ref{musket_projinput}, each the result of analyses presented by \citet{Dawson:2012dl}.  
 I refer to their ``south'' subcluster as halo 1 and ``north'' subcluster as halo 2. 
 The mass PDF's, Figure \ref{musket_massinput}, are the result of an MCMC analysis where NFW halos were simultaneously fit to the weak lensing signal.
 The relative velocity distributions, Figure \ref{musket_vinput}, are the result of a bootstrap error analysis \citep{Beers:1990kg} of the 38 and 35 spectroscopic members of the north and south subclusters, respectively.
-These redshifts as well as the full \object{Musket Ball Cluster} spectroscopic catalog are presented in Table \ref{table_MBCzcat} of Appendix \ref{sec_MBCzcat}.
+These redshifts as well as the full Musket Ball Cluster spectroscopic catalog are presented in Table \ref{table_MBCzcat} of Appendix \ref{sec_MBCzcat}.
 The projected subcluster separation distribution, Figure \ref{musket_projinput}, is the result of a bootstrap error analysis of the recursively estimated subclusters' galaxy number density centroids \citep[see e.g.][for a description of this method]{Randall:2008hs}.
 For each Monte Carlo realization individual values are drawn randomly from each of these distributions. 
 
@@ -524,16 +524,16 @@ For each Monte Carlo realization individual values are drawn randomly from each 
 
 \subsection{Musket Ball System Dynamics Results}
 
-This more complete analysis confirms that the \object{Musket Ball Cluster} merger is both significantly slower and further progressed compared to the \object{Bullet Cluster}, see Figure \ref{fig_mbc_TSC}.
+This more complete analysis confirms that the Musket Ball Cluster merger is both significantly slower and further progressed compared to the Bullet Cluster, see Figure \ref{fig_mbc_TSC}.
 To estimate a lower limit on how much further progressed I perform an additional Monte Carlo analysis  for $TSC_{\rm 0_{Musket}}-TSC_{\rm 0_{Bullet}}$ assuming the marginalized $TSC_0$ distributions (see Appendices \ref{sec_bcresults} and \ref{sec_mbcresults}).
 This is a lower limit since the \object{Musket Ball} observations, unlike the \object{Bullet Clusters} observations, cannot rule out the case that its subclusters have reached the apoapsis and are on a return trajectory (61\% of the realizations have $TSC_1$ less than the age of the Universe at $z=0.53$).
-I find that  the \object{Musket Ball} is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the \object{Bullet Cluster}, see Figure \ref{fig_TSC0comparison}.
+I find that  the \object{Musket Ball} is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the Bullet Cluster, see Figure \ref{fig_TSC0comparison}.
 This is in line with the more approximate 3--5 times estimate of \citet{Dawson:2012dl}.
 The \object{Musket Ball}'s relatively large $TSC_0$ means that it has potential for providing tighter constraints on $\sigma_{\rm DM}$, since the expected offset between the galaxies and dark matter will initially increase with increasing $TSC_0$.
 However as noted in \S\ref{sec_intro}, given enough time the expected offset will decrease due the gravitational attraction between the galaxies and dark matter.
-Also important in determining which cluster can provide the tightest $\sigma_{\rm DM}$ constraints is the fact the expected offset increases as a function of the cluster surface mass density and collision velocity, both of which are larger in the the case of the \object{Bullet Cluster} (compare Tables \ref{bulletresultparam} \& \ref{musketballresultparam}). 
+Also important in determining which cluster can provide the tightest $\sigma_{\rm DM}$ constraints is the fact the expected offset increases as a function of the cluster surface mass density and collision velocity, both of which are larger in the the case of the Bullet Cluster (compare Tables \ref{bulletresultparam} \& \ref{musketballresultparam}). 
 Without running SIDM simulations it is difficult to know at what $TSC_0$ the offset reaches it maximum, or which merger parameters are most important for maximizing the offset.
-The complete \object{Musket Ball Cluster} parameter estimates are summarized in Table \ref{musketballresultparam} and plotted in Appendix \ref{sec_mbcresults}.
+The complete Musket Ball Cluster parameter estimates are summarized in Table \ref{musketballresultparam} and plotted in Appendix \ref{sec_mbcresults}.
 
 \begin{figure}
 \epsscale{1}
@@ -583,7 +583,7 @@ $T$	&	Gyr	&	4.8	&	2.9	--	10.4	&	2.2	--	22.7	\\
 \tablenotetext{c}{61\% of the realizations with a valid $TSC_0$ (i.e.\,less than the age of the Universe at the cluster redshift) have a valid $TSC_1$, meaning that it is possible that the Musket Ball Cluster is being observed in the ``incoming'' state.}
 \end{deluxetable*}
 
-Note that just as a temporal prior was justified for the \object{Bullet Cluster} based on the observed shock front and increased temperature/mass estimate, I could apply a similar yet opposite prior to the \object{Musket Ball} since the temperature/mass estimate is consistent with the weak lensing inferred mass (additionally no shock front is observed).  
+Note that just as a temporal prior was justified for the Bullet Cluster based on the observed shock front and increased temperature/mass estimate, I could apply a similar yet opposite prior to the \object{Musket Ball} since the temperature/mass estimate is consistent with the weak lensing inferred mass (additionally no shock front is observed).  
 According to \citet{Randall:2002kk} if the cluster mass and inferred X-ray temperature or luminosity cluster mass are approximately the same then $TSC_0 \gtrsim 2 t_{\rm sc}$, which in the case of the \object{Musket Ball} means $TSC_0 \gtrsim 1.75$\,Gyr.
 While this is consistent with my $TSC_0$ estimate for the \object{Musket Ball}, it is not entirely appropriate to apply this prior since the X-ray observations are relatively shallow and cannot confidently rule out a temperature and luminosity boost \citep{Dawson:2012dl}.
 However it is conceivable that this line of reasoning would be applicable with deeper X-ray observations, either for the \object{Musket Ball} or similar dissociative mergers.
@@ -596,15 +596,15 @@ I have introduced a new method for determining the dynamic properties and associ
 I find that this method addresses the primary weaknesses of existing methods, namely enabling accurate parameter estimation and propagation of uncertainty near the collision state with a convergent solution achieved in $\sim$6\,CPU\,hours. 
 I have confirmed that the two NFW halo model is capable of achieving the required 10\% level accuracy by direct comparison with an N-body hydrodynamic simulation.
 
-In applying this method to the \object{Bullet Cluster} I not only determined its merger dynamic parameters but found that the bulk of uncertainty in these parameters is due to uncertainty in $\alpha$, the angle of the merger with respect to the plane of the sky.
-Analyses that fail to account for the uncertainty in $\alpha$ (all existing N-body simulations of the \object{Bullet Cluster}) will significantly underestimate the uncertainty in their results.
+In applying this method to the Bullet Cluster I not only determined its merger dynamic parameters but found that the bulk of uncertainty in these parameters is due to uncertainty in $\alpha$, the angle of the merger with respect to the plane of the sky.
+Analyses that fail to account for the uncertainty in $\alpha$ (all existing N-body simulations of the Bullet Cluster) will significantly underestimate the uncertainty in their results.
 This highlights the need to carefully select and model many possible realizations of the merger when trying to infer results from N-body simulations of a real merger (I discuss this further in \S\ref{sec_suggestions}).
 I have also shown how ex post facto priors can easily be applied to the results of the default priors to further constrain the inferred dynamic properties.
 In particular accurate measurement of the cluster gas properties can enable approximately a factor of two better constraint on the dynamic properties of the merger, principally through added constraint on the time scale of the merger.
 
-I have also applied this method to the \object{Musket Ball Cluster}, validating the approximate results of \citet{Dawson:2012dl}.
+I have also applied this method to the Musket Ball Cluster, validating the approximate results of \citet{Dawson:2012dl}.
 Comparing the dynamic properties of the \object{Musket Ball} with those of the \object{Bullet} I have shown that the \object{Musket Ball} represents a significantly different volume of merger phase space.
-The \object{Musket Ball Cluster}, being $3.4^{+3.8}_{-1.4}$ times further progressed than the \object{Bullet Cluster}, could potentially provide tighter constraints on $\sigma_{\rm DM}$ since the offset between galaxies and dark matter should initially increase with time post-merger for  $\sigma_{\rm DM}>0$.
+The Musket Ball Cluster, being $3.4^{+3.8}_{-1.4}$ times further progressed than the Bullet Cluster, could potentially provide tighter constraints on $\sigma_{\rm DM}$ since the offset between galaxies and dark matter should initially increase with time post-merger for  $\sigma_{\rm DM}>0$.
 And the larger the expected offset, the better the dark matter constraint when applying a method similar to \citet{Randall:2008hs}.
 
 \subsection{Suggested Uses of Method}\label{sec_suggestions}
@@ -618,7 +618,7 @@ Additionally it is inappropriate to simply simulate one realization of a dissoci
 Thus multiple simulations of each merger are required to properly represent the allowed phase space.
 One could conceivably reduce the number of required simulations by using the results of this method to select representative merger realizations that uniformly sample the merger phase space of interest (e.g. cluster mass, $v_{\rm 3D}(t_{\rm col})$, and $TSC_0$);
 then weight the results of each simulated realization by the integral of the corresponding local phase space PDF, as determined by this method.
-For example, one could estimate the uncertainty distribution of the $\sigma_{\rm DM}$ constraint inferred from SIDM simulations of the \object{Bullet Cluster} by weighting the constraint from each realization, where a realization with  $v_{\rm 3D}(t_{\rm col})$=2800\,km\,s$^{-1}$ and $TSC_0$=0.4\,Gyr would receive greater weight than one with $v_{\rm 3D}(t_{\rm col})$=4000\,km\,s$^{-1}$ and $TSC_0$=0.2\,Gyr, see Figure \ref{fig_bcTSC_added}.
+For example, one could estimate the uncertainty distribution of the $\sigma_{\rm DM}$ constraint inferred from SIDM simulations of the Bullet Cluster by weighting the constraint from each realization, where a realization with  $v_{\rm 3D}(t_{\rm col})$=2800\,km\,s$^{-1}$ and $TSC_0$=0.4\,Gyr would receive greater weight than one with $v_{\rm 3D}(t_{\rm col})$=4000\,km\,s$^{-1}$ and $TSC_0$=0.2\,Gyr, see Figure \ref{fig_bcTSC_added}.
 Thus the results of this method will not only inform efficient selection of realizations to model but will reduce the number of simulations required to properly sample the posterior PDF's.
 Nevertheless SIDM simulations of mock clusters need to be performed to determine how much acceptable values of $\sigma_{\rm DM}$ affect the inferred merger dynamics properties.
 
@@ -657,7 +657,7 @@ git://github.com/wadawson/merging-cluster-dynamics-paper.git.
 I thank my adviser David Wittman who has always encouraged my research-freewill, while at the same time providing invaluable input and correcting guidance.
 Our many fruitful discussions have touched every aspect of this work.
 I also thank the Deep Lens Survey --- in particular Perry Gee --- for access to the 2007 Keck LRIS spectra, as well as Perry Gee and Brian Lemaux for assistance in reduction of the 2011 Keck DEIMOS spectra.  
-I am grateful to  Jack P.\,Hughes for discussions on constraining the \object{Bullet Cluster}'s TSC by the observed X-ray shock feature and boosted temperature/luminosity, and
+I am grateful to  Jack P.\,Hughes for discussions on constraining the Bullet Cluster's TSC by the observed X-ray shock feature and boosted temperature/luminosity, and
 Reinout J.\,van Weeren for discussions on the possibilities of constraining the dynamics and geometry of mergers using radio relics.
 Finally I would like to thank Maru{\v s}a Brada{\v c}, Ami Choi, James Jee, Phil Marshall, Annika Peter, Michael Schneider, Reinout van Weeren, and David Wittman for their substantial reviews of earlier drafts.
 
@@ -912,7 +912,7 @@ The calculated Velocity \& Time parameters consist of:  $v_{\rm 3D}(t_{\rm obs})
 
 \section{Musket Ball Cluster Result Plots}\label{sec_mbcresults}
 
-This section contains the parameter results array plots for the \object{Musket Ball Cluster}.
+This section contains the parameter results array plots for the Musket Ball Cluster.
 Similar to \S\ref{sec_bcresults} the parameters are grouped in three categories (\emph{Input}, \emph{Geometry}, and \emph{Velocity \& Time}) resulting in a six subplot results array, see Figure \ref{fig_resultsarray}.
 The \emph{Input} parameters consist of: M$_{200_1}$, M$_{200_2}$, $z_1$, $z_2$,	and $d_{\rm proj}$, where halo 1 refers to the ``south'' subcluster and halo 2 refers to the ``north'' subcluster.
 The calculated \emph{Geometry} parameters consist of: $\alpha$, $d_{\rm 3D}$, and $d_{\rm max}$.
