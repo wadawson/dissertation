@@ -15,13 +15,6 @@ I introduce this method, verify it against an existing hydrodynamic N-body simul
 I find that this method surpasses existing analytic models --- providing accurate (10\% level) dynamic parameter and uncertainty estimates throughout the merger history.
 This coupled with minimal required \emph{a priori} information (subcluster mass, redshift, and projected separation) and relatively fast computation ($\sim$6 CPU\,hours) makes this method ideal for large samples of dissociative merging clusters.
 
-%% Keywords should appear after the \end{abstract} command. The uncommented
-%% example has been keyed in ApJ style. See the instructions to authors
-%% for the journal to which you are submitting your paper to determine
-%% what keyword punctuation is appropriate.
-
-\keywords{galaxies: clusters: individual (1ES 0657-558), galaxies: clusters: individual (DLSCL J0916.2+2951), gravitation, methods: analytical, methods: statistical} 
-
 \section{Introduction}\label{sec_intro}
 % %%% Context
 Merging galaxy clusters have become important astrophysical probes providing constraints on the dark matter (DM) self-interaction cross-section \citep[$\sigma_{\rm DM}$;][]{Markevitch:2004dl, Randall:2008hs, Merten:2011gu, Dawson:2012dl}, and the large-scale matter-antimatter ratio \citep{Steigman:2008dy}.
@@ -526,10 +519,10 @@ For each Monte Carlo realization individual values are drawn randomly from each 
 
 This more complete analysis confirms that the Musket Ball Cluster merger is both significantly slower and further progressed compared to the Bullet Cluster, see Figure \ref{fig_mbc_TSC}.
 To estimate a lower limit on how much further progressed I perform an additional Monte Carlo analysis  for $TSC_{\rm 0_{Musket}}-TSC_{\rm 0_{Bullet}}$ assuming the marginalized $TSC_0$ distributions (see Appendices \ref{sec_bcresults} and \ref{sec_mbcresults}).
-This is a lower limit since the \object{Musket Ball} observations, unlike the \object{Bullet Clusters} observations, cannot rule out the case that its subclusters have reached the apoapsis and are on a return trajectory (61\% of the realizations have $TSC_1$ less than the age of the Universe at $z=0.53$).
-I find that  the \object{Musket Ball} is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the Bullet Cluster, see Figure \ref{fig_TSC0comparison}.
+This is a lower limit since the Musket Ball observations, unlike the Bullet Cluster observations, cannot rule out the case that its subclusters have reached the apoapsis and are on a return trajectory (61\% of the realizations have $TSC_1$ less than the age of the Universe at $z=0.53$).
+I find that  the Musket Ball is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the Bullet Cluster, see Figure \ref{fig_TSC0comparison}.
 This is in line with the more approximate 3--5 times estimate of \citet{Dawson:2012dl}.
-The \object{Musket Ball}'s relatively large $TSC_0$ means that it has potential for providing tighter constraints on $\sigma_{\rm DM}$, since the expected offset between the galaxies and dark matter will initially increase with increasing $TSC_0$.
+The Musket Ball's relatively large $TSC_0$ means that it has potential for providing tighter constraints on $\sigma_{\rm DM}$, since the expected offset between the galaxies and dark matter will initially increase with increasing $TSC_0$.
 However as noted in \S\ref{sec_intro}, given enough time the expected offset will decrease due the gravitational attraction between the galaxies and dark matter.
 Also important in determining which cluster can provide the tightest $\sigma_{\rm DM}$ constraints is the fact the expected offset increases as a function of the cluster surface mass density and collision velocity, both of which are larger in the the case of the Bullet Cluster (compare Tables \ref{bulletresultparam} \& \ref{musketballresultparam}). 
 Without running SIDM simulations it is difficult to know at what $TSC_0$ the offset reaches it maximum, or which merger parameters are most important for maximizing the offset.
@@ -583,10 +576,10 @@ $T$	&	Gyr	&	4.8	&	2.9	--	10.4	&	2.2	--	22.7	\\
 \tablenotetext{c}{61\% of the realizations with a valid $TSC_0$ (i.e.\,less than the age of the Universe at the cluster redshift) have a valid $TSC_1$, meaning that it is possible that the Musket Ball Cluster is being observed in the ``incoming'' state.}
 \end{deluxetable*}
 
-Note that just as a temporal prior was justified for the Bullet Cluster based on the observed shock front and increased temperature/mass estimate, I could apply a similar yet opposite prior to the \object{Musket Ball} since the temperature/mass estimate is consistent with the weak lensing inferred mass (additionally no shock front is observed).  
-According to \citet{Randall:2002kk} if the cluster mass and inferred X-ray temperature or luminosity cluster mass are approximately the same then $TSC_0 \gtrsim 2 t_{\rm sc}$, which in the case of the \object{Musket Ball} means $TSC_0 \gtrsim 1.75$\,Gyr.
-While this is consistent with my $TSC_0$ estimate for the \object{Musket Ball}, it is not entirely appropriate to apply this prior since the X-ray observations are relatively shallow and cannot confidently rule out a temperature and luminosity boost \citep{Dawson:2012dl}.
-However it is conceivable that this line of reasoning would be applicable with deeper X-ray observations, either for the \object{Musket Ball} or similar dissociative mergers.
+Note that just as a temporal prior was justified for the Bullet Cluster based on the observed shock front and increased temperature/mass estimate, I could apply a similar yet opposite prior to the Musket Ball since the temperature/mass estimate is consistent with the weak lensing inferred mass (additionally no shock front is observed).  
+According to \citet{Randall:2002kk} if the cluster mass and inferred X-ray temperature or luminosity cluster mass are approximately the same then $TSC_0 \gtrsim 2 t_{\rm sc}$, which in the case of the Musket Ball means $TSC_0 \gtrsim 1.75$\,Gyr.
+While this is consistent with my $TSC_0$ estimate for the Musket Ball, it is not entirely appropriate to apply this prior since the X-ray observations are relatively shallow and cannot confidently rule out a temperature and luminosity boost \citep{Dawson:2012dl}.
+However it is conceivable that this line of reasoning would be applicable with deeper X-ray observations, either for the Musket Ball or similar dissociative mergers.
 
 %\emph{Should I mention the fraction of realizations that have an allowable $TSC_1$, should I compare this with the Bullet cluster?}
  
@@ -603,7 +596,7 @@ I have also shown how ex post facto priors can easily be applied to the results 
 In particular accurate measurement of the cluster gas properties can enable approximately a factor of two better constraint on the dynamic properties of the merger, principally through added constraint on the time scale of the merger.
 
 I have also applied this method to the Musket Ball Cluster, validating the approximate results of \citet{Dawson:2012dl}.
-Comparing the dynamic properties of the \object{Musket Ball} with those of the \object{Bullet} I have shown that the \object{Musket Ball} represents a significantly different volume of merger phase space.
+Comparing the dynamic properties of the Musket Ball with those of the Bullet I have shown that the Musket Ball represents a significantly different volume of merger phase space.
 The Musket Ball Cluster, being $3.4^{+3.8}_{-1.4}$ times further progressed than the Bullet Cluster, could potentially provide tighter constraints on $\sigma_{\rm DM}$ since the offset between galaxies and dark matter should initially increase with time post-merger for  $\sigma_{\rm DM}>0$.
 And the larger the expected offset, the better the dark matter constraint when applying a method similar to \citet{Randall:2008hs}.
 
@@ -668,7 +661,7 @@ I would also like to acknowledge the sultry universe who hides her secrets well.
 %% See the AASTeX Web site at http://www.journals.uchicago.edu/AAS/AASTeX
 %% for information on obtaining the facility keywords.
 
-{\it Facilities:} \facility{CXO (ACIS-I)}, \facility{HST (ACS)}, \facility{Keck:I (LRIS)}, \facility{Keck:2 (DEIMOS)}, \facility{Mayall (MOSAIC 1 \& 1.1)}, \facility{Subaru (Suprime-Cam)}, \facility{SZA}.
+This work made use of the following facilities: CXO (ACIS-I), HST (ACS), Keck:I (LRIS), Keck:2 (DEIMOS), Mayall (MOSAIC 1 \& 1.1), Subaru (Suprime-Cam), SZA.
 
 %% Appendix material should be preceded with a single \appendix command.
 %% There should be a \section command for each appendix. Mark appendix
