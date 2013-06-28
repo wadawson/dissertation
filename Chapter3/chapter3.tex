@@ -224,7 +224,7 @@ Finally to compact the results I use the biweight-statistic (generally more robu
 
 For the purposes of checking the physical assumptions of the model I reanalyze the \citet{Springel:2007bg} model of the Bullet Cluster, comparing my dynamic parameter estimates with their hydrodynamic N-body simulation based estimates.
 For this analysis I run just their single case through the model (i.e.\,I do not perform a Monte Carlo analysis).
-They represent the ``main'' and ``bullet'' subclusters as NFW halos with  M$_{200_1} = 1.5\times 10^{15} $\,M$_\sun$, c$_1=1.94$, M$_{200_2} = 1.5\times 10^{14}$\,M$_\sun$, and c$_2=7.12$, respectively.
+They represent the ``main'' and ``bullet'' subclusters as NFW halos with  M$_{200_1} = 1.5\times 10^{15} $\,M\sun, c$_1=1.94$, M$_{200_2} = 1.5\times 10^{14}$\,M\sun, and c$_2=7.12$, respectively.
 They note that the gas properties of their simulation most closely match the observed Bullet Cluster gas properties for the time step corresponding to a subcluster separation of $d_{3D}=625$\,kpc and  relative velocity of $v_{\rm 3D}(t_{\rm obs})=2630$\,km\,s$^{-1}$.
 I define this as the ``observed'' state (dashed line in Figure \ref{fig_SFcomparison}) and use the model discussed in \S \ref{sec_model} to extrapolate values of the relative subcluster velocities ($v_{\rm 3D}$) and time-since-observed state (TSO) before and after the observed state (left and right of the dashed line in Figure \ref{fig_SFcomparison}, respectively).
 The \citet{Springel:2007bg} simulation results (black circles) for these parameters are read directly from their Figure 4.
@@ -307,9 +307,9 @@ For each Monte Carlo realization individual values are drawn randomly from each 
 \colhead{Parameter}     & \colhead{Units}  & \colhead{$\mu$}  & \colhead{$\sigma$}	&	\colhead{Ref.}
 }
 \startdata
-M$_{200_1}$	&	$10^{14}$\,M$_\sun$	&	15	&	1.5\tablenotemark{a}	&	1	\\
+M$_{200_1}$	&	$10^{14}$\,M\sun	&	15	&	1.5\tablenotemark{a}	&	1	\\
 c$_1$	&		&	7.2	&	\nodata\tablenotemark{b}	&	1	\\
-M$_{200_2}$	&	$10^{14}$\,M$_\sun$	&	1.5	&	0.15\tablenotemark{a}	&	1	\\
+M$_{200_2}$	&	$10^{14}$\,M\sun	&	1.5	&	0.15\tablenotemark{a}	&	1	\\
 c$_2$	&		&	2.0	&	\nodata\tablenotemark{b}	&	1	\\
 z$_1$	&		&	0.29560	&	0.00023	&	2	\\
 z$_2$	&		&	0.29826	&	0.00014	&	2	\\
@@ -384,10 +384,10 @@ Parameter     & Units  &
 \colhead{Location\tablenotemark{a}}  & \colhead{68\% LCL--UCL\tablenotemark{b}} & \colhead{95\% LCL--UCL\tablenotemark{b}}	
 }					
 \startdata																							
-M$_{200_1}$	&	$10^{14}$\,M$_\sun$	&	
+M$_{200_1}$	&	$10^{14}$\,M\sun	&	
 15.0	&	13.5	--	16.6	&	12.1	--	18.1	&	
 15.2	&	13.6	--	16.6	&	12.2	--	18.1	\\
-M$_{200_2}$	&	$10^{14}$\,M$_\sun$	&	
+M$_{200_2}$	&	$10^{14}$\,M\sun	&	
 1.5	&	1.4	--	1.6	&	1.2	--	1.8	&	
 1.5	&	1.4	--	1.7	&	1.2	--	1.8	\\
 $z_1$	&		&	
@@ -437,7 +437,7 @@ Hydrodynamic simulations of merging clusters \citep[e.g.][]{Ricker:2001ju,Randal
 Since simulations show negligible difference between the time scales of the two I chose to construct a prior based on the observed temperature boost.
 \citet{Randall:2002kk} find that the full-width-half-max (FWHM) duration of the temperature boost is $\sim 0.4 t_{\rm sc}$ with the entire boost duration being $\sim 1.4 t_{\rm sc}$, where $t_{\rm sc}$ is the sound crossing time of the more massive of the two subclusters.
 The peak of this boost roughly coincides with the time of the \emph{collision}, as defined in \S\ref{sec_intro}.
-Given the M$_{200_1}=15 \times 10^{14}$\,M$_\sun$ and temperature T$_{\rm X}=14$\,keV of the ``main'' subcluster \citep{Markevitch:2006wv}, the $t_{\rm sc}=1$\,Gyr.
+Given the M$_{200_1}=15 \times 10^{14}$\,M\sun and temperature T$_{\rm X}=14$\,keV of the ``main'' subcluster \citep{Markevitch:2006wv}, the $t_{\rm sc}=1$\,Gyr.
 I construct a sigmoid function for the $TSC$ prior PDF based on the observed temperature boost, 
 \begin{displaymath}
 {\rm PDF}(TSC) = \frac{1}{2}\left[1-\tanh\left(\frac{TSC-0.5 a}{0.25 b} \right)\right],
@@ -549,8 +549,8 @@ dark and light blue regions denote the bias-corrected  68\% and 95\% lower and u
 \colhead{Parameter}     & \colhead{Units}  & \colhead{Location\tablenotemark{a}}  & \colhead{68\% LCL--UCL\tablenotemark{b}} & \colhead{95\% LCL--UCL\tablenotemark{b}}
 }
 \startdata
-M$_{200_1}$	&	$10^{14}$\,M$_\sun$	&	3.2	&	2.3	--	4.3	&	1.6	--	5.5	\\
-M$_{200_2}$	&	$10^{14}$\,M$_\sun$	&	1.7	&	1.1	--	2.4	&	0.6	--	3.3	\\
+M$_{200_1}$	&	$10^{14}$\,M\sun	&	3.2	&	2.3	--	4.3	&	1.6	--	5.5	\\
+M$_{200_2}$	&	$10^{14}$\,M\sun	&	1.7	&	1.1	--	2.4	&	0.6	--	3.3	\\
 $z_1$	&		&	0.5339	&	0.5333	--	0.5345	&	0.5326	--	0.5352	\\
 $z_2$	&		&	0.5316	&	0.5305	--	0.5324	&	0.5294	--	0.5331	\\
 $d_{\rm proj}$		&	Mpc	&	1.0	&	0.9	--	1.1	&	0.7	--	1.3	\\
