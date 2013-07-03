@@ -23,7 +23,7 @@ dissertation
 	* Being my first mentee
 * MCC
 	* taking raw ideas and turning them into something great
-	* note a few specific members and their contrabutions
+	* note a few specific members and their contributions
 * UC Davis cosmology group
 	* Teachers
 		* Chris F., Lori, Lloyd, Andy, Patricia Boeshaar
@@ -41,10 +41,30 @@ dissertation
 
 1. Introduction (about 4-10 pages)
 (Much of this can be transferred from my talk)
-	1. Dark Matter
-	2. Motivation for studying SIDM
-		1. Note degeneracy of baryon and SIDM physics in these motivating probes (motivate merging clusters)
-	3. How merging clusters are probes of SIDM
+	1. Overview of Standard Model of Cosmology
+		1. Briefly how do we know what we "know"
+	2. Highlight Dark Matter
+		1. Historical review 
+			1. Zwicky, Rubin, Clowe & Markevitch
+			2. Why dark matter and not modified gravity (merging clusters)
+		2. Generaly accepted properties
+			1. Nearly collisionless
+			2. Compare in relation to baryons (quantity, interaction, etc.)
+	3. Motivation for studying SIDM
+		1. Early motivation and work (missing satellite problem, Spergel & Steinheardt)
+		2. Early constraints. SIDM ruled out? (Miralda-Escudé 2002, Yoshidal et al. 2000, Dave et al. 2001, Gnedin & Ostriker 2001, Randall et al 2008, Hennawi & Ostriker 2002)
+		3. Recent motivation (Dwarf core problem, Too Big to Fail, Central densities of clusters, recent SIDM simulation)
+			1. How SIDM may resolve these "problems"
+			2. Narrow window of parameter space to probe (Rocha et al. 2013)
+		5. Why merging clusters may be best probe
+			1. Note degeneracy of baryon and SIDM physics in these motivating probes (motivate merging clusters)
+	4. How merging clusters are probes of SIDM
+		1. Simple picture of merging cluster (diagram)
+		2. 4 ways of constraining SIDM with merging clusters
+			1. Highlight the galaxy-dark matter offset method
+				1. Highlight advantages over other SIDM probes (i.e. different baryon systematics, due to different scales)
+				2. Note systematics involved in this measurement
+	5. Note on other probes of SIDM (beyond scope of dissertation)
 2. Musket Ball Cluster: Observed Properties
 	1. Intro
 	2. Photometry
