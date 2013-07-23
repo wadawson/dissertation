@@ -142,12 +142,20 @@ We measure the PSF of both datasets using the PCA method presented in \citet{Jee
 We perform our WL analysis independently on both the Subaru and HST F814W data. The Subaru data has $0.72\arcsec$ seeing and 49 WL-quality source galaxies (i.e.\,background galaxies with measured ellipticity error  $<0.3$) per arcmin$^2$. For the mass map we use an apodizing kernel radius of $0.5\arcmin$, which can be interpreted as the effective resolution of the WL mass map.
 We are able to cross-match most of the detected objects with the DLS and use the $p(z)$'s discussed in the previous section.
 
-Cross-matching is more problematic with the higher-resolution HST data, so we use a color-magnitude cut (F606W-F814W\,$<$\,0.8 and 24\,$<$\,F814W\,$<$\,28.5) to select source galaxies and exclude cluster red-sequence and bright foreground galaxies.
+Cross-matching is more problematic with the higher-resolution HST data, so we use a color-magnitude cut (F606W-F814W\,$<$\,0.8 and 24\,$<$\,F814W\,$<$\,28.5) to select source galaxies and exclude cluster red-sequence and bright foreground galaxies, see Figure \ref{figure:HSTcolormag}.
 For the WL analysis of the HST F814W image, which has a $0.1\arcsec$ PSF and 136 WL-quality source galaxies per arcmin$^{2}$, we use an  apodizing kernel radius of $3.6\arcsec$.
 We find no significant spatial correlation between source density and subcluster position, suggesting that our source galaxy population is not significantly contaminated with cluster galaxies.
 Furthermore, we find a comparable number distribution of sources as a function of magnitude when we make similar cuts to the HUDF \citep{Coe:2006jf} and GOODS North \& South \citep{Giavalisco:2004kl} galaxy catalogs, indicating negligible cluster contamination.
 We estimate the $p(z)$ of our HST source galaxy sample by assuming the photometric redshift distribution of the \citet{Coe:2006jf} HUDF catalog after applying our color-magnitude cut.
 Figure \ref{fig3} shows excellent agreement between the Subaru and HST WL mass, and galaxy density maps.
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Chapter2/HSTcolormag_wBPZ.png}
+\caption[Musket Ball Cluster color-magnitude diagram based on HST photometry, along with galaxy location based on DLS photometric redshifts.]{Musket Ball Cluster color-magnitude diagram based on HST photometry.  The larger color points are cross-matched DLS objects which have been divided into \emph{Foreground} (blue; $z_{\rm phot}<0.43$), \emph{Cluster} (green; $z_{\rm phot}=0.53\pm0.1$), and \emph{Background} (red; $z_{\rm phot}>0.63$) samples.  Note that the photometric redshifts become relatively unreliable for $M_{\rm 814}>24$. 
+The purple box indicates the HST source galaxy sample.  
+\label{figure:HSTcolormag}}
+\end{figure}
 
 We construct a joint catalog from the HST and Subaru data, using the HST data where available and Subaru for the surrounding area.
 Using a tomography-based MCMC analysis we simultaneously fit NFW halos centered on the North and South HST WL peaks, and use the \citet{Gelman:1992ht} convergence test applied to eight independent chains.
