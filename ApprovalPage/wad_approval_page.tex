@@ -1,0 +1,194 @@
+%\typein[\pdf]{Generate a PDF?}
+%\documentclass[11pt,draft]{ucthesis}
+\documentclass[oneside,11pt,final]{ucdthesis}
+%\setlength{\pdfpagewidth}{\paperwidth}
+%\setlength{\pdfpageheight}{\paperheight}
+\def\newblock{\hskip .11em plus .33em minus .07em}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lscape}	% Added by JH 6/21/10
+\usepackage{longtable}    % Added by JH on 7/17/10
+%\usepackage{chapterbib}
+%\usepackage[sectionbib,round]{natbib}
+\usepackage{deluxetable}
+
+%
+% hyperref package not working...
+%
+
+%%\usepackage[pdftex,
+%%  colorlinks=true,
+%%  urlcolor=blue,
+%%  linkcolor=red,
+%%  citecolor=red,
+%%  letterpaper=true]{hyperref}
+%\usepackage{nomencl}
+%\usepackage{makeidx}
+%\ifx\pdf\empty
+%	\usepackage{url}
+%\else
+%	\usepackage[pdftex,
+%		colorlinks=true,
+%		urlcolor=blue,
+%		linkcolor=blue,
+%		citecolor=blue,
+%		pdftitle={Simulation Based Earthquake Forecasting},
+%		pdfauthor={Jordan Van Aalsburg},
+%		pdfsubject={Doctoral Thesis},
+%		pdfkeywords={Earthquake, forecasting, prediction},
+%		pdfproducer={pdfLaTeX},
+%		plainpages=false,
+%		pdfpagemode=None]{hyperref}
+%\fi
+%%\usepackage{url}
+%
+%\usepackage{chapterbib}
+%\usepackage[sectionbib,round]{natbib}
+\usepackage{rotating}
+\usepackage{type1cm}
+%%
+%
+%\usepackage{mystyle}
+%
+%\usepackage[Bjarne]{fncychap}
+%\usepackage{fancyhdr}
+%
+%\usepackage[hang,small,bf]{caption}
+%\setlength{\captionmargin}{30pt}
+
+%\fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont
+%\renewcommand{\helv}{%
+%   \fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+
+%\renewcommand{\chaptermark}[1]%
+%   {\markboth{\MakeUppercase{\thechapter.\ #1}}{}}
+%\renewcommand{\sectionmark}[1]%
+%   {\markright{\MakeUppercase{\thesection.\ #1}}}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\newcommand{\helv}{%
+%   \fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LE,RO]{\helv \thepage}
+%\fancyhead[LO]{\helv \rightmark}
+%\fancyhead[RE]{\helv \leftmark}
+
+%\fancypagestyle{plain}{
+%\fancyhf{}
+%\renewcommand{\headrulewidth}{0pt} % remove lines as well
+%\renewcommand{\footrulewidth}{0pt}}
+%\def\newblock{\hskip .11em plus .33em minus .07em}
+
+% making reference commands
+
+\newcommand\aj{The Astronomical Journal}
+%\newcommand\apj{The Astrophysical Journal}
+\newcommand\apjl{The Astrophysical Journal Letters}
+\newcommand\apjs{The Astrophysical Journal Supplement}
+\newcommand\aap{Astronomy and Astrophysics}
+\newcommand\mnras{Monthly Notices of the Royal Astronomical Society}
+\newcommand\pasp{Publications of the Astronomical Society of the Pacific}
+\newcommand\pasj{Publications of the Astronomical Society of the Japan}
+\newcommand\procspie{Proceedings of the Society of Photo-Optical Instrumentation Engineers}
+\newcommand\araa{Annual Review of Astronomy and Astrophysics}
+\newcommand\baas{Bulletin of the American Astronomical Society}
+\newcommand\aaps{Astronomy and Astrophysics Supplement}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+% Declarations for front matter
+%
+%-------------------------------------------------------------------------------
+\author{William Anthony Dawson}
+\title{Constraining Dark Matter Through the Study of Merging Galaxy Clusters}
+\degreeyear{2013}
+\degreesemester{Summer}
+\degree{DOCTOR OF PHILOSOPHY}
+\chair{Professor David M. Wittman} 
+\othermembers{Professor J. Anthony Tyson\\
+   Professor Maru{\v s}a Brada{\v c}} 
+\numberofmembers{3}
+\prevdegrees{B.S. Maritime Systems Engineering (Texas A\& M University, Galveston) 2002\\ M.S. Physics (University of California, Davis) 2008}
+\field{Physics}
+\degreemonth{August}
+\campus{Davis}
+
+
+%-------------------------------------------------------------------------------
+% FRONT MATTER
+%
+%-------------------------------------------------------------------------------
+\begin{frontmatter}
+
+% Title and copyright page
+\maketitle
+\approvalpage
+%\copyrightpage
+
+% Abstract
+%\begin{abstract}
+	%\thispagestyle{empty}
+%	\input{bcl_abstract}
+	%\abstractsignature
+%\end{abstract}
+
+% Dedication
+%\begin{dedication}
+%	\input{dedication}
+%\end{dedication}
+
+% Indices
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+% Acknowledgements
+%\newpage
+%\begin{acknowledgements}
+%	\input{bcl_acknowledgements}
+%\end{acknowledgements}
+
+%\newpage
+%\include{foreword}
+
+\end{frontmatter}
+
+
+%-------------------------------------------------------------------------------
+% MAIN MATTER
+%
+%-------------------------------------------------------------------------------
+%\part{Earthquake Simulations}
+%\part{Data Scoring}
+%\part{Data Visualization and Interaction}
+
+%\include{bcl_Intro}
+%\include{ORELSE}
+%\include{LAEs}
+%\include{NIRSPEC}
+%\include{XrayNIRSPEC}
+%\include{sc1604clusters}
+%\appendix
+%\include{bcl_publications}
+
+%\clearpage
+%\bibliography{thesisbibv_2}
+
+%-------------------------------------------------------------------------------
+% BACK MATTER
+%
+%-------------------------------------------------------------------------------
+
+
+%\newpage
+%\begin{center}
+%\vspace*{8 cm}
+%\LARGE{\uppercase{So long, and thanks for all the fish.}}
+%\end{center}
+
+\end{document}
