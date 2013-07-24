@@ -145,16 +145,25 @@ We are able to cross-match most of the detected objects with the DLS and use the
 Cross-matching is more problematic with the higher-resolution HST data, so we use a color-magnitude cut (F606W-F814W\,$<$\,0.8 and 24\,$<$\,F814W\,$<$\,28.5) to select source galaxies and exclude cluster red-sequence and bright foreground galaxies, see Figure \ref{figure:HSTcolormag}.
 For the WL analysis of the HST F814W image, which has a $0.1\arcsec$ PSF and 136 WL-quality source galaxies per arcmin$^{2}$, we use an  apodizing kernel radius of $3.6\arcsec$.
 We find no significant spatial correlation between source density and subcluster position, suggesting that our source galaxy population is not significantly contaminated with cluster galaxies.
-Furthermore, we find a comparable number distribution of sources as a function of magnitude when we make similar cuts to the HUDF \citep{Coe:2006jf} and GOODS North \& South \citep{Giavalisco:2004kl} galaxy catalogs, indicating negligible cluster contamination.
+Furthermore, we find a comparable number distribution of sources as a function of magnitude when we make similar cuts to the HUDF \citep{Coe:2006jf} and GOODS North \& South \citep{Giavalisco:2004kl} galaxy catalogs, indicating negligible cluster contamination, see Figure \ref{figure:HSTsourcedensity}.
 We estimate the $p(z)$ of our HST source galaxy sample by assuming the photometric redshift distribution of the \citet{Coe:2006jf} HUDF catalog after applying our color-magnitude cut.
 Figure \ref{fig3} shows excellent agreement between the Subaru and HST WL mass, and galaxy density maps.
 
 \begin{figure}
 \centering
-\includegraphics[width=5in]{Chapter2/HSTcolormag_wBPZ.png}
+\includegraphics[width=4in]{Chapter2/HSTcolormag_wBPZ.png}
 \caption[Musket Ball Cluster color-magnitude diagram based on HST photometry, along with galaxy location based on DLS photometric redshifts.]{Musket Ball Cluster color-magnitude diagram based on HST photometry.  The larger color points are cross-matched DLS objects which have been divided into \emph{Foreground} (blue; $z_{\rm phot}<0.43$), \emph{Cluster} (green; $z_{\rm phot}=0.53\pm0.1$), and \emph{Background} (red; $z_{\rm phot}>0.63$) samples.  Note that the photometric redshifts become relatively unreliable for $M_{\rm 814}>24$. 
 The purple box indicates the HST source galaxy sample.  
 \label{figure:HSTcolormag}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Chapter2/UDF_GOODS_sourcemaghist.png}
+\caption[Comparison of the Musket Ball Cluster, HUDF and GOODS North \& South source galaxy densities.]{Comparison of the Musket Ball Cluster, HUDF \citep{Coe:2006jf} and GOODS North \& South \citep{Giavalisco:2004kl} source galaxy densities.
+The HUDF field has a depth of 288 F775W orbits, the GOODS survey has a depth of one F775W orbit, and the Musket Ball Cluster has a depth of 2 F814W orbits (the F814W filter is comparable to the F775W filter).
+Up to the completeness of each survey we find a comparable number distribution of sources as a function of magnitude when we make similar cuts to each galaxy catalog, indicating negligible cluster contamination.
+\label{figure:HSTsourcedensity}}
 \end{figure}
 
 We construct a joint catalog from the HST and Subaru data, using the HST data where available and Subaru for the surrounding area.
@@ -176,6 +185,14 @@ The map created from the joint Subaru/HST catalog looks nearly identical to the 
 \section{Sunyaev--Zel'dovich Effect}
 
 Section text
+
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Chapter2/color_2contours_noblue_edit.png}
+\caption{DLS composite $BVR$ color image of DLSCL J0916.2+2951 showing evidence that the cluster gas, represented by the solid red SZE decrement significance contours (1, 2, 3, 4$\sigma$), is offset $\sim1\arcmin$ ($\sim0.4$ Mpc) and $\sim3\arcmin$ ($\sim1$ Mpc) from the two subclusters, represented by the white galaxy number density contours for galaxies with $z_{\rm phot}=0.53\pm0.1$ (beginning at 200 galaxies\,Mpc$^{-2}$ with increments of 50). 
+The image field-of-view is the same as Figure \ref{fig1}. 
+The beam of the SZ observation has a radius of $\sim1\arcmin$.\label{fig2}}
+\end{figure}
 
 \section{X-ray}
 
