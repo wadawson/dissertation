@@ -203,7 +203,10 @@ The beam of the SZ observation has a radius of $\sim1\arcmin$.\label{figure:Musk
 We acquired X-ray spectral-imaging of the cluster with 40ks of {\it Chandra} ACIS-I time (GO-12800854), and reduce it using \emph{CIAO} version 4.2 and \emph{CALDB} version 4.4.1.
 We manually identify X-ray point sources and mask them before adaptively smoothing the diffuse emission, we present the resulting map in Figure \ref{fig3}.
 We estimate source counts and their error using the \emph{dmextract} function of \emph{CIAO}.
-We use an 8$\arcmin$ radius background region which encloses the subcluster regions and rests $\sim90\%$ on ACIS-I3 (on which the subclusters are observed); yet excludes subcluster, chip gaps, and point sources.
+We use an 8$\arcmin$ radius background region which encloses the subcluster regions and rests $\sim90\%$ on ACIS-I3 (on which the subclusters are observed).
+In the estimate of the background counts each subcluster region, chip gap, and point source are excluded.
+The subcluster exclusion regions were defined such that they encompassed the source emission and were extended out to approximately the SNR = 1 level based on the smoothed map.
+In total we there were $1800\pm40$ background counts in 620,000 pixel$^2$ area within the energy range of 0.5-2\,keV.
 For the South and Central X-ray concentrations (120$\pm$17 and 170$\pm$19 detected 0.5-2\,keV photons, respectively) we use the \emph{Xspec} X-ray spectral fitting tool \citep{Arnaud:1996vl} to fit a Mewe-Kaastra-Liedahl plus photoelectric absorption model \citep[fixed to the Leiden/Argentine/Bonn value;][]{Kalberla:2005de} to the X-ray spectrum of each X-ray concentration.
 For the North concentration there are not enough detected X-ray photons (38$\pm$12) to fit a meaningful spectrum.  
 We report the results of this analysis in Table \ref{tbl1}. 
