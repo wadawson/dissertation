@@ -7,15 +7,43 @@ Chapter abstract text
 
 \section{Introduction}
 
+
+
 Intro text \citep{Dawson:2012dl}
+
+\section{Location Estimation}
+For the original work of \citet{Dawson:2012dl} (see Chapter 2) I estimated the weak lensing subcluster positions and errors on their positions by using the location of the peak signal in a region and estimated the variance on the peak by measuring the peak location of each bootstrap iteration within the selected region.  
+For this chapter, rather than using the location of the peak and variance of the peak, I have adopted an iterative centroid estimation scheme, similar to \citet{Randall:2008hs}. 
+I begin by calculating the centroid of a large aperture that encompasses one subcluster, but excludes the other.
+I then decrease the aperture, recenter on the previously calculated centroid, and estimate the centroid of the new aperture.
+This process is repeated until the aperture is decreased to a radius of XXX kpc.
+To estimate the uncertainty on the location I perform this process on each iteration of a random bootstrap sample map, resulting in a array of centroid values.
+ The uncertainty on the location is then inferred from the variance of this array of centroid values.
+
+
+\subsection{Galaxies}
+\subsection{Gas}
+\subsection{Weak Lensing}
+
 
 \section{Gas--Weak Lensing Offset}
 
 %copied from \citep{Dawson:2012dl}
-Given the evident merger scenario we are able to use the first method of \citet{mark04} and place a rough limit on the DM self-interaction cross-section, $\sigma_{\rm DM}$.
+Given the evident merger scenario we are able to use the first method of \citet{Markevitch:2004dl} and place a rough limit on the DM self-interaction cross-section, $\sigma_{\rm DM}$.
 This method compares the scattering depth of the dark matter, $\tau_{\rm DM}=\sigma_{\rm DM}m^{-1}_{\rm DM} \Sigma_{\rm DM}$, with that of the ICM gas, $\tau_{\rm ICM}\approx 1$, where $m_{\rm DM}$ is the DM particle mass and $\Sigma_{\rm DM}$ is the surface mass density of the DM particles.
-$\Sigma_{\rm DM}$ is approximately the WL measured surface mass density, $\Sigma$, since $\sim80\%$ of a typical cluster's mass is DM \citep{diaf08}.
-For ease of comparison with the results of \citet{mark04} and \citet{mert11} we examine the surface density averaged over the face of the subcluster within $r$=125\,kpc, which is $\Sigma\approx0.15$\,g\,cm$^{-2}$; thus we find $\sigma_{\rm DM} m_{\rm DM}^{-1} \lesssim 7$\,cm$^2$\,g$^{-1}$.  Note that we cannot apply the velocity-dependent $\sigma_{\rm DM}$ constraint methods outlined by \citet{mark04} since our analytic model assumes $\sigma_{\rm DM}$\,=\,0.
+$\Sigma_{\rm DM}$ is approximately the WL measured surface mass density, $\Sigma$, since $\sim80\%$ of a typical cluster's mass is DM \citep{Diaferio:2008js}.
+For ease of comparison with the results of \citet{Markevitch:2004dl} and \citet{Merten:2011gu} we examine the surface density averaged over the face of the subcluster within $r$=125\,kpc, which is $\Sigma\approx0.15$\,g\,cm$^{-2}$; thus we find $\sigma_{\rm DM} m_{\rm DM}^{-1} \lesssim 7$\,cm$^2$\,g$^{-1}$.  
+Note that we cannot apply the velocity-dependent $\sigma_{\rm DM}$ constraint methods outlined by \citet{Markevitch:2004dl} since our analytic model assumes $\sigma_{\rm DM}$\,=\,0 \citep{Dawson:2012dl, Dawson:2012ub}.
+
+\begin{figure}
+%\plottwo{fig3a.eps}{fig3b.eps}
+\plotone{Chapter2/fig3.png}
+\caption{Comparison of the Subaru $i'$-band ground-based (left) and HST space-based (right) WL mass signal-to-noise maps (color) of DLSCL J0916.2+2951 with the X-ray distribution (bold black contours) and galaxy number density (white contours, same as Figure \ref{fig2}). The peak centers and corresponding one sigma errors are denoted by the gray cross-hairs.
+In both analyses there is agreement between the location and relative magnitude of galaxies and WL yet the majority of the cluster gas is centered $\sim1.4\arcmin$ between the North and South subclusters in a local mass underdensity, providing evidence that the North and South subclusters have undergone the first pass-through of a major merger.
+The scale of each map is equivalent and the image field-of-view is the same as Figures \ref{fig1} \& \ref{fig2}.
+The map created from the joint Subaru/HST catalog looks nearly identical to the HST map, with only slight variations in the scale (see Table \ref{tbl1}).
+\label{fig3}}
+\end{figure}
 
 \section{Galaxy--Weak Lensing Offset}
 
