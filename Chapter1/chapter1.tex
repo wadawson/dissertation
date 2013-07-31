@@ -67,7 +67,7 @@ Such DM has been termed self-interacting dark matter (SIDM).
 
 The earliest motivation for studying SIMD came from the \textit{missing satellites problem} \citep[see][for a thorough review]{Bullock:2010uv}.
 \citet{Moore:1999ja} and \citet{Klypin:1999ej} were the first to note that the number of Milky Way satellites predicted by $\Lambda$CDM simulations significantly exceeded the number of observed satellites.
-In an attempt to resolve this problem \citet{Spergel:2000cb} introduced a SIDM model with a large scattering cross-section but with negligible annihilation or dissipation. 
+In an attempt to resolve this problem \citet{Spergel:2000cb} revived a SIDM model with a large scattering cross-section but with negligible annihilation or dissipation\footnote{Such a SIDM model was first proposed by \citet{Carlson:1992cp} and \citet{Machacek:1994kj} to suppress small scale power of CDM dominated cosmologies.  \citet{deLaix:1995ey} found that while SIDM suppressed the small scale power spectrum in a desirable way it resulted in inconsistencies with the observed properties of galaxies.  The \citet{deLaix:1995ey} objects are no longer valid as they only applied to CDM dominated cosmologies, not $\Lambda$CDM cosmologies.}. 
 They found that if the SIDM scattering cross-section ($\sigma_{\rm SIDM}/m_{\rm DM}$) is between 0.45--450\,cm$^2$\,g$^{-1}$ then the expected number of Milky Way satellites could be brought inline with the number of observed satellites.
 More recently the Sloan Digital Sky Survey (SDSS) and Sloan Extension for Galactic Understanding and Exploration (SEGUE) have enabled the discovery of a number of new dwarf satellites \citep[see][for a review]{Willman:2010fg}, effectively doubling the number of know satellites.
 This in combination with simulations that better quantified the selection function of these surveys has helped to reduce the tension between $\Lambda$CDM and the number of observed satellites.
@@ -77,23 +77,64 @@ On a final note, recent simulations \citep{Rocha:2012tr} show that for $\sigma_{
 
 \subsection{Early SIDM Constraints}
 
-Following the introduction of SIMD by \citet{Spergel:2000cb} a number of researchers began to constrain \sigma_{\rm SIDM}/m_{\rm DM} through several independent observations, in what \citet{Peter:2012vi} has termed the ``Y2K-era constraints''.
+Following the revival of SIMD by \citet{Spergel:2000cb} a number of researchers began to constrain $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$ through several independent observations, in what \citet{Peter:2012vi} has termed the ``Y2K-era constraints''.
+The Y2K-era constraints fall into five categories:
+1) Those that compare the central density of simulated SIDM halos with those observed across a range of halo mass-scales from dwarf spheroids to galaxy clusters \citep{Hogan:2000ih, Kochanek:2000iw, Yoshida:2000bd, Yoshida:2000gn, Dave:2001hh, Dalcanton:2001jj, Meneghetti:2001en, Colin:2002ku}.
+Some finding that SIDM created central density cores (i.e. flattened density profile) that were too large and others finding that SIDM with large cross-sections actually exacerbates the formation of cusps (i.e. sharply peaked density profile).
+2) Those that compare the shape (i.e. spherical or elliptical) of simulated SIDM halos with the shapes of observed DM halos \citep{Yoshida:2000bd, Dave:2001hh, MiraldaEscude:2002ev}.
+They found that as the SIDM cross-section is increase DM halos become more spherically symmetric and at a certain point elliptical halos, such as those observed in some galaxy clusters, can no longer be formed.
+3)Those that compared the amount of substructure in simulated SIDM halos with the amount observed in galaxies and galaxy clusters \citep{Hogan:2000ih, Yoshida:2000bd, Colin:2002ku}.
+As the SIDM cross-section increases subhalos begin to evaporate in their parent DM halo.
+4) Those that estimated the formation of super massive black holes (SMBH) as a function of varying SIDM cross-section \citep{Hennawi:2002kv}.
+As the SIDM cross-section is increased the initial seeds of SMBH's can form earlier and more efficiently, at some point the expected number and mass of SMBH's exceeds the observed number and mass.
+5) Those that compared and contrasted the observed behavior of DM with collisionless galaxies and collisional gas during the merging process of two galaxy clusters \citep{Markevitch:2004dl}.
+This method will be the focus of this dissertation and is discussed in great detail in \S\ref{section:DMconstraintWithMergers}.
 
-See the summary by \citet{Peter:2012vi} on page 106.
+%Central density profile (i.e. cores in halo):
+%
+%Dwarfs density cores: Dave et al. 2001 sigma/m=0.1--10
+%Hogan \& Dalconton 2000: substructure and central density cusps
+%Cluster central density: Meneghetti et al. 2001
+%Dalconton \& Hogan 2001: cores in dwarfs to clusters of galaxies
+%Kochanek \& White 2000:  claim that SIDM exacerbates the formation of cusps in galaxy halos
+%Colin et al. 2002: structure and substructure of Milky Way-sized halos, velocity dependent cross-section, found catastrophic formation of cusps
+%Yoshida et al. 2000a {Yoshida:2000bd}
+%Yoshida et al. 2000b {Yoshida:2000gn} sigma/m < 0.1
+%
+%halos shapes (i.e. elliptical halos):
+%
+%Halo Shapes: Miralda-Escudé 2002 sigma/m < 0.02
+%Dwarfs density cores: Dave et al. 2001 sigma/m=0.1--10
+%Yoshida et al. 2000a {Yoshida:2000bd}
+%
+%Substructure in DM halos / halo evaporation:
+%
+%Subhalo evaporation: Gnedin \& Ostriker 2001 sigma/m < 0.3
+%Hogan \& Dalconton 2000: substructure and central density cusps
+%Colin et al. 2002: structure and substructure of Milky Way-sized halos, velocity dependent cross-section, found catastrophic formation of cusps
+%Yoshida et al 2000a {Yoshida:2000bd}
+%
+%growth of SMBH:
+%
+%Hennawi \& Ostriker 2002 sigma/m $\sim$0.02 (need to investigate this further
+%
+%Merging Galaxy Cluster
+%Merging Cluster: Randall et al 2008 sigma/m < 0.7--1.25
+%
+%By comparing DM halo shapes and the substructure there in \citet{Moore:2000ee} found that simulations with $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\sim 10$\,cm$^2$\,g$^{-1}$ resulted in halos with singular isothermal density profiles which ``is inconsistent with galactic rotation curves''\footnote{\citet{Moore:2000ee} don't actually define the $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$ they use in their model. Since they treat SIDM as a non-radiative gas I have estimated the cross-section by comparing the scattering depth of such a gas with that of SIDM with a given cross-section \citep[see for example][]{Markevitch:2004dl}}.
+%Thus \citet{Moore:2000ee} effectively placed a constraint of $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 10$\,cm$^2$\,g$^{-1}$.
+%
+%Repeat similarly for other constraints... (perhaps too much detail though) and I could just summarize the methods that provide the tightest constraints.
+%
+%See the summary by \citet{Peter:2012vi} on page 106.
 
-Halo Shapes: Miralda-Escudé 2002
 
-Cluster density core: Yoshidal et al. 2000
 
-Dwarfs density cores: Dave et al. 2001
 
-Subhalo evaporation: Gnedin \& Ostriker 2001
 
-Merging Cluster: Randall et al 2008
 
-Growth of SMBH: Hennawi \& Ostriker 2002
 
-Moore et al. 2000 \citep{Moore:2000ee}
+
 
 Problems with each of those (see presentation slides)
 
@@ -147,7 +188,7 @@ At $t_{\rm 6}$ the galaxy cluster merger is classed as \emph{dissociative merger
 \label{fig:MergerTimeSeries}}
 \end{figure}  
 
-\subsection{Constraining Self-Interacting Dark Matter with Merging Galaxy Clusters}
+\subsection{Constraining Self-Interacting Dark Matter with Merging Galaxy Clusters}\label{section:DMconstraintWithMergers}
 
 Think about moving some of the Figure \ref{fig:4ConstraintMethods} caption to the body text to make for a more concise caption.
 
