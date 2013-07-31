@@ -59,9 +59,7 @@ It is entirely possible that DM interacts with itself via some new dark gauge bo
 Such DM has been termed self-interacting dark matter (SIDM).
 
 %--------------------------------------------------------------------
-\section{Motivation for Studying Self-interacting Dark Matter}
-
-
+\section{Motivation for Studying Self-interacting Dark Matter and Existing Constraints}
 
 \subsection{Early Motivation}
 
@@ -83,12 +81,21 @@ The Y2K-era constraints fall into five categories:
 Some finding that SIDM created central density cores (i.e. flattened density profile) that were too large and others finding that SIDM with large cross-sections actually exacerbates the formation of cusps (i.e. sharply peaked density profile).
 2) Those that compare the shape (i.e. spherical or elliptical) of simulated SIDM halos with the shapes of observed DM halos \citep{Yoshida:2000bd, Dave:2001hh, MiraldaEscude:2002ev}.
 They found that as the SIDM cross-section is increase DM halos become more spherically symmetric and at a certain point elliptical halos, such as those observed in some galaxy clusters, can no longer be formed.
-3)Those that compared the amount of substructure in simulated SIDM halos with the amount observed in galaxies and galaxy clusters \citep{Hogan:2000ih, Yoshida:2000bd, Colin:2002ku}.
+3)Those that compared the amount of substructure in simulated SIDM halos with the amount observed in galaxies and galaxy clusters \citep{Hogan:2000ih, Yoshida:2000bd, Gnedin:2001gd, Colin:2002ku}.
 As the SIDM cross-section increases subhalos begin to evaporate in their parent DM halo.
 4) Those that estimated the formation of super massive black holes (SMBH) as a function of varying SIDM cross-section \citep{Hennawi:2002kv}.
 As the SIDM cross-section is increased the initial seeds of SMBH's can form earlier and more efficiently, at some point the expected number and mass of SMBH's exceeds the observed number and mass.
 5) Those that compared and contrasted the observed behavior of DM with collisionless galaxies and collisional gas during the merging process of two galaxy clusters \citep{Markevitch:2004dl}.
 This method will be the focus of this dissertation and is discussed in great detail in \S\ref{section:DMconstraintWithMergers}.
+
+Of these early works four constrained the velocity independent $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$ to such a degree that it became astrophysically uninteresting.
+\citet{Gnedin:2001gd} obtained a constraint of $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 0.3$\,cm$^2$\,g$^{-1}$ with their study of subhalo evaporation in galaxy clusters.
+\citet{Yoshida:2000gn} and \citet{Meneghetti:2001en} obtained a constraint of $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 0.1$\,cm$^2$\,g$^{-1}$ with their study of the central densities of galaxy cluster.
+Finally \citet{MiraldaEscude:2002ev} obtained tightest constraint, $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 0.02$\,cm$^2$\,g$^{-1}$, with their study of galaxy cluster halo shapes.
+However recent SIDM simulations \citep{Peter:2012vi, Rocha:2012tr} have cast serious doubts on each of these previous constraints.
+However in recent SIDM simulations\citet{Rocha:2012tr} find that the previous subhalo evaporation and central density constraints are likely overestimated, and \citet{Peter:2012vi} points out several weaknesses of the \citet{MiraldaEscude:2002ev} work as well as presents contradictory results.
+In summary \citet{Peter:2012vi} and \citet{Rocha:2012tr} find that the previous constraints need to be loosened to $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 1.0$\,cm$^2$\,g$^{-1}$.
+As will be discussed in \S\ref{section:RecentMotivation}  $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$ between $\sim$0.3--1.0\,cm$^2$\,g$^{-1}$ has potentially interesting and desirable astrophysical implications.
 
 %Central density profile (i.e. cores in halo):
 %
@@ -128,33 +135,78 @@ This method will be the focus of this dissertation and is discussed in great det
 %
 %See the summary by \citet{Peter:2012vi} on page 106.
 
+\subsection{Recent Motivation}\label{section:RecentMotivation}
 
+After the burst of Y2K-era work, the field of SIDM essentially died, with only a few new constraints trickling in \citep{Randall:2008hs, Dawson:2012dl, Merten:2011gu}.
+However, the field has recently entered a renaissance with extensive theoretical work {ArkaniHamed:2009gk, Feng:2010kh, Tulin:2012jt, Tulin:2013eo, Ackerman:2009ia, Pospelov:2008di} and simulation work \citep{Peter:2012vi, Rocha:2012tr, Vogelsberger:2012dy, Vogelsberger:2013bb, Zavala:2013iq}.
+This renaissance can largely be attributed to three apparent conflicts between astrophysical observations and $\Lambda$CDM:
 
+% Copied from our NSF proposal
+{\it (i)} SIDM would explain the dynamics of dwarf spheroidal
+galaxies (dSphs) around the Milky Way.
+%Figure~\ref{fig-boylankolchin} from \citet{BoylanKolchin12}
+%illustrates the problem.  
+In $\Lambda$CDM simulations of Milky Way-mass galaxies, each realization has
+of order ten subhalos which are denser than any known Milky Way
+dSph \citep{BoylanKolchin:2012id}.  Moreover, stellar kinematic data from
+the best studied dSph indicate that these galaxies have \emph{cored}
+density profiles, in contrast to $\Lambda$CDM predictions that
+these dSph should have cuspy DM density
+profiles \citep{Navarro:2004hi, Walker:2011eg, Wolf:2012vc}.
+%The density is manifest as a high circular
+%velocity $V_{\rm circ}$ even at small radii; the total mass is related
+%to $V_{\rm circ}$ at large radii so these are also the more massive
+%subhalos, excluding the Magellanic Clouds and their analogs.
+%These dSphs are predicted by $\Lambda$CDM, but apparently don't exist; if
+%they had formed stars we would have detected them, and scenarios in
+%which they {\it didn't} form stars but the lower-mass dSphs {\it did}
+%are implausible.  
+SIDM would reduce the central density of and create cores in the
+subhalos, so that the known luminous dSph would live in the most
+massive of the Milky Way's subhalos \citep{Rocha:2012tr}.  Otherwise, one
+must argue that many of the densest and most massive subhalos failed
+to form stars while lower-mass subhalos did form stars and host the
+observed dSph.
+%the more massive ones are accounted for by observations 
+%Note that $\Lambda$CDM also predicts too many
+%subhalos, but at lower masses and densities incompleteness and
+%failure to form stars are plausible arguments.  
+It is the tension between the data and the higher-density simulated
+subhalos which most strongly argues for SIDM.  A recent analysis of
+SIDM simulations by \citet{Rocha:2012tr} suggests that a SIDM cross
+section $\sigma_{\rm SIDM} \approx 0.1-0.5$\,cm$^2$\,g$^{-1}$ would lead to
+the correct central density and core size for the Milky Way dSph.
 
+{\it (ii)} Analyses of stellar kinematics in low surface
+brightness (LSB) and dwarf galaxies continue to suggest that these
+galaxies have central densities and density profiles more consistent
+with the presence of dark-matter cores than the $\Lambda$CDM
+prediction of cusps \citep{Simon:2005fu, deNaray:2008iz, Oh:2011jd}.  In the same
+analysis that found that $\sigma_{\rm SIDM} \approx 0.1-0.5$\,cm$^2$\,g$^{-1}$ would produce DM cores of the right size and
+density for the Milky Way dSph, it was found that this range of cross
+section also yields appropriate density profiles for LSB and dwarf
+galaxies \citep{Rocha:2012tr}.
 
+{\it (iii)} Recent observations of the ellipticity of the surface
+densities \citep{Richard:2010bo} and the central density
+profiles \citep{Newman:2012wt, Newman:2012tk} of massive galaxy clusters
+suggest that a cross section of $\sigma_{\rm SIDM} \approx 1$\,cm$^2$\,g$^{-1}$ is too large \citep{Peter:2012vi, Rocha:2012tr}.
+However, cross sections in the range $\sigma_{\rm SIDM} \approx 0.1-0.5$\,cm$^2$\,g$^{-1}$ may be consistent with these observations.  In
+particular, after carefully modeling out the baryonic content of a set
+of seven galaxy clusters \citet{Newman:2012tk} find that the central
+(within 50 kpc) DM density profile is more consistent with a core or
+shallow cusp, characteristic of SIDM, than with a $\Lambda$CDM steep
+cusp.
 
-
-
-
-Problems with each of those (see presentation slides)
-
-Recent revisions to these constraints \citep{Peter:2012vi}
-
-\subsection{Recent Motivation}
-
-Cusp-core problem
-
-	rachael kuza de neray
-	drew newman
-	counter example: Tomasso's student, Louie Strigari (see KITP presentation)
-
-Too-big to fail
-
-\subsection{SIDM as a Solution}
-
-How SIMD may resolve these problems
-
-Narrow window of parameter space to probe \citep{Rocha:2012tr}
+These observations suggest that SIDM is astrophysically interesting
+(in the sense that it produces measurable changes to dark-matter
+halos) if its cross section is velocity independent and in the range $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\sim$0.1-0.5\,cm$^2$\,g$^{-1}$.  A detection of
+$\sigma_{\rm SIDM}$ in this range would explain a variety of astrophysical
+observations and open a new window to hidden-sector extensions to the
+standard model of physics.  Conversely, a nondetection of SIDM by
+experiments sensitive to this range would render the SIDM hypothesis
+astrophysically uninteresting.
+Given the modified existing constraints of $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\lesssim 1.0$\,cm$^2$\,g$^{-1}$ this is a very narrow window of parameter space to explore.
 
 %--------------------------------------------------------------------
 \section{Probes of SIDM}
@@ -206,6 +258,8 @@ Thus the mass-to-light ratio of each subcluster can be compared with the mass-to
 Thus depending on whether a significant offset between the galaxies and DM is or is not observed, then respectively a lower limit or upper limit can be placed on $\sigma_{\rm SIDM}$.
 \label{fig:4ConstraintMethods}}
 \end{figure}
+
+\subsection{Advantages of Merging Clusters Over other Probes of Self-interacting Dark Matter}
 
 \section{Work Presented in this Dissertation}
 Briefly summarize each chapter.
