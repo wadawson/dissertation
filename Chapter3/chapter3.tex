@@ -47,8 +47,9 @@ It has recently been applied to several dissociative mergers, including the Bull
 N-body simulations of observed dissociative mergers have been limited to the Bullet Cluster (1ES 0657-558) and have come in two variants: hydrodynamic \citep{Springel:2007bg, Milosavljevic:2007hf, Mastropietro:2008fs}, and self interacting dark matter (SIDM) plus collisionless galaxy particles \citep{Randall:2008hs}.
 
 \begin{figure}
-\includegraphics{Chapter3/MergerDiagram_revC.png}
-\caption{The generic two-halo merger configuration assumed in this work.  Observable parameters are shown in dark blue, and include the mass of each halo ($M_i$), the  projected separation ($d_{\rm proj}$), and the line of sight (LOS) velocity components ($v_i$) as determined from the halo redshifts. 
+\centering
+\includegraphics[width=4in]{Chapter3/MergerDiagram_revC.png}
+\caption[Parameters involved in a generic two-halo merger configuration.]{The generic two-halo merger configuration assumed in this work.  Observable parameters are shown in dark blue, and include the mass of each halo ($M_i$), the  projected separation ($d_{\rm proj}$), and the line of sight (LOS) velocity components ($v_i$) as determined from the halo redshifts. 
 The generally unknown parameters of the mergers are shown in light blue, and include the angle of the merger axis with respect to the plane of the sky ($\alpha$), and the three-dimensional separation ($d_{\rm 3D}$) and velocity components ($v_{\rm 3D_i}$).
 Note that while just the outgoing scenario is shown in this figure, the method also considers the incoming scenario.
 \label{fig_mergerdiagram}}
@@ -237,8 +238,9 @@ Note that the better agreement between the velocity estimates than between the T
 The results of this comparative study essentially validate many of the simplifying assumptions of the model (conservation of energy, and ignoring the affects of dynamical friction, tidal stripping of dark matter and gas during the collision).
 
 \begin{figure}
+\centering
 \includegraphics{Chapter3/SFcomparison.png}
-\caption{
+\caption[Comparison of the analytic model results with hydrodynamic simulation results of the Bullet Cluster.]{
 Comparison of the model results (blue boxes) with the hydrodynamic simulation results of \citet[black circles;][]{Springel:2007bg} for the Bullet Cluster.  
 The top figure is a comparison of the velocity of the ``bullet'' relative to the ``main'' subcluster, with the subhalo separation (i.e. the three-dimensional separation of the ``main'' and ``bullet'' subclusters) as the independent variable.  
 The bottom figure is a comparison of the time-since-observed state (TSO), where the ``observed'' state (dashed line) is defined by \citet{Springel:2007bg} as the time step in their simulation when the gas properties most closely match the observed Bullet Cluster gas properties.
@@ -333,8 +335,9 @@ Parameter estimates converge to better than a fraction of a percent with only 20
 I run a factor of a hundred more since it was computationally inexpensive and it provides a data sample to which I can apply any number of conceivable posterior PDF's and still maintain sub-percent statistical accuracy.
 
 \begin{figure}
-\includegraphics[scale=1.15]{Chapter3/peakvalues_revB.png}
-\caption{
+\centering
+\includegraphics[width=5in]{Chapter3/peakvalues_revB.png}
+\caption[The posterior of the Bullet Cluster's time-since-collision and three-dimensional collision velocity parameters.]{
 The posterior of the Bullet Cluster's time-since-collision $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters is shown in grayscale with dark and light blue contours representing 68\% and 95\% confidence, respectively.
 The green-scale triangles are from a subsample of the Monte Carlo population, which jointly satisfies the requirement of being drawn from $\pm 0.01 \sigma$ of the mean of each of the input parameters, i.e. the ``most likely'' values for the input parameters. 
 Despite representing the most probable input parameter values there is considerable spread in the inferred output parameters, with the subsample clearly tracing the ridge of the distribution. 
@@ -371,8 +374,9 @@ In \S\ref{sec_suggestions} I discuss how the results of this method can be used 
 
 
 \begin{deluxetable}{lc|ccc|ccc}
+\rotate
 \tablewidth{0pt}
-%\tabletypesize{\scriptsize}
+\tabletypesize{\footnotesize}
 \tablecaption{Bullet Cluster parameter estimates\label{bulletresultparam}}
 \tablehead{																							
 Parameter     & Units  & 
@@ -446,8 +450,9 @@ I chose a sigmoid function over a simple step function since the temperature boo
 This prior is coupled with the previously discussed $TSC$ prior (Equation \ref{eq_timeprior}).
 
 \begin{figure}
-\includegraphics[scale=1.15]{Chapter3/bullet_VvsTSC_addedprior.png}
-\caption{
+\centering
+\includegraphics[width=5in]{Chapter3/bullet_VvsTSC_addedprior.png}
+\caption[The posterior of the Bullet Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters after application of an additional temporal prior based on X-ray observations of the Bullet Cluster.]{
 The posterior of the Bullet Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters after application of an additional temporal prior based on X-ray observations of the Bullet Cluster (grayscale).  
 Dark and light blue contours representing 68\% and 95\% confidence, respectively.
 The added temporal prior significantly improves the constraint on the merger parameters (compare with Figure \ref{fig_bcTSC}).
@@ -491,19 +496,22 @@ The projected subcluster separation distribution, Figure \ref{musket_projinput},
 For each Monte Carlo realization individual values are drawn randomly from each of these distributions. 
 
 \begin{figure}
-\includegraphics{Chapter3/MusketBall_mass_input_revB.png}
+\centering
+\includegraphics[width=4in]{Chapter3/MusketBall_mass_input_revB.png}
 \caption{Weak lensing mass PDF's of the Musket Ball subclusters \citep{Dawson:2012dl}. 
 \label{musket_massinput}}
 \end{figure}
 
 \begin{figure}
-\includegraphics{Chapter3/MusketBall_velocity_input_revB.png}
+\centering
+\includegraphics[width=4in]{Chapter3/MusketBall_velocity_input_revB.png}
 \caption{Relative radial subcluster velocity PDF's inferred from spectroscopic redshifts the Musket Ball Cluster galaxies  \citep{Dawson:2012dl}. 
 \label{musket_vinput}}
 \end{figure}
 
 \begin{figure}
-\includegraphics{Chapter3/MusketBall_projsep_input_revB.png}
+\centering
+\includegraphics[width=4in]{Chapter3/MusketBall_projsep_input_revB.png}
 \caption{Projected separation PDF of the Musket Ball subcluster galaxy density centroids \citep{Dawson:2012dl}. 
 \label{musket_projinput}}
 \end{figure}
@@ -522,8 +530,9 @@ Without running SIDM simulations it is difficult to know at what $TSC_0$ the off
 The complete Musket Ball Cluster parameter estimates are summarized in Table \ref{musketballresultparam} and plotted in Appendix \ref{sec_mbcresults}.
 
 \begin{figure}
-\includegraphics{Chapter3/MusketTSCwithBullet.png}
-\caption{
+\centering
+\includegraphics[width=5in]{Chapter3/MusketTSCwithBullet.png}
+\caption[The posterior of the Musket Ball Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters.]{
 The posterior of the Musket Ball Cluster's $TSC_0$ and $v_{\rm 3D}(t_{\rm col})$ parameters is shown in grayscale with dark and light blue contours representing 68\% and 95\% confidence, respectively.
 For comparison the gray dashed contours are the Bullet Cluster's 68\% and 95\% confidence intervals copied from Figure \ref{fig_bcTSC_added}.
 The Musket Ball Cluster occupies a much different region of merger phase than the Bullet Cluster, having both a slower relative collision velocity and being observed in a much later stage of merger.
@@ -531,8 +540,9 @@ The Musket Ball Cluster occupies a much different region of merger phase than th
 \end{figure}
 
 \begin{figure}
-\includegraphics{Chapter3/TSC0subtraction.png}
-\caption{
+\centering
+\includegraphics[width=5in]{Chapter3/TSC0subtraction.png}
+\caption[Comparison of the Musket Ball Cluster's and Bullet Cluster's time-since-collision.]{
 The histogram presents the $TSC_{\rm 0_{Musket}}-TSC_{\rm 0_{Bullet}}$ distribution from random draws of the respective marginalized $TSC_0$ distributions; showing that the Musket Ball Cluster merger is at least $0.8^{+1.2}_{-0.4}$\,Gyr ($3.4^{+3.8}_{-1.4}$ times) further progressed than the Bullet Cluster merger.
 The black dashed line is the biweight-statistic location \citep{Beers:1982dp}, the 
 dark and light blue regions denote the bias-corrected  68\% and 95\% lower and upper confidence limits, respectively.
