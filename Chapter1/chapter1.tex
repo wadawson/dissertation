@@ -73,7 +73,7 @@ While the missing satellites problem is not resolved it is not nearly as signifi
 On a final note, recent simulations \citep{Rocha:2012tr} show that for $\sigma_{\rm SIDM}/m_{\rm DM} \sim 1$\,cm$^2$\,g$^{-1}$ the effects of DM halo evaporation are less than originally estimated by \citet{Spergel:2000cb}'s analytic estimates, especially in the outer radii of parent DM halos where the majority of satellites reside.
 %This is in stark contrast to the expectations of warm DM (WDM; $\sim$keV-mass), which was also originally considered as a possible solution of the missing satellites problem. 
 
-\subsection{Early SIDM Constraints}
+\subsection{Early SIDM Constraints}\label{section:EarlySIDMconstraints}
 
 Following the revival of SIMD by \citet{Spergel:2000cb} a number of researchers began to constrain $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$ through several independent observations, in what \citet{Peter:2012vi} has termed the ``Y2K-era constraints''.
 The Y2K-era constraints fall into five categories:
@@ -167,18 +167,42 @@ Given the modified existing constraints of $\sigma_{\rm SIDM}m_{\rm DM}^{-1}\les
 %--------------------------------------------------------------------
 \section{Probes of SIDM}
 
-The only way to investigate whether DM self-interacts is through astrophysical observations.
+While laboratory experiments have placed tight constraints on the baryon-dark matter interaction cross-section ($~21$ orders of magnitude tighter the the current $\sigma_{\rm SIDM}$ constraints), these experiments are insensitive to dark matter-dark matter interactions.
+The only way to investigate whether DM self-interacts is through astrophysical observations (\S\ref{section:EarlySIDMconstraints} summarized the various astrophysical methods for constraining SIDM). 
 
-Baryon degeneracy and why merging cluster may be the best probe
+As discussed in the previous section the greatest tensions with $\Lambda$CDM come from studies of the central densities of DM halos.
+This is true over a range of halo scales from LSBs to galaxy clusters.
+While such probes suggest that dark matter may self-scatter, each suffers from a \emph{baryonic degeneracy}, where the observations might be explained by various baryonic processes/assumptions (e.g. AGN or supernove feedback, or the assumed initial mass function).
+In fact the important scales of these observations often coincide with baryonic scales \citep[e.g. the core size in clusters is approximately the size of the brightest cluster galaxy;][]{Newman:2012wt, Newman:2012tk}.
+What is needed is a probe of self-interacting dark matter (SIDM) where the expected effect is independent of these baryonic degeneracies.
+Merging galaxy cluster are such a probe. 
 
 %--------------------------------------------------------------------
 \section{Merging Galaxy Clusters as Probes of Self-Interacting Dark Matter}
 
-Section text
-
 \subsection{Merging Galaxy Clusters}\label{Section:MergingClusters}
 
-Think about moving some of the Figure \ref{fig:4ConstraintMethods} caption to the body text to make for a more concise caption.
+According to the generally accepted model of structure formation in the Universe small structures (e.g. galaxies) form first then through gravitational attraction begin to merge and form larger structures (e.g. galaxy clusters).
+This process constantly repeats throughout the history of the universe and is known as the hierarchical structure formation model.
+When small structures merge with larger structures (e.g. dSphs merging with a galaxy or a galaxies merging with a galaxy cluster) the smaller structures are often dramatically altered (having the stars, gas and DM stripped from them), yet the larger structures remain largely unaffected and there is little net change in the system.
+Occasionally structures of nearly the same size (e.g. two galaxies or two galaxy clusters) will merge.
+In these cases the system is often dramatically disturbed and will remain in such a disturbed state until dissipative processes (e.g. dynamic friction, and thermal radiation) cause the two structures to combine and the system to enter a relaxed state.
+It is the disturbed phase of merging galaxy clusters that provides the best means of testing whether DM self-interacts.
+
+Merging galaxy clusters are the most energetic example of hierarchical structure formation.
+Figure \ref{fig:MergerTimeSeries} shows the generic time-series picture of a merging galaxy cluster leading to a \textit{dissociative merger}, a highly disturbed system where the intracluster gas has become dissociated from the galaxies and DM.
+In the case of a dissociative merger two subclusters\footnote{While they are both technically galaxy clusters they are termed subclusters to distinguish them from the galaxy cluster system they will eventually form when the merger is complete.} begin with some physical separation, often significantly larger than the size of the individual subclusters.
+The mass of each subcluster is composed of $\sim$2\% galaxies, $\sim$15\% intracluster gas, and $\sim$85\% DM.
+Through gravitational attraction the two subcluster accelerate towards one another with the relative velocity of each approaching free-fall velocity.
+Eventually the two subclusters collide\footnote{The time of collision is defined to be the time of the first pericentric passage ($t_{\rm 4}$ of Figure \ref{fig:MergerTimeSeries}).}
+Because there is so much space between the galaxies, a strong interaction between any two galaxies is extremely unlikely and they can be treated as effectively collisionless particles.
+And since the galaxies of each subcluster have built up momentum they will pass through and begin to separate (this time on the opposite side; see $t_{\rm 5}$ of Figure \ref{fig:MergerTimeSeries}).
+The gas however is more evenly distributed, thus an interaction between the gas particles of each subcluster is more likely.
+These interactions will convert some of the infall kinetic energy into thermal energy (i.e. the gas of each subcluster will experience ram pressure), the net effect being that the gas halo of each subcluster is slowed with respect to the galaxies and much of it becomes dissociated remains centered between the galaxies of the two subclusters (`C' in $t_{\rm 6}$ of Figure \ref{fig:MergerTimeSeries}).
+Given that $\sigma_{\rm SIDM}m_{\rm DM}^{-1} \lesssim 1.0$\,cm$^2$\,g$^{-1}$, if the DM interacts it will be significantly less than the gas and behave more like the effectively collisionless galaxies.
+Thus the DM will predominately be located with the galaxies. 
+It is during this disturbed phase of the merger ($t_{\rm 6}$ of Figure \ref{fig:MergerTimeSeries}) that it is termed dissociative and can provide the best constraints on  $\sigma_{\rm SIDM}m_{\rm DM}^{-1}$.  
+
 
 \begin{figure}
 \centering
@@ -187,12 +211,12 @@ Think about moving some of the Figure \ref{fig:4ConstraintMethods} caption to th
 Two galaxy clusters (N \& S), each consisting of overlapping halos of DM and gas as well as sparsely populated galaxies, begin with an initial physical separation ($t_{\rm 1}$).
 Due to the mass of each galaxy cluster they experience a gravitational attraction and accelerate towards one another until eventually they collide ($t_{\rm 1}$--$t_{\rm 4}$).
 By convention time $t_{\rm 4}$ is defined as the ``collision''.
-Because there is so much space between the galaxies, a strong interaction between any two galaxies is extremely unlikely and they can be treated as effectively collisionless particles.
-And since the galaxies of each subcluster have built up momentum they will pass through and begin to separate (this time on the opposite side), $t_{\rm 5}$.
-The gas however is more evenly distributed, thus an interaction between gas particles of each subcluster is more likely.
-This interactions will convert some of the infall kinetic energy into thermal energy (i.e. the gas of each subcluster will experience ram pressure), the net effect being that the gas halo of each subcluster is slowed with respect to the galaxies and much of it becomes dissociated remains centered between the galaxies of the two subclusters ($t_{\rm 6}$ C).
+The momentum of the effectively collisionless galaxies will cause them to pass through the impact, $t_{\rm 5}$, only slowed slightly by dynamic friction. 
+The collisional gas will strongly self-interact, slowing significantly, and remain in the center ($t_{\rm 6}$ C).
+Much like the galaxies the DM behaves in a nearly collisionless manner and appears largely coincident with the galaxies.
 Much like the galaxies the DM behaves in a nearly collisionless manner and appears largely coincident with the galaxies.
 At $t_{\rm 6}$ the galaxy cluster merger is classed as \emph{dissociative merger}.
+At later times dissipative processes (e.g. dynamic friction, and thermal radiation) will have caused the two structures to combine into a single relaxed galaxy cluster.
 \label{fig:MergerTimeSeries}}
 \end{figure}  
 
