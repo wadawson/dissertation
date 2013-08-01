@@ -65,7 +65,7 @@ m_{ij} = 2\pi \int_{i\,\delta r}^{(i+1)\delta r} \int_{j\,\delta\theta}^{(j+1)\d
 \end{displaymath}
 For an NFW halo this becomes
 \begin{displaymath}
-m_{ij} = 2\pi\rho_s r_s^3 \left[\cos(j\,\delta\theta)-\cos\left((j+1)\delta\theta\right) \right] \left[ \left( 1+\frac{(i+1)\delta r}{r_s}\right)^{-1} - \left(1+\frac{i\,\delta r}{r_s}\right)^{-1} + \ln\left[\frac{(i+1)\delta r+r_s}{i\,\delta r+r_s}\right]\right].
+m_{ij} = 2\pi\rho_s r_s^3 \left[\cos(j\,\delta\theta)-\cos\left((j+1)\delta\theta\right) \right]\left[ \left( 1+\frac{(i+1)\delta r}{r_s}\right)^{-1} - \left(1+\frac{i\,\delta r}{r_s}\right)^{-1} + \ln\left[\frac{(i+1)\delta r+r_s}{i\,\delta r+r_s}\right]\right].
 \end{displaymath}
 
 \clearpage
@@ -150,8 +150,9 @@ The \emph{Geometry} parameters consist of the randomly drawn $\alpha$, and calcu
 The calculated \emph{Velocity \& Time} parameters consist of:  $TSC_0$, $TSC_1$, and $T$.
 
 \begin{figure}[b]
-\includegraphics{Appendix1/ResultsArray_RevB.png}
-\caption{
+\centering
+\includegraphics[width=6in]{Appendix1/ResultsArray_RevB.png}
+\caption[Dynamics results array configuration.]{
 For ease of display the results array is divided into six subplots, Figures \ref{fig_bc_inin}--\ref{fig_bc_geovt}.
 The Input parameters consist of: M$_{200_1}$, M$_{200_2}$, $z_1$, $z_2$,	and $d_{\rm proj}$.
 The calculated Geometry parameters consist of: $\alpha$, $d_{\rm 3D}$, and $d_{\rm max}$.
@@ -161,43 +162,49 @@ The calculated Velocity \& Time parameters consist of:  $v_{\rm 3D}(t_{\rm obs})
 \clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_input-input.png}
-\caption{Bullet Cluster marginalized \emph{Input vs.\,Input} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}. Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}. 
+\centering
+\includegraphics[width=6in]{Appendix1/bullet_shockprior_input-input.png}
+\caption[Bullet Cluster marginalized \emph{Input vs.\,Input} parameters result plots.]{Bullet Cluster marginalized \emph{Input vs.\,Input} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}. Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}. 
 \label{fig_bc_inin}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_input-geometry.png}
-\caption{Bullet Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[width=6in]{Appendix1/bullet_shockprior_input-geometry.png}
+\caption[Bullet Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots.]{Bullet Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_ingeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_input-vt.png}
-\caption{Bullet Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[width=6in]{Appendix1/bullet_shockprior_input-vt.png}
+\caption[Bullet Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots.]{Bullet Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_invt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_geometry-geometry.png}
-\caption{Bullet Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
+\centering
+\includegraphics[width=6in]{Appendix1/bullet_shockprior_geometry-geometry.png}
+\caption[Bullet Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots.]{Bullet Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{fig_bc_geogeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_geometry-vt.png}
-\caption{Bullet Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[height=7in]{Appendix1/bullet_shockprior_geometry-vt.png}
+\caption[Bullet Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots.]{Bullet Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{fig_bc_geovt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/bullet_shockprior_vt-vt.png}
-\caption{Bullet Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
+\centering
+\includegraphics[width=6in]{Appendix1/bullet_shockprior_vt-vt.png}
+\caption[Bullet Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots.]{Bullet Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots, for the case including the added temporal prior of \S\ref{sec_addedprior}.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{fig_bc_vtvt}}
 \end{figure}
 \clearpage
@@ -212,42 +219,48 @@ The calculated \emph{Geometry} parameters consist of: $\alpha$, $d_{\rm 3D}$, an
 The calculated Velocity \& Time parameters consist of:  $v_{\rm 3D}(t_{\rm obs})$, $v_{\rm 3D}(t_{\rm col})$, $TSC_0$, $TSC_1$, and $T$.
 
 \begin{figure}[b]
-\includegraphics{Appendix1/run_v11_revB_input-input.png}
-\caption{Musket Ball Cluster marginalized \emph{Input vs.\,Input} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
+\centering
+\includegraphics[width=6in]{Appendix1/run_v11_revB_input-input.png}
+\caption[Musket Ball Cluster marginalized \emph{Input vs.\,Input} parameters result plots.]{Musket Ball Cluster marginalized \emph{Input vs.\,Input} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_inin}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/run_v11_revB_input-geometry.png}
-\caption{Musket Ball Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[width=6in]{Appendix1/run_v11_revB_input-geometry.png}
+\caption[Musket Ball Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots.]{Musket Ball Cluster marginalized \emph{Input vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_ingeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/run_v11_revB_input-vt.png}
-\caption{Musket Ball Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[width=6in]{Appendix1/run_v11_revB_input-vt.png}
+\caption[Musket Ball Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots.]{Musket Ball Cluster marginalized \emph{Input vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_invt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/run_v11_revB_geometry-geometry.png}
-\caption{Musket Ball Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
+\centering
+\includegraphics[width=6in]{Appendix1/run_v11_revB_geometry-geometry.png}
+\caption[Musket Ball Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots.]{Musket Ball Cluster marginalized \emph{Geometry vs.\,Geometry} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_geogeo}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/run_v11_revB_geometry-vt.png}
-\caption{Musket Ball Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
+\centering
+\includegraphics[height=7in]{Appendix1/run_v11_revB_geometry-vt.png}
+\caption[Musket Ball Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots.]{Musket Ball Cluster marginalized \emph{Geometry vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.
 \label{musket_geovt}}
 \end{figure}
 %\clearpage
 
 \begin{figure}
-\includegraphics{Appendix1/run_v11_revB_vt-vt.png}
-\caption{Musket Ball Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
+\centering
+\includegraphics[width=6in]{Appendix1/run_v11_revB_vt-vt.png}
+\caption[Musket Ball Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots.]{Musket Ball Cluster marginalized \emph{Velocity \& Time vs.\,Velocity \& Time} parameters result plots.  Dark and light blue colors correspond to 68\% and 95\% confidence intervals, respectively.  The black dashed line is the biweight-statistic location \citep{Beers:1982dp}.
 \label{musket_vtvt}}
 \end{figure}
