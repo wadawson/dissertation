@@ -221,7 +221,9 @@ At later times dissipative processes (e.g. dynamic friction, and thermal radiati
 
 \subsection{Constraining Self-Interacting Dark Matter with Merging Galaxy Clusters}\label{section:DMconstraintWithMergers}
 
-Think about moving some of the Figure \ref{fig:4ConstraintMethods} caption to the body text to make for a more concise caption.
+\citet{Markevitch:2004dl} originally introduced (and applied to the Bullet Cluster) three methods for constraining $\sigma_{\rm SIDM}$ with observations of dissociative mergers.
+This was followed by \citet{Randall:2008hs} who introduced (and also applied to the Bullet Cluster) an additional method of constraint by combining observations and simulations of dissociative mergers.
+These four methods are shown in Figure \ref{fig:4ConstraintMethods} and are discussed below.
 
 \begin{figure}
 \centering
@@ -232,13 +234,89 @@ Think about moving some of the Figure \ref{fig:4ConstraintMethods} caption to th
 Thus if the observed velocity ($v_{\rm obs}$) is found to be consistent with the free-fall velocity ($v_{\rm free-fall}$) an upper limit can be placed on $\sigma_{\rm SIDM}$.
 If however $v_{\rm obs}$ is significantly less than $v_{\rm free-fall}$, an upper limit could be potentially placed on $\sigma_{\rm SIDM}$.
 \emph{Lower Left:} If DM self-interacts during the merger, then some fraction of the DM particles will scatter and become unbound from each subcluster.
-Thus the mass-to-light ratio of each subcluster can be compared with the mass-to-light ratio of similar non-merging clusters, and depending on where the mass-to-light ratio of the merger is the same or less than the non-merging clusters' mass-to-light ratio, then respectively an upper limit or lower limit can be placed on $\sigma_{\rm SIDM}$.
+Thus the mass-to-light ratio of each subcluster can be compared with the mass-to-light ratio of similar non-merging clusters, and depending on whether the mass-to-light ratio of the merger is the same or less than the non-merging clusters' mass-to-light ratio, then respectively an upper limit or lower limit can be placed on $\sigma_{\rm SIDM}$.
 \emph{Lower Right:} If the DM self-interacts during the merger, then the DM component of each subcluster will experience an additional drag force and will travel at a slower velocity than the respective subcluster galaxies.
 Thus depending on whether a significant offset between the galaxies and DM is or is not observed, then respectively a lower limit or upper limit can be placed on $\sigma_{\rm SIDM}$.
 \label{fig:4ConstraintMethods}}
 \end{figure}
 
+\subsubsection{Dark Matter - Gas Offset}
+The first method that \citet{Markevitch:2004dl} introduced used the fact that in the case of the Bullet Cluster the DM was observed to be significantly offset from the gas.
+According the the generic merger picture discussed in \S \ref{Section:MergingClusters} this is because the collisional gas has a significantly larger scattering depth than the DM and thus is likely to self-interact and become dissociated from the DM.
+Thus \citet{Markevitch:2004dl} setup the following inequality relating the scattering depth of the gas, $\tau_{\rm gas}\approx 1$, to the scattering depth of SIDM, $\tau_{\rm SIDM}=\sigma_{\rm SIDM}m^{-1}_{\rm DM} \Sigma_{\rm DM}$.
+$\Sigma_{\rm DM}$ is the surface mass density of the DM particles.
+\citet{Markevitch:2004dl} assumed that $\Sigma_{\rm DM}$ is approximately the WL measured surface mass density, $\Sigma$, since the majority of a typical cluster's mass is DM.
+
+\begin{displaymath}
+\tau_{\rm gas} \gtrsim \tau_{\rm SIDM}
+\end{displaymath}
+
+\begin{displaymath}
+1 \gtrsim \frac{\sigma_{\rm SIDM}}{m_{\rm DM}} \Sigma_{\rm DM}
+\end{displaymath}
+
+\begin{equation}\label{equation:scatterdepth}
+\frac{\sigma_{\rm SIDM}}{m_{\rm DM}} \lesssim \Sigma_{\rm DM}^{-1}
+\end{equation}
+
+This method has been applied to a number of dissociative mergers \citep{Markevitch:2004dl, Dawson:2012dl, Merten:2011gu}, with constraints ranging from $\sigma_{\rm SIDM}m^{-1}_{\rm DM} <$3-8\,cm$^2$\,g$^{-1}$.
+This method has two notable disadvantages that are apparent from Equation \ref{equation:scatterdepth}: the constraint can only be improved by finding clusters with larger $\Sigma_{\rm DM}$ and that the constraint is directly proportional to the inverse surface mass density.
+Two of the existing constraints \citep{Markevitch:2004dl, Merten:2011gu} come from extremely dense clusters.
+To better the existing $\sigma_{\rm SIDM}m^{-1}_{\rm DM}$ by the necessary order of magnitude would require clusters with surface mass densities an order of magnitude higher than both the Bullet Cluster and Abell 2744.
+Such clusters are highly unlikely to exist, thus this method has little value for future constraints of SIDM.
+ 
+\subsubsection{Velocities of the Subclusters} 
+ 
+\citet{Markevitch:2004dl} noted that the Bullet Cluster merger velocity inferred from the X-ray gas shock feature ``is in good agreement with the expected free-fall velocity''.
+They then argued that if DM self-interacts then each subcluster will decelerate, resulting in a velocity difference between the observed velocity, $v_{\rm obs}$, and the free-fall velocity, $v_{\rm free-fall}$:
+
+\begin{displaymath}
+v_{\rm obs} - v_{\rm free-fall} = \frac{\bar{p}}{m_{\rm DM}}\frac{\sigma_{\rm SIDM}}{m_{\rm DM}} \Sigma_{\rm DM},
+\end{displaymath}
+where $\bar{p}$ is the average momentum lost by the subcluster in each particle collision.
+
+This method has only been applied to the Bullet Cluster \citep{Markevitch:2004dl}, and resulted in a constraint of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} \lesssim$7\,cm$^2$\,g$^{-1}$.
+The predominant reason this method has not been applied to more mergers is that it is very difficult to constrain the three-dimensional velocity of the merger \citep{Dawson:2012ub}, which is necessary to estimate $\bar{p}$.
+Often times the only direct observation of the merger velocity comes from spectroscopic redshifts of the subcluster galaxies, and these only provide information about the line-of-sight velocity component of the merger.
+In the case of the Bullet Cluster however, the X-ray gas has been shocked due to the merger velocity being greater than the sound speed of the gas.
+From this shock \citet{Markevitch:2002iz} were able to estimate the Mach number of the merger, which in tern provided them with an estimate the the three-dimensional merger velocity.
+Most clusters do not have such a well defined shock feature.
+
+While it was originally believed that the three-dimensional merger velocity could be inferred from the X-ray shock feature, \citet{Springel:2007bg} showed that the X-ray shock inferred velocity significantly overestimates the true three-dimensional merger velocity.
+This coupled with the fact that $v_{\rm obs}$ is expected to vary throughout the merger and always be less than $v_{\rm free-fall}$ suggests that the existing constraints from this method should be questioned.
+Further more it seems unlikely that the the constraints will ever improve upon existing SIDM constraints.
+
+\subsubsection{Mass-to-Light Ratio}\label{section:MLR}
+
+\citet{Markevitch:2004dl} noted that if DM self-interacts during the merger, then some fraction of the DM particles will scatter and become unbound from each subcluster.
+Thus the mass-to-light ratio (M/L) of each subcluster can be compared with the M/L of similar non-merging clusters, and depending on whether the M/L of the merger is the same or less than the non-merging clusters' M/L, then respectively an upper limit or lower limit can be placed on $\sigma_{\rm SIDM}$.
+\citet{Clowe:2004eq} claim that the M/L of the Bullet Cluster are in ``good agreement with the universal cluster values from the lensing analyses \citep[e.g.,][]{Mellier:1999dh, Dahle:2002do}.''
+As such this enabled \citet{Markevitch:2004dl} to place a constraint of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} \lesssim$1\,cm$^2$\,g$^{-1}$.
+\citet{Randall:2008hs} were able to improve upon this constraint by simulating the Bullet Cluster with collisionless ``galaxy'' particle and collisional SIDM particles.
+And by varying $\sigma_{\rm SIDM}$ between collisions.
+They found that for $\sigma_{\rm SIDM}m^{-1}_{\rm DM} <$0.7\,cm$^2$\,g$^{-1}$, otherwise the M/L decreased by more than $\sim 23\%$ in their simulation, which they claimed was not reasonable given the measured M/L of the subclusters.
+
+induce star formation?
+
+subject to the mass sheet degeneracy
+
+assumes all cluster at the same redshift have the same M/L
+
+considerable spread in the universal M/L radio \citep{Dahle:2002do}
+
+\subsubsection{Dark Matter - Galaxy Offset}
+
+The method introduced by \citet{Randall:2008hs} is based upon the fact that if DM self-interacts during the merger, then the DM component of each subcluster will experience an additional drag force and will decelerate with respect to the respective subcluster galaxies.
+Initially this velocity difference will result in a DM-galaxy offset that increases with time.
+Thus depending on whether a significant offset between the galaxies and DM is or is not observed, then respectively a lower limit or upper limit can be placed on $\sigma_{\rm SIDM}$.
+
+Using the same galaxy-DM simulations referenced in \S\ref{section:MLR} \citet{Randall:2008hs}
+
 \subsection{Advantages of Merging Clusters Over other Probes of Self-interacting Dark Matter}
 
+\textit{This section is optional}
+
+A disadvantage it that a wide range of observations are necessary to study merging clusters.
+
 \section{Work Presented in this Dissertation}
-Briefly summarize each chapter.
+Briefly summarize each chapter. \textit{This section is optional}
