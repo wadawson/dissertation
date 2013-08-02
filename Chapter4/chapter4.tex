@@ -22,7 +22,11 @@ To estimate the uncertainty on the location I perform this process on each itera
 
 
 \subsection{Galaxies}
+
+\subsubsection{Noise and Systematic Effects}
+
 \subsection{Gas}
+
 \subsection{Weak Lensing}
 
 
@@ -48,6 +52,48 @@ The map created from the joint Subaru/HST catalog looks nearly identical to the 
 \section{Galaxy--Weak Lensing Offset}
 
 Section text
+
+%-----------------------------Figure Start------------------------------
+% Single panel figure
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=6in]{Chapter4/WLgalaxyoffset.png}
+	\caption[Musket Ball Cluster galaxy-weak lensing offset.]{
+		\small{The WL mass signal-to-noise map based on HST measured shapes is shown in color with the galaxy number density isopleths in white.  
+		The inset shows the 68\% (solid black) and 95\% (dashed black) confidence intervals on the South subcluster's WL and galaxy density centroids.  
+		We have detected a 19" offset between the galaxies and the WL mass in the South subcluster that is consistent with the offset expected if DM has a non-zero cross-section just below the current published upper limits.  
+		This is the best astrophysical evidence to date of a non-zero DM cross-section.  While a consistent offset is observed for the North subcluster, the large WL centroid error prohibits measurement of a significant offset for that subcluster.
+		}
+	}
+	\label{fig2}
+\end{figure}
+%-----------------------------Figure End--------------------------------
+
+
+\subsubsection{Noise and Systematic effects}
+
+\textit{Copied from Chandra/HST proposal. Need to edit.}
+
+Several sources of noise and systematic effect could cause such an offset:
+(1) the mass of the northern subcluster pulling off the overall mass
+centroid; (2) the gas mass just to the north doing the same; and (3)
+unrelated structures along the line of sight. We show below that (2)
+is the primary concern and can be solved with Chandra data, and that
+(4) HST data are required to tighten up the statistical uncertainty on
+the size of offset.  Together, these data will enable measurement of
+$\sigma_{\rm DM}m_{\rm DM}^{-1}$.
+
+\textbf{(1)} We model the surface mass density of the north and south subclusters with three NFW halos using masses determined by \citet{Dawson:2012dl}. We recursively estimate the centroid of this model and find an offset $3.4''$ from the true centroid towards the northern subcluster. 
+\textbf{(2)} We then combine estimated surface mass densities of the
+Central and South gas concentrations with the previous DM surface
+densities from step (1) which results in a $7.6''$ centroid offset (dashed red curve of Figure \ref{fig3}).  
+For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$ (light red region of Figure \ref{fig3}). 
+With the proposed Chandra observations we can better constrain the gas mass by approximately a factor of 10 and constrain the distribution of the gas mass so that the resulting uncertainty in the modeled centroid offset is reduced by at least a factor of 2 (dark red region of Figure \ref{fig3}).
+\textbf{(3)} As discussed in \citet{Dawson:2012dl} we find no evidence of significant line of sight structures using our full sample of 654 spectroscopic redshifts (with uniform selection over $0<z<1.0$) as well as photometric redshifts. 
+Based our findings we confidently rule out any line of sight structures with $M_{\rm 200}\gtrsim1\times10^{12} M_\odot$; any undetected structure will have negligible impact on the offset.
+\textbf{(4)} We estimate the noise of the galaxy density and weak lensing centroids by performing the recursive centroid analysis on bootstrap samples of each.
+For the galaxy density centroid errors we take 1000 bootstrap samples of the spectroscopically confirmed cluster galaxies and remaining galaxies with $0.43<z_{\rm phot}<0.63$ (roughly the cluster redshift $\pm\sigma_{z_{\rm phot}}$).
+Similarly we estimate the weak lensing centroid errors by analyzing 1000 bootstrap samples of the lensed background galaxies.
 
 \section{Discussion}
 
