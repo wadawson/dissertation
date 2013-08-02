@@ -290,19 +290,19 @@ Further more it seems unlikely that the the constraints will ever improve upon e
 
 \citet{Markevitch:2004dl} noted that if DM self-interacts during the merger, then some fraction of the DM particles will scatter and become unbound from each subcluster.
 Thus the mass-to-light ratio (M/L) of each subcluster can be compared with the M/L of similar non-merging clusters, and depending on whether the M/L of the merger is the same or less than the non-merging clusters' M/L, then respectively an upper limit or lower limit can be placed on $\sigma_{\rm SIDM}$.
-\citet{Clowe:2004eq} claim that the M/L of the Bullet Cluster are in ``good agreement with the universal cluster values from the lensing analyses \citep[e.g.,][]{Mellier:1999dh, Dahle:2002do}.''
-As such this enabled \citet{Markevitch:2004dl} to place a constraint of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} \lesssim$1\,cm$^2$\,g$^{-1}$.
+\citet{Clowe:2004eq} claim that the M/L of the Bullet Cluster are in ``good agreement with the universal cluster values from the lensing analyses \citep[e.g.,][]{Mellier:1999dh, Dahle:2000uz}.''
+This enabled \citet{Markevitch:2004dl} to place a constraint of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} \lesssim$1\,cm$^2$\,g$^{-1}$.
 \citet{Randall:2008hs} were able to improve upon this constraint by simulating the Bullet Cluster with collisionless ``galaxy'' particle and collisional SIDM particles.
 And by varying $\sigma_{\rm SIDM}$ between collisions.
 They found that for $\sigma_{\rm SIDM}m^{-1}_{\rm DM} <$0.7\,cm$^2$\,g$^{-1}$, otherwise the M/L decreased by more than $\sim 23\%$ in their simulation, which they claimed was not reasonable given the measured M/L of the subclusters.
 
-induce star formation?
-
-subject to the mass sheet degeneracy
-
-assumes all cluster at the same redshift have the same M/L
-
-considerable spread in the universal M/L radio \citep{Dahle:2002do}
+While this method has provided the tightest  $\sigma_{\rm SIDM}m^{-1}_{\rm DM} $ constraints there are a number of assumptions and possible systematic errors to consider more seriously.
+First and foremost the method assumes that all clusters have close to the same ($\lesssim$40\% difference) M/L.
+However as \citet{Dahle:2000uz} shows there is significant variance in the M/L of galaxy clusters with $100 \lesssim$h(M/L$_B$)$\lesssim 1000$. 
+Secondly, it is well established that galaxy clusters play an important role in the evolution of their member galaxies, but it is still unclear whether cluster mergers trigger star formation \citep[e.g.][]{Miller:2003kx,Owen:2005dx,Ferrari:2005es,Hwang:2009ip}, quench it \citep{Poggianti:2004ca}, or have no immediate effect \citep{Chung:2010ds}.
+Thus it is unclear what affects the cluster merger will have on the luminosities of the subclusters.
+Finally there are a number of biases \citep[see e.g.][]{Noh:2010vt} and systematic errors \citep[][discuss several]{Randall:2008hs} that can affect the gravitational lensing estimated mass. 
+Because of these issues caution should be used when applying this method to constrain SIDM.
 
 \subsubsection{Dark Matter - Galaxy Offset}
 
@@ -310,7 +310,35 @@ The method introduced by \citet{Randall:2008hs} is based upon the fact that if D
 Initially this velocity difference will result in a DM-galaxy offset that increases with time.
 Thus depending on whether a significant offset between the galaxies and DM is or is not observed, then respectively a lower limit or upper limit can be placed on $\sigma_{\rm SIDM}$.
 
-Using the same galaxy-DM simulations referenced in \S\ref{section:MLR} \citet{Randall:2008hs}
+Using the same galaxy-DM simulations referenced in \S\ref{section:MLR} \citet{Randall:2008hs} found, as expected, that as they increased $\sigma_{\rm SIDM}$ the offset between their collisionless ``galaxy'' particles and there SIDM particles increased.
+Then given the observed galaxy and lensing centroids and the uncertainty on these centroids they claimed they could rule out any scenarios where SIDM resulted in an offset greater than $\sim$50\,kpc.
+This corresponded to a constraint of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} <$1.25\,cm$^2$\,g$^{-1}$.
+Interestingly \citet{Randall:2008hs} note that the observed galaxy centroid is leading the lensing mass centroid by 5.7''$\pm$6.6'' (25$\pm$29\,kpc), yet rather than try to estimate the value of $\sigma_{\rm SIDM}m^{-1}_{\rm DM}$ based on this offset they only took the extreme and fit an upper limit.
+According to their simulations an offset of $\sim$25\,kpc is seen in their simulation with $\sigma_{\rm SIDM}m^{-1}_{\rm DM}\approx0.7$\,cm$^2$\,g$^{-1}$
+Granted that with offset uncertainties of order the measured offset there is little confidence in this estimate 
+
+This method has the advantage that the scales of interest are typically $\gtrsim$25\,kpc.
+Thus this method is immune to the baryonic degeneracies that weaken the constraining power of other SIDM constraining methods (e.g. central halo density).
+The method does have number of sources of noise and systematic error that need to be considered, in addition to the Poisson noise of the centroid measurements.
+The important offset for this method is the three-dimensional offset between the galaxies and the DM.
+What can be measured is the projected offset between the galaxies and the lensing centroid.
+As will be discussed in Chapter \ref{chapter:4} there is considerable uncertainty when converting between projected and three-dimensional distances of merging cluster systems.
+While this uncertainty is not important for determining if there is a significant offset between the galaxies and dark matter (that would suggest $\sigma_{\rm SIDM}>0$) it is important if we wish to quantify $\sigma_{\rm SIDM}m^{-1}_{\rm DM}$.
+The other key limitation is that we cannot directly measure the DM centroid, we are only able to measure the total projected mass with gravitational lensing.
+The lensing centroid can then diverge from the DM centroid for a number of reasons.
+The fact that these are dissociative mergers means that $\sim$10\% of the cluster mass is in between the two subclusters.
+This gas mass will act to pull the lensing centroid away from the DM centroid towards the center of the cluster.
+This systematic effect will exactly mimic the effect expected if DM self-interacts.
+Similarly the mass of one subcluster will pull the lensing centroid of the other subcluster away from the DM centroid and towards the center.
+This effect may be countered to some degree since the galaxy centroid will experience a similar effect.
+Without simulations it is unclear if these two effects will completely null one another.
+Finally, lensing is sensitive to all mass along the line of sight.
+Thus foreground or background large scale structures could cause a random offset in the lensing centroid from the DM centroid of the subcluster.
+\citet{Dietrich:2011gs} found that projected large scale structure results in a $\sim$4'' random offset of the lensing centroid from the true DM centroid.
+As will be discussed in Chapter \ref{chapter:4} these sources of noise and systematic error can be mitigated.
+Thus it seems as though this method holds the most promise for constraining $\sigma_{\rm SIDM}m^{-1}_{\rm DM}$.
+
+Problems with the \citep{Randall:2008hs} approach and possible means of improvement? This could be covered to some degree in Chapter 5.
 
 \subsection{Advantages of Merging Clusters Over other Probes of Self-interacting Dark Matter}
 
