@@ -32,6 +32,11 @@ version speczmod
 -- modified to incorporate spec-z + photo-z info.  This will remove photo-z info
    of any galaxy with spec-z infor, and will fix all spec-z galaxies during the
    bootstrap resampling.
+version speczmod2
+-- this will no longer fix all spec-z galaxies during the bootstrap sampling but
+   will rather weight them as more likely to be drawn (if they are within the
+   cluster velocity dispersion region) than corresponding photo-z galaxies that
+   have a much larger uncertainty in their position.
 '''
 from __future__ import division
 import numpy
@@ -383,9 +388,10 @@ def zVdisp(catalog, colnames, cluster_coord, zest, vwidth, radii, prefix,
     
     pylab.show()
     
-def numberdensity(catalog, colnames, rabin, prefix, rarange=None, decrange=None,
-                  zrange=None,N_boot=None,speczname=None,speczclustrange=None,
-                  magcol=None,magrange=None):
+def numberdensity(catalog, ra_ttype, dec_ttype, spec_z_ttype, photo_z_ttype, 
+                  photoz_errorfactor, rabin, prefix, z_cluster, vdisp_cluster, 
+                  rarange=None, decrange=None, N_boot=None, magcol=None,
+                  magrange=None):
     '''
     Creates a 2D fits map which is essentially a 2D histogram of the galaxies.
     
@@ -426,15 +432,47 @@ def numberdensity(catalog, colnames, rabin, prefix, rarange=None, decrange=None,
         
     '''
     import pyfits
+    import scipy.integrate
+    import astrostats
+    from scipy import pi,inf
+    
+    def p_z_phot(z,z_phot,sigma_z_phot,z_cluster,sigma_z_cluster):
+        return 1/(sigma_z_phot*numpy.sqrt(2*numpy.pi))*numpy.exp(-(z-z_phot)**2/(2*sigma_z_phot**2)) * 1/(sigma_z_cluster*numpy.sqrt(2*numpy.pi))*numpy.exp(-(z-z_cluster)**2/(2*sigma_z_cluster**2))
+    
+    def weight_z_phot(z_phot,sigma_z_phot,z_cluster,sigma_z_cluster):
+        """
+        Usage: weight_z_phot(z,z_phot,sigma_z_phot,z_cluster,sigma_z_cluster)
+    
+        Returns the joint probability of overlapping galaxy and cluster redshift Gaussian PDF's.
+        """
+        prob = scipy.integrate.quad(lambda x: p_z_phot(x,z_phot,sigma_z_phot,z_cluster,sigma_z_cluster),0,inf)[0]
+        return prob    
+
+    def p_z_spec(z,z_cluster,sigma_z_cluster):
+        return 1/(sigma_z_cluster*numpy.sqrt(2*numpy.pi))*numpy.exp(-(z-z_cluster)**2/(2*sigma_z_cluster**2))
+    
+    def weight_z_spec(z,z_cluster,sigma_z_cluster):
+        """
+        Usage: weight_z_phot(z,z_phot,sigma_z_phot,z_cluster,sigma_z_cluster)
+    
+        Returns the joint probability of overlapping galaxy and cluster redshift Gaussian PDF's.
+        """
+        prob = 1/(sigma_z_cluster*numpy.sqrt(2*numpy.pi))*numpy.exp(-(z-z_cluster)**2/(2*sigma_z_cluster**2))
+        return prob    
+
     ### CALCULATIONS ################
+    # cluster redshift uncertainty (as determined from cluster velocity dispersion
+    sigma_z_cluster = (1+z_cluster)* vdisp_cluster / 3e5    
+    
     # Read in the catalog data and header
     cat = tools.readcatalog(catalog)
     key = tools.readheader(catalog)
-    racol = key[colnames[0]]
-    deccol = key[colnames[1]]
+    racol = key[ra_ttype]
+    deccol = key[dec_ttype]
     magcol = key[magcol]
-    if numpy.size(colnames) == 3:
-        zcol = key[colnames[2]]
+    z_spec_col = key[spec_z_ttype]
+    z_phot_col = key[photo_z_ttype]
+    
     # Apply the coordinate filters
     if rarange != None:
         ra_min = rarange[0]
@@ -446,22 +484,52 @@ def numberdensity(catalog, colnames, rabin, prefix, rarange=None, decrange=None,
         cat = tools.filtercat(cat,deccol,dec_min,dec_max)
     if magrange != None:
         cat = tools.filtercat(cat,magcol,magrange[0],magrange[1])
-  
-    # Extract all the galaxies with spec-z's
-    zspeccol = key[speczname]
-    mask_spec = cat[:,zspeccol] != -99 #all columns that have spec-z
-    cat_specz = cat[mask_spec,:]
-    mask_photo = mask_spec == False
-    cat_photoz = cat[mask_photo,:]
-    # filter on spec-z's
-    cat_specz = tools.filtercat(cat_specz,zspeccol,speczclustrange[0],speczclustrange[1])
+    
+    N_cat = numpy.shape(cat)[0]
+    
+    # calculate the typical photo-z error of each galaxy
+    sigma_z_phot = photoz_errorfactor*(1+cat[:,z_phot_col])    
+    
+    # calculate the redshift membership weights associated with each galaxy
+    weight = numpy.zeros(N_cat)
+    for i in range(N_cat):
+        if cat[i,z_spec_col] == -99:
+            weight[i] = weight_z_phot(cat[i,z_phot_col],sigma_z_phot[i],z_cluster,sigma_z_cluster)
+        else:
+            weight[i] = weight_z_spec(cat[i,z_spec_col],z_cluster,sigma_z_cluster)
+    # set any weight values that might be negative = 0, these seem to be related to integration uncertainty
+    mask_posweight = weight >= 0
+    weight *= mask_posweight    
+
+    ## determine which objects have spec-z's
+    #mask_specz = cat[:,z_spec_col] != -99 
+    #print "{0} objects have spec-z's".format(numpy.sum(mask_specz))
+
+    ## determine which objects have just photo-z's
+    #mask_photoz = ~mask_specz
+    ## filter out any objects that do not have a photo-z
+    #mask_nophotoz = cat[:,z_phot_col]!=-99
+    #mask_photoz *= mask_nophotoz
+    #print "{0} objects have only photo-z's".format(numpy.sum(mask_photoz))
+    
+    ##concatinate the redshift column
+    #z_concat = numpy.concatenate((cat[mask_specz,key['z_spec']],cat[mask_photoz,key['z_mid']]))
+
+    ## Extract all the galaxies with spec-z's
+    #zspeccol = key[speczname]
+    #mask_spec = cat[:,zspeccol] != -99 #all columns that have spec-z
+    #cat_specz = cat[mask_spec,:]
+    #mask_photo = mask_spec == False
+    #cat_photoz = cat[mask_photo,:]
+    ## filter on spec-z's
+    #cat_specz = tools.filtercat(cat_specz,zspeccol,speczclustrange[0],speczclustrange[1])
     # filter on photo-z's
-    if zrange != None and numpy.size(colnames) == 3:
-        # filter the catalog for the user specified redshift range
-        cat_photoz = tools.filtercat(cat_photoz,zcol,zrange[0],zrange[1])
-    elif zrange != None and numpy.size(colnames) != 3:
-        print 'numberdensity: Warning zrange specified but no z column name specified in colnames input. Exiting'
-        sys.exit()
+    #if zrange != None and numpy.size(colnames) == 3:
+        ## filter the catalog for the user specified redshift range
+        #cat_photoz = tools.filtercat(cat_photoz,zcol,zrange[0],zrange[1])
+    #elif zrange != None and numpy.size(colnames) != 3:
+        #print 'numberdensity: Warning zrange specified but no z column name specified in colnames input. Exiting'
+        #sys.exit()
     
     # Calculate the number of bins along the dec axis
     if rarange == None:
@@ -479,26 +547,43 @@ def numberdensity(catalog, colnames, rabin, prefix, rarange=None, decrange=None,
     dec_edge = numpy.arange(dec_min,dec_max+dec_binwidth,dec_binwidth)
     
     # Create the blank map_array
-    if N_boot != None:
-        h = numpy.zeros((3+N_boot,decbin,rabin))
-        N = numpy.shape(cat_photoz)[0] #number of rows in filtered catalog
+    h = numpy.zeros((3+N_boot,decbin,rabin))
+    b = numpy.zeros((N_cat,N_boot))
+    for i in numpy.arange(N_boot):
         # Random with replacement bootstrap index array 
-        b = numpy.random.randint(0,high=N,size=(N,N_boot))
-        print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
+        b[:,i] = astrostats.weightedrand(weight,size=N_cat)
+    print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
+    # reformat the b array so that it can be used as an array index
+    b = numpy.array(b,dtype=numpy.uint64)
+    #if N_boot != None:
+        #h = numpy.zeros((3+N_boot,decbin,rabin))
+        ##N = numpy.shape(cat_photoz)[0] #number of rows in filtered catalog
+        ## Random with replacement bootstrap index array 
+        #b = numpy.random.randint(0,high=N,size=(N,N_boot))
+        #print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
             
     #create the 2D histogram    
-    if N_boot == None:
-        cat_flt = numpy.concatenate((cat_specz,cat_photoz),axis=0)
-        h, tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
-    else:
-        cat_flt = numpy.concatenate((cat_specz,cat_photoz),axis=0)        
-        h[0,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
-        for i in numpy.arange(N_boot):
-            cat_flt = numpy.concatenate((cat_specz,cat_photoz[b[:,i],:]),axis=0)           
-            h[3+i,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
-        #Create signal/noise and standard deviation maps
-        h[2,:,:] = numpy.std(h[3:,:,:],ddof=1)
-        h[1,:,:] = h[0,:,:]/h[2,:,:]
+    #if N_boot == None:
+        #cat_flt = numpy.concatenate((cat_specz,cat_photoz),axis=0)
+        #h, tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
+    #else:
+        #cat_flt = numpy.concatenate((cat_specz,cat_photoz),axis=0)        
+        #h[0,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
+        #for i in numpy.arange(N_boot):
+            #cat_flt = numpy.concatenate((cat_specz,cat_photoz[b[:,i],:]),axis=0)           
+            #h[3+i,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
+    ##Create signal/noise and standard deviation maps
+    #h[2,:,:] = numpy.std(h[3:,:,:],ddof=1)
+    #h[1,:,:] = h[0,:,:]/h[2,:,:]
+
+    h[0,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat[:,deccol],cat[:,racol],bins=(dec_edge,ra_edge))
+    for i in numpy.arange(N_boot):
+        h[3+i,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat[b[:,i],deccol],cat[b[:,i],racol],bins=(dec_edge,ra_edge))
+    #Create signal/noise and standard deviation maps
+    h[2,:,:] = numpy.std(h[3:,:,:],axis=0,ddof=1)
+    h[1,:,:] = h[0,:,:]/h[2,:,:]
+
+
     #Create the fits file
     H = h
     hdu = pyfits.PrimaryHDU(numpy.float32(H))
