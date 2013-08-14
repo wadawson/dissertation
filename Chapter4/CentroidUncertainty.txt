@@ -1,0 +1,48 @@
+## South Subcluster
+
+Recursive centroid estimate.
+Fits file: /Users/dawson/Git/dissertation/Chapter4/BVRzMed_24maglim_south_10000_numberdensity.fits
+Starting region:
+x_start = 148
+y_start = 50
+r_start = 40
+Centroid results.
+Centroid is at pixel location:
+x = 134.78 +/- 2.40
+y = 47.15 +/- 1.41
+*Note that the above errors do not account for sample variance.*
+Bootstrap Sample
+sigma_x = 1.24
+sigma_y = 1.80
+x location, and 68% & 95% upper and lower confidence limits
+x_loc = 143.17
+x_68%_ll = 141.82, x_68%_ul = 144.22
+x_95%_ll = 140.18, x_95%_ul = 145.19
+y location, and 68% & 95% upper and lower confidence limits
+y_loc = 42.13
+y_68%_ll = 40.79, x_68%_ul = 43.22
+y_95%_ll = 37.34, x_95%_ul = 44.14
+
+## North Subcluster
+Recursive centroid estimate.
+Fits file: /Users/dawson/Git/dissertation/Chapter4/BVRzMed_24maglim_north_10000_numberdensity.fits
+Starting region:
+x_start = 104
+y_start = 163
+r_start = 63
+Centroid results.
+Centroid is at pixel location:
+x = 97.81 +/- 1.74
+y = 156.31 +/- 2.19
+*Note that the above errors do not account for sample variance.*
+Bootstrap Sample
+sigma_x = 23.77
+sigma_y = 20.52
+x location, and 68% & 95% upper and lower confidence limits
+x_loc = 111.45
+x_68%_ll = 95.93, x_68%_ul = 149.61
+x_95%_ll = 77.31, x_95%_ul = 161.64
+y location, and 68% & 95% upper and lower confidence limits
+y_loc = 144.42
+y_68%_ll = 107.18, x_68%_ul = 159.08
+y_95%_ll = 100.99, x_95%_ul = 167.65
