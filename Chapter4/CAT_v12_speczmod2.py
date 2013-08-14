@@ -464,35 +464,17 @@ def numberdensity(catalog, ra_ttype, dec_ttype, spec_z_ttype, photo_z_ttype,
         prob = 1/(sigma_z_cluster*numpy.sqrt(2*numpy.pi))*numpy.exp(-(z-z_cluster)**2/(2*sigma_z_cluster**2))
         return prob    
 
-    def weighting_pen(cat,z_cluster,sigma_z_cluster,photoz_errorfactor,photo_z_penalty=0.63):
+    def weighting_pen(cat,z_cluster,sigma_z_cluster,photo_z_penalty=0.63):
         '''
         calculate the redshift membership weights associated with each galaxy
         '''
         N_cat = numpy.shape(cat)[0]
-        # calculate the approximate photo-z uncertainty for each galaxy
-        sigma_z_phot = photoz_errorfactor*(1+cat[:,z_phot_col])
-        # Determine where the photo-z weight is maximized
-        z_test = numpy.arange(z_cluster-0.2,z_cluster+0.2,0.001)
-        sigma_z_phot_test = photoz_errorfactor*(1+z_test)
-        N_test = numpy.size(z_test)
-        weight_test = numpy.zeros(N_test)
-        for i in numpy.arange(N_test):
-            weight_test[i] = weight_z_phot(z_test[i],sigma_z_phot_test[i],z_cluster,sigma_z_cluster)
-        weight_test_max = numpy.max(weight_test)
-        weight_test_max_arg = numpy.argmax(weight_test)
-        z_max = z_test[weight_test_max_arg]
-        print 'max weight = {0}'.format(weight_test_max)
-        print 'at redshift = {0}'.format(z_max)
-        # determine the weights for all galaxies
         weight = numpy.zeros(N_cat)
         for i in range(N_cat):
             if cat[i,z_spec_col] == -99:
-                weight[i] = weight_z_phot(cat[i,z_phot_col],sigma_z_phot[i],z_cluster,sigma_z_cluster)/weight_test_max*photo_z_penalty
+                weight[i] = photo_z_penalty
             else:
                 weight[i] = 1
-        # set any weight values that might be negative = 0, these seem to be related to integration uncertainty
-        mask_posweight = weight >= 0
-        weight *= mask_posweight
         return weight    
 
     ### CALCULATIONS ################
@@ -553,7 +535,7 @@ def numberdensity(catalog, ra_ttype, dec_ttype, spec_z_ttype, photo_z_ttype,
     
     # calculate the redshift membership weights associated with each galaxy
     print 'calculating the weights'
-    weight = weighting_pen(cat,z_cluster,sigma_z_cluster,photoz_errorfactor,photo_z_penalty)
+    weight = weighting_pen(cat,z_cluster,sigma_z_cluster,photo_z_penalty)
     print 'finished calculating the weights'
         
     # Calculate the number of bins along the dec axis
@@ -572,35 +554,30 @@ def numberdensity(catalog, ra_ttype, dec_ttype, spec_z_ttype, photo_z_ttype,
     dec_edge = numpy.arange(dec_min,dec_max+dec_binwidth,dec_binwidth)
     
     # Create the blank map_array
-    print 'creating the randomly generated bootstrap indices'
-    h = numpy.zeros((3+N_boot,decbin,rabin))
-    b = numpy.zeros((N_cat,N_boot))
-    for i in numpy.arange(N_boot):
-        # Random with replacement bootstrap index array 
-        b[:,i] = astrostats.weightedrand(weight,size=N_cat)
-    print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
-    # reformat the b array so that it can be used as an array index
-    b = numpy.array(b,dtype=numpy.uint64)
-    #if N_boot != None:
-        #h = numpy.zeros((3+N_boot,decbin,rabin))
-        ##N = numpy.shape(cat_photoz)[0] #number of rows in filtered catalog
-        ## Random with replacement bootstrap index array 
-        #b = numpy.random.randint(0,high=N,size=(N,N_boot))
-        #print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
+    if N_boot != None:
+        print 'creating the randomly generated bootstrap indices'
+        h = numpy.zeros((3+N_boot,decbin,rabin))
+        b = numpy.zeros((N_cat,N_boot))
+        for i in numpy.arange(N_boot):
+            # Random with replacement bootstrap index array 
+            b[:,i] = astrostats.weightedrand(weight,size=N_cat)
+        print 'numberdensity: will perform bootstrap analysis with {0} random iterations'.format(N_boot)
+        # reformat the b array so that it can be used as an array index
+        b = numpy.array(b,dtype=numpy.uint64)
             
     #create the 2D histogram
     print 'creating the 2D histograms'
     if N_boot == None:
         cat_flt = cat
-        h, tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge))
+        h, tmp_edge, tmp_edge = numpy.histogram2d(cat_flt[:,deccol],cat_flt[:,racol],bins=(dec_edge,ra_edge),weights=weight)
     else:
-        h[0,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat[:,deccol],cat[:,racol],bins=(dec_edge,ra_edge))
+        h[0,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat[:,deccol],cat[:,racol],bins=(dec_edge,ra_edge),weights=weight)
         for i in numpy.arange(N_boot):
             h[3+i,:,:], tmp_edge, tmp_edge = numpy.histogram2d(cat[b[:,i],deccol],cat[b[:,i],racol],bins=(dec_edge,ra_edge))
 
-    #Create signal/noise and standard deviation maps
-    h[2,:,:] = numpy.std(h[3:,:,:],axis=0,ddof=1)
-    h[1,:,:] = h[0,:,:]/h[2,:,:]
+        #Create signal/noise and standard deviation maps
+        h[2,:,:] = numpy.std(h[3:,:,:],axis=0,ddof=1)
+        h[1,:,:] = h[0,:,:]/h[2,:,:]
 
 
     #Create the fits file

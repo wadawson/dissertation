@@ -1,0 +1,69 @@
+# results from input_CenterVarianceBoot1000.py
+#South Subcluster
+Fits file: /Users/dawson/Git/dissertation/Chapter4/BVRzMed_24maglim_pzpen_south_10000_numberdensity.fits
+Starting region:
+x_start = 148
+y_start = 50
+r_start = 40
+Centroid results.
+Centroid is at pixel location:
+x = 142.44 +/- 1.84
+y = 50.69 +/- 1.08
+*Note that the above errors do not account for sample variance.*
+Bootstrap Sample
+sigma_x = 4.02
+sigma_y = 2.45
+x location, and 68% & 95% upper and lower confidence limits
+x_loc = 143.81
+x_68%_ll = 141.42, x_68%_ul = 146.60
+x_95%_ll = 132.47, x_95%_ul = 149.48
+y location, and 68% & 95% upper and lower confidence limits
+y_loc = 50.07
+y_68%_ll = 47.80, x_68%_ul = 52.23
+y_95%_ll = 44.55, x_95%_ul = 54.59
+
+#North Subcluster with rstart = 68
+Fits file: /Users/dawson/Git/dissertation/Chapter4/BVRzMed_24maglim_pzpen_north_10000_numberdensity.fits
+Starting region:
+x_start = 104
+y_start = 163
+r_start = 63
+Centroid results.
+Centroid is at pixel location:
+x = 103.61 +/- 1.45
+y = 157.74 +/- 1.79
+*Note that the above errors do not account for sample variance.*
+Bootstrap Sample
+sigma_x = 15.71
+sigma_y = 10.72
+x location, and 68% & 95% upper and lower confidence limits
+x_loc = 104.10
+x_68%_ll = 85.03, x_68%_ul = 108.27
+x_95%_ll = 43.16, x_95%_ul = 128.24
+y location, and 68% & 95% upper and lower confidence limits
+y_loc = 159.05
+y_68%_ll = 155.65, x_68%_ul = 163.22
+y_95%_ll = 111.71, x_95%_ul = 172.61
+
+#North Subcluster with rstart = 40
+Fits file: /Users/dawson/Git/dissertation/Chapter4/BVRzMed_24maglim_pzpen_north_10000_numberdensity.fits
+Starting region:
+x_start = 104
+y_start = 163
+r_start = 40
+Centroid results.
+Centroid is at pixel location:
+x = 103.61 +/- 1.45
+y = 157.74 +/- 1.79
+*Note that the above errors do not account for sample variance.*
+Bootstrap Sample
+sigma_x = 10.35
+sigma_y = 4.45
+x location, and 68% & 95% upper and lower confidence limits
+x_loc = 103.46
+x_68%_ll = 86.24, x_68%_ul = 107.38
+x_95%_ll = 65.67, x_95%_ul = 113.17
+y location, and 68% & 95% upper and lower confidence limits
+y_loc = 159.10
+y_68%_ll = 155.92, x_68%_ul = 162.91
+y_95%_ll = 152.97, x_95%_ul = 172.81
