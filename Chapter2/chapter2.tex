@@ -1,7 +1,7 @@
 \newchapter{Musket Ball: Observed Properties}{Musket Ball Cluster: Observed Properties}{Musket Ball Cluster: Observed Properties}
 \label{chapter:2}
 
-\noindent This chapter is an expanded version of the article titled \emph{Discovery of a Dissociative Galaxy Cluster Merger with Large Physics Separation} which was published in the March 2012 issue of the Astrophysical Journal Letters (Volume 747, pp. L42). \\
+\noindent This chapter is an expanded version of the article titled \emph{Discovery of a Dissociative Galaxy Cluster Merger with Large Physical Separation} which was published in the March 2012 issue of the Astrophysical Journal Letters (Volume 747, pp. L42). \\
 
 We present DLSCL J0916.2+2951 ($z$=0.53), a major cluster merger in which the collisional cluster gas has become dissociated from the collisionless galaxies and dark matter.
 We identified the cluster using optical and weak lensing observations as part of the Deep Lens Survey. 
@@ -201,7 +201,7 @@ The beam of the SZ observation has a radius of $\sim1\arcmin$.\label{figure:Musk
 \section{X-ray}
 
 We acquired X-ray spectral-imaging of the cluster with 40ks of {\it Chandra} ACIS-I time (GO-12800854), and reduce it using \emph{CIAO} version 4.2 and \emph{CALDB} version 4.4.1.
-We manually identify X-ray point sources and mask them before adaptively smoothing the diffuse emission, we present the resulting map in Figure \ref{fig3}.
+We manually identify X-ray point sources and mask them before adaptively smoothing the diffuse emission, we present the resulting map in Figure \ref{figure:MusketBallXray}.
 We estimate source counts and their error using the \emph{dmextract} function of \emph{CIAO}.
 We use an 8$\arcmin$ radius background region which encloses the subcluster regions and rests $\sim90\%$ on ACIS-I3 (on which the subclusters are observed).
 In the estimate of the background counts each subcluster region, chip gap, and point source are excluded.
@@ -221,6 +221,16 @@ The binning is carried out on the spectra before background subtraction; these r
 Since the background spectrum contains 7725 counts, each spectral bin in the background is far above the 20 count threshold.
 Binning data in this manner does reduce the spectral resolution, however for hot clusters like those in our study the number of final spectral bins we have (31 for the southern and 39 for the central subcluster, which include cuts on the highest energy channels) are sufficient to determine the temperature, since the spectrum is dominated by bremsstrahlung emission which has few sharp spectral features. 
 We report the results of this analysis in Table \ref{tbl1}.
+
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Chapter2/XrayMapwithContours.png}
+\caption[X-ray map of the Musket Ball Cluster]{
+Chandra ACIS-I 40\,ks adaptively smoothed X-ray image of DLSCL J0916.2+2951.
+The image field-of-view is the same as Figure \ref{fig1}.
+The contours are evenly spaced on an arbitrary linear scale and are used throughout this dissertation when comparing the gas map with other components.
+\label{figure:MusketBallXray}}
+\end{figure}
 
 \section{Radio}
 
