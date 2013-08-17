@@ -131,7 +131,10 @@ This penalization factor is based in the fact that from our magnitude limited su
 \centering
 \includegraphics[width=5in]{Chapter4/photVSspec.png}
 \caption[Spectroscopic verses photometric redshift for the Musket Ball Cluster.]{
-
+Spectroscopic redshifts verses photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R$<23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2}).
+The horizontal dashed blue lines highlight the 0.43$\leq z_{\rm phot} \leq$0.63 range.
+63\% of the surveyed galaxies within this range are cluster members.
+The verticle dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54 or three times the cluster velocity dispersion.
 }
 \label{figure:photzVSspecz}
 \end{figure}
@@ -140,6 +143,7 @@ This penalization factor is based in the fact that from our magnitude limited su
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/cumnormwghtdist_zclip_photozpenalty.png}
 \caption[Photometric redshift penalization scheme; cumulative normalized weight distribution for galaxies being in the Musket Ball Cluster.]{
+
 }
 \label{figure:NormPenaltyWeightDist}
 \end{figure}
@@ -241,64 +245,80 @@ For ease of comparison with the results of \citet{Markevitch:2004dl} and \citet{
 Note that we cannot apply the velocity-dependent $\sigma_{\rm DM}$ constraint methods outlined by \citet{Markevitch:2004dl} since our analytic model assumes $\sigma_{\rm DM}$\,=\,0 \citep{Dawson:2012dl, Dawson:2012ub}.
 
 
-
 \begin{figure}
-%\plottwo{fig3a.eps}{fig3b.eps}
-\plotone{Chapter2/fig3.png}
-\caption[Comparison of the Subaru $i'$-band ground-based and HST space-based WL mass signal-to-noise maps of DLSCL J0916.2+2951 with the X-ray distribution and galaxy number density.]{Comparison of the Subaru $i'$-band ground-based (left) and HST space-based (right) WL mass signal-to-noise maps (color) of DLSCL J0916.2+2951 with the X-ray distribution (bold black contours) and galaxy number density (white contours, same as Figure \ref{fig2}). The peak centers and corresponding one sigma errors are denoted by the gray cross-hairs.
-In both analyses there is agreement between the location and relative magnitude of galaxies and WL yet the majority of the cluster gas is centered $\sim1.4\arcmin$ between the North and South subclusters in a local mass underdensity, providing evidence that the North and South subclusters have undergone the first pass-through of a major merger.
-The scale of each map is equivalent and the image field-of-view is the same as Figures \ref{fig1} \& \ref{fig2}.
-The map created from the joint Subaru/HST catalog looks nearly identical to the HST map, with only slight variations in the scale (see Table \ref{tbl1}).
-\label{figure:SubaruHSTwlComparison}}
+\centering
+\includegraphics[width=5in]{Chapter4/LensingXrayOverlay.png}
+\caption[Musket Ball Cluster weak lensing signal-to-noise map with X-ray map overlay, including centroid locations.]{
+HST space-based WL mass signal-to-noise map of the Musket Ball Cluster with the X-ray distribution overlay (white contours).
+The 68\% and 95\% centroid confidence intervals are shown for the north and south subcluster WL centroids (dashed black ellipses) as well as the central gas distribution (solid black ellipses).
+The majority of the cluster gas is centered $\sim1.4\arcmin$ between the North and South subclusters.
+}
+\label{figure:LensingXrayOverlay}
 \end{figure}
+
 
 \section{Galaxy--Weak Lensing Offset}
 
+The offset is now 20.5''
+
 Section text
 
-%-----------------------------Figure Start------------------------------
-% Single panel figure
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=6in]{Chapter4/WLgalaxyoffset.png}
-	\caption[Musket Ball Cluster galaxy-weak lensing offset.]{
-		\small{The WL mass signal-to-noise map based on HST measured shapes is shown in color with the galaxy number density isopleths in white.  
-		The inset shows the 68\% (solid black) and 95\% (dashed black) confidence intervals on the South subcluster's WL and galaxy density centroids.  
-		We have detected a 19" offset between the galaxies and the WL mass in the South subcluster that is consistent with the offset expected if DM has a non-zero cross-section just below the current published upper limits.  
-		This is the best astrophysical evidence to date of a non-zero DM cross-section.  While a consistent offset is observed for the North subcluster, the large WL centroid error prohibits measurement of a significant offset for that subcluster.
-		}
-	}
-	\label{figure:galaxyWLoffsetZoom}
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Chapter4/LensingGalaxyOverlay.png}
+\caption[Musket Ball Cluster weak lensing signal-to-noise map with galaxy number density map overlay, including centroid locations.]{
+HST space-based WL mass signal-to-noise map of the Musket Ball Cluster with the spectroscopic and photometric redshift based galaxy number density overlay (white contours).
+The 68\% and 95\% centroid confidence intervals are shown for the north and south subcluster WL centroids (dashed black ellipses) as well as north and south galaxy number density centroids (solid black ellipses).
+Note the 20.5'' offset between the galaxies and the WL mass in the South subcluster.
+}
+\label{figure:LensingGalaxyOverlay}
 \end{figure}
-%-----------------------------Figure End--------------------------------
+
+
 
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/southcentroids_histplot2d_reformat.png}
 \caption[Musket Ball southern subcluster galaxy and weak lensing centroid spatial distribution.]{
-1.5' by 1.5'
-Merger axis position angle = 159 degrees
-First Principle component axis position angle =  153 degrees
+Musket Ball southern subcluster WL (blue) and galaxy number density (red) centroid probability density distribution functions constructed from 10,000 respective bootstrap realizations.
+The 68\% (dark contours) and 95\% (light contours) confidence intervals are shown for each.
+The region shown is 1.5' by 1.5' ($567\times 567\,kpc^2$ at $z$=0.53).
+The first principle component axis of two distributions (dot-dashed green line) has a position angle of 159 degrees, this close to the 153 degree position angle of the merger axis of the cluster (dashed purple line; as inferred from a line intersecting the two galaxy centroids) .
 }
 \label{figure:CentroidDist_South}
 \end{figure}
+
+Both centroids in the northern subcluster are less well defined than the centroids in the southern subcluster.
+This is likely due to the northern subcluster being approximately half as massive as the northern subcluster.
+
 
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/northcentroids_histplot2d_reformat.png}
 \caption[Musket Ball northern subcluster galaxy and weak lensing centroid spatial distribution.]{
-1.5' by 1.5'
+Musket Ball northern subcluster WL (blue) and galaxy number density (red) centroid probability density distribution functions constructed from 10,000 respective bootstrap realizations.
+The 68\% (dark contours) and 95\% (light contours) confidence intervals are shown for each.
+The region shown is 1.5' by 1.5' ($567\times 567\,kpc^2$ at $z$=0.53), the same scale as Figure \ref{figure:CentroidDist_South}.
+The merger axis of the cluster (as inferred from a line intersecting the two galaxy centroids) is plotted as a dashed purple line.
+Unlike the southern subcluster (Figure \ref{figure:CentroidDist_South}) there does not appear to be a significant offset between between the locations.
+Both centroids in the northern subcluster are less well defined than the centroids in the southern subcluster; most notably the galaxy density centroid which appears bimodal.
 }
 \label{figure:CentroidDist_North}
 \end{figure}
 
 Perhaps include some figures discussing systematic offset tests.
 
+The statistical question we pose is:
+If the WL and galaxy parent distributions coincide how often would one expect the observed offset of the galaxies leading the WL along the mergers axis\footnote{This is a one-tailed test}.
+Assuming the two centroids are expected to coincide in the CDM scenario then the complement of the previous probability is the confidence that $\sigma_{\rm DM}>0$.
+Also assuming no systematic errors or random noise not captured by the bootstrap analysis.
 
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/GalDenVsHSTWL_pzpen_delxPC_south_reformat.png}
 \caption[Musket Ball southern subcluster galaxy and weak lensing centroid offset significance.]{
+
+The galaxy-WL centroid offset is measured along the merger axis direction ($x'$) with positive offsets being when the galaxies lead the DM (as expected in the case of SIDM).
 }
 \label{figure:CentroidSignificance_South}
 \end{figure}
