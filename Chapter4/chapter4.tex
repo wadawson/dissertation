@@ -22,7 +22,7 @@ Secondly, if a significant offset is observed then one could still conclude that
 For both the gas-DM offset and galaxy-DM offset methods the primary measurements necessary are the location of the galaxies (\S\ref{section:GalaxyLocation}), gas (\S\ref{section:GasLocation}), and DM (\S\ref{section:WLLocation}).
 Much of this chapter will focus on how there measurements are made with the later sections (\S\ref{section:GasWLOffset} and \S\ref{section:GalaxyWLOffset}) discussing the offset measurement and their implications for $\sigma_{\rm SIDM}$.
 
-\subsection{Location Estimation}
+\subsection{Location Estimation}\label{section:LocationEstimation}
 For the original work of \citet{Dawson:2012dl} (see Chapter 2) I estimated the weak lensing subcluster positions and errors on their positions by using the location of the peak signal in a region and estimated the variance on the peak by measuring the peak location of each bootstrap iteration within the selected region.  
 For this chapter, rather than using the location of the peak and variance of the peak, I have adopted an iterative centroid estimation scheme, similar to \citet{Randall:2008hs} (and often used in N-body simulations). 
 I begin by calculating the centroid of a large aperture that encompasses one subcluster, but excludes the other.
@@ -80,7 +80,7 @@ Finally smoothing based methods are an alternative population based location est
 Typically in these methods the projected distribution of galaxy members are smoothed by a signal matched smoothing kernel and then the peak of this smoothed distribution is used as the location \citep[see e.g.][]{Merritt:1994fc, Gonzalez:2002kl, Randall:2008hs}.
 
 
-\subsection{Cluster Membership}
+\subsection{Cluster Membership}\label{section:ClusterMembership}
 
 Another major challenge in determining the galaxy population location is separating the sample of galaxies that are gravitationally bound to a DM halo from foreground and background galaxy samples.
 This contamination of the cluster sample by fore/background galaxies and the dilution of the cluster sample by improperly assigning cluster members to the fore/background galaxy sample will both act to decrease the signal-to-noise of the galaxy centroid measurements.
@@ -184,7 +184,7 @@ w_i = \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z_{\rm spec_{i}}-z_{\rm 
 \end{equation}\label{equation:specz_weight}
 Under the assumption of Gaussian photometric redshift errors ($\sigma_{\rm z-phot_{i}} \approx \bar{\sigma}(1+z_{\rm phot_{i}})$; $\bar{\sigma}$=0.07 for the Musket Ball Cluster) Equation \ref{equation:genericz_weight} takes the form
 \begin{equation}
-w(draw)_i = \int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot_{i}}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm phot_{i}})^2}{2\sigma_{\rm z-phot_{i}}^2}} \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
+w_i = \int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot_{i}}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm phot_{i}})^2}{2\sigma_{\rm z-phot_{i}}^2}} \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
 \label{equation:photoz_weight}
 \end{equation}
 
@@ -196,7 +196,7 @@ Beyond this weighted draw with replacement the bootstrap uncertainty analysis is
 
 \begin{figure}
 \centering
-\includegraphics[width=4.5in]{Chapter4/AnalysisFiles/cumnormwghtdist.png}
+\includegraphics[width=4in]{Chapter4/AnalysisFiles/cumnormwghtdist.png}
 \caption[Probabilistic scheme; cumulative normalized weight distribution for galaxies being in the Musket Ball Cluster.]{
 The resulting cumulative weight distribution for all the galaxies with $R<24$ and within a 9' by 9' region surrounding the Musket Ball Cluster.
 This distribution is used to perform a weighted random draw of cluster galaxies (e.g. the green distribution of Figure \ref{figure:ProbWeightDist}) for the galaxy centroid bootstrap analysis.
@@ -210,8 +210,8 @@ Note that the catalog is sorted such that the spectroscopic members are first, t
 Comparing the galaxy redshift distribution of a random bootstrap realization with the redshift distribution of the parent population (Figure \ref{figure:ProbWeightDist}) it is apparent that the fully probabilistic membership determination scheme still includes a large number of galaxies with photometric redshift estimates well outside the cluster redshift velocity dispersion ($z_{\rm cluster}\pm\sigma_{\rm vdisp} \approx 0.53\pm0.004$).
 The reason for this is simply that the photometric redshift uncertainties are so large compared to all other pertinent redshift scales.
 Thus, galaxies that have the exact same photometric redshift as the cluster are not weighted dramatically more than galaxies with photometric redshift estimates well in front of or behind the cluster.
-Take for example two photometric redshift galaxies, one at the cluster redshift ($z=0.53$) and one well behind the cluster at $z_{\phot}=0.79$.
-According to Equation \ref{equation:photoz_weight} the galaxy with $z_{\phot}=0.53$ will have a weight of 3.7 while the galaxy with $z_{\phot}=0.79$ will have a weight of 0.37.
+Take for example two photometric redshift galaxies, one at the cluster redshift ($z=0.53$) and one well behind the cluster at $z_{\rm phot}=0.79$.
+According to Equation \ref{equation:photoz_weight} the galaxy with $z_{\rm phot}=0.53$ will have a weight of 3.7 while the galaxy with $z_{\rm phot}=0.79$ will have a weight of 0.37.
 Since even in this small projected region around the Musket Ball Cluster the number of fore/background galaxies outnumbers the cluster member, this probabilistic weighting scheme will always result in a significant amount of contamination.
 This is likely why \citet{George:2011kv} base their probability of cluster membership both on the expected distribution of the cluster members as well as the field.
 Such a method is worth considering for future work but is currently beyond the scope of this dissertation.
@@ -220,7 +220,7 @@ Instead we will use an empirical based method to determine our weighting scheme 
 
 \begin{figure}
 \centering
-\includegraphics[width=5in]{Chapter4/AnalysisFiles/zdist_randomweightdraw_reformat.png}
+\includegraphics[width=4in]{Chapter4/AnalysisFiles/zdist_randomweightdraw_reformat.png}
 \caption[Comparison of parent galaxy redshift distribution with weighted random draw distribution.]{
 The redshift (spectroscopic if available, otherwise photometric) distribution of all the galaxies in a 9'$\times$9' area surrounding the Musket Ball Cluster with $R<$24 (blue); and a single bootstrap sample (green) drawn from the fully probabilistic weighted distribution (Figure \ref{figure:NormWeightDist}).
 While the probabilistic scheme does work to increase the number of galaxies selected at the cluster redshift ($z=0.53$) it still selects a disproportionate number of galaxies with photometric redshifts outside of the cluster redshift; see that in Figure \ref{figure:photzVSspecz} only 1 galaxy of our spectroscopic survey sample with $z_{\rm phot}$>0.7 is actually at the cluster redshift and only 1 galaxy with $z_{\rm phot}<$0.43 is at the cluster redshift.
@@ -229,31 +229,24 @@ While the probabilistic scheme does work to increase the number of galaxies sele
 \end{figure}
 
 
-\subsubsection{Empirically Based Membership Determination}
+\subsubsection{Empirically Based Membership Determination}\label{section:EmpiricalWeightScheme}
 
-The second method of membership determiniation
+The second method of membership determination is considerably less elegant but more empirically based and aims higher cluster membership purity.
+If a galaxy has a spectroscopic redshift within the 3$\sigma_{\rm vdisp}$ range of the cluster redshift (0.525$<z_{\rm spec}<$0.54 for the Musket Ball Cluster) it is given a weight of 1\footnote{
+Note that this ignores the ``finger of god effect'', although since it is reasonable to assume that the number of cluster galaxies should dominate the number of fore/background galaxies within $\pm$30\,Mpc of the cluster redshift this effect should not dominate the centroid uncertainty.}
+If galaxies only have a photometric redshift and that happens to be within the range 0.43$\leq z_{\rm phot} \leq$0.63 (approximatly the Musket Ball Cluster redshift $\pm sigma_{\rm z-phot}$) they are given a weight of 0.63.
+All remaining galaxies are given a weight of 0.
+The cumulative normalized weight distribution function for this weighting scheme is shown in Figure \ref{figure:NormPenaltyWeightDist}.
 
-Hard redshift cut... why? 1) we are more concerned with purity 
-
-Spectroscopic galaxies should not really be penalized 
-
-
-spec-z bounds, and justification
-
-photo-z bounds, and justification
-
-photo-z normalization
-
-Photo-z Penalization Factor
-
-This penalization factor is based in the fact that from our magnitude limited survey\footnote{The survey was magnitude limited in regards to the fact that we targeted any galaxy with $R$<23.5, if galaxies had a 0.43$\leq z_{\rm phot} \leq$0.63 there likelihood of being target was twice that of other galaxies. This should not bias the conclusions of this section since we are limiting ourselves to considering just the range 0.43$\leq z_{\rm phot} \leq$0.63. Figure \ref{figure:PhotozSpeczMagDist} shows the approximate completeness of this survey.} (R<23.5) of the Musket Ball we targeted 355 galaxies between 0.43= 3) and 210 of these spectra were between 0.525<specz<0.54 (with quality>=3), see for example the figure below. This translates to a sample purity of 63\%.  Thus I will multiply all of the photo-z galaxy weights by a penalization factor of 0.63.
-
-
-
+The motivation behind the photometric redshift weight of 0.63 comes from our magnitude limited redshift survey\footnote{The survey was magnitude limited in regards to the fact that we targeted any galaxy with $R$<23.5, if galaxies had a 0.43$\leq z_{\rm phot} \leq$0.63 there likelihood of being target was twice that of other galaxies. This should not bias the conclusions of this section since we are limiting ourselves to considering just the range 0.43$\leq z_{\rm phot} \leq$0.63. Figure \ref{figure:PhotozSpeczMagDist}.}
+of the Musket Ball Cluster.
+We obtained 355 high quality spectra of galaxies with 0.43$\leq z_{\rm phot} \leq$0.63 and 210 of these spectroscopic redshifts were between 0.525$<z_{\rm spec}<$0.54, see for example Figure \ref{figure:photzVSspecz}.
+This translates to a purity of 63\%.
+Note that this photometric redshift range should result in a cluster membership completeness of 95\%.
 
 \begin{figure}
 \centering
-\includegraphics[width=5in]{Chapter4/AnalysisFiles/cumnormwghtdist_zclip_photozpenalty.png}
+\includegraphics[width=4in]{Chapter4/AnalysisFiles/cumnormwghtdist_zclip_photozpenalty.png}
 \caption[Photometric redshift penalization scheme; cumulative normalized weight distribution for galaxies being in the Musket Ball Cluster.]{
 The photometric redshift penalization scheme cumulative normalized weight distribution (blue step curve) for galaxies being in the Musket Ball Cluster. 
 Galaxies that are spectroscopically confirmed cluster members (0.525$\leq z_{\rm spec} \leq$0.54) are given a weight of 1 and are left of the dashed red line in this sorted sample.
@@ -264,19 +257,18 @@ Similar, but an alternative, to Figure \ref{figure:NormWeightDist} this distribu
 \end{figure}
 
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=5in]{ }
-%\caption[]{
-%}
-%\label{}
-%\end{figure}
-
 \subsection{Galaxy Location Results}
 
-Perhaps include a table with the actual coordinates and confidence limit values.
+We use the empirical weighting scheme of \S\ref{section:EmpiricalWeightScheme} to create an updated version of the purely photometric redshift based galaxy number density map of Figure \ref{fig2}.
+The new galaxy number density map (Figure \ref{figure:GalDenMap_withspec} gives a weight of 1 to all (117) with galaxies spectroscopic redshift within three times the velocity dispersion of each subcluster, and  weight of 0.63 to all (270) galaxies without a spectroscopic redshift but with $z_{\rm phot}=0.53\pm0.1$.
+While very similar to Figure \ref{fig2}, the peak in the northern subcluster is now slightly more prominent.
 
-Note that we have disregarded the noise caused by subcluster to subcluster contamination. One could consider something like the Walker et al. method (see two component dwarf galaxy).
+To estimate the location of the galaxy centroids in the north and south subclusters we use the iterative centroid procedure outlined in \S\ref{section:LocationEstimation}, the centroid formula of Equation \ref{equation:WeightedCentroid} and the weights discussed in \S\ref{section:EmpiricalWeightScheme}.
+To estimate the confidence limits on each subcluster's centroid we generate 10,000 bootstrap realizations of the galaxy sample using the cumulative weight distribution of Figure \ref{figure:ProbWeightDist} when randomly drawing galaxies with replacement\footnote{Note that because we weight the random draw we do not use the galaxy weights when calculating the centroid.}.
+For each of these bootstrap realizations we apply the same iterative centroid proceedure of \S\ref{section:LocationEstimation}, which generates a 10,000 sample distribution of the centroid right ascension and declination.
+From these bootstrap centroid distributions we calculate bias-corrected percent confidence limits \citep{Beers:1990kg} of the marginalized parameter distributions.
+We find that the south subcluster has a galaxy centroid of $09\fh16\fm16.0\fs\pm3.9\fs, 29\fdg49\farcm14.7\farcs\pm3.3\farcs$ and the north subcluster has a galaxy centroid of $09\fh16\fm11.3\fs\pm15.9\fs, 29\fdg51\farcm59.1\farcs\pm5.3\farcs$.
+These centroids and confidence limits are overplotted as dashed green ellipses on the galaxy number density map (Figure \ref{figure:GalDenMap_withspec}). 
 
 \begin{figure}
 \centering
@@ -292,6 +284,11 @@ The dashed green ellipses show the approximate galaxy centroid 68\% and 95\% con
 }
 \label{figure:GalDenMap_withspec}
 \end{figure}
+
+Finally it is worth noting that  we have disregarded the centroid error associated with subcluster to subcluster galaxy membership contamination (see \S\ref{section:ClusterMembership}).
+This is a potentially important source error and could cause a bias in the centroid estimates of each subcluster towards the direction of the other subcluster.
+To the best of our knowledge no-one has performed studies investigating this particular bias. As such, accounting for and correcting such a bias in the Musket Ball Cluster (and other dissociative mergers) will require a significant amount of investigation and is beyond the scope of this current dissertation.
+One could consider something like the multicomponent joint fitting method of \citet{Walker:2011eg}.
 
 
 %--------------------------------------------------------
