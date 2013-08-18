@@ -91,7 +91,7 @@ This may cancel to some degree with a similar directional bias in the WL estimat
 
 The challenge in determining cluster galaxy membership lies with the inherently limited observational information that one can obtain of galaxies.
 While it is relatively easy to constrain the projected position of galaxies to sub-arcsecond precision, it is much more difficult to constrain the position of galaxies along the line-of-sight.
-The best than can be done in this regard are spectroscopic redshifts of the galaxies, which can often constrain the line-of-sight velocities to a few km\,s$^{-1}$ \citep[in the case of a 1200 line mm^${-1}$ grating with resulting resolution of $\sim1\,\AA$; see e.g.][]{Dawson:2012ub}.
+The best than can be done in this regard are spectroscopic redshifts of the galaxies, which can often constrain the line-of-sight velocities to a few km\,s$^{-1}$ \citep[in the case of a 1200 line mm$^{-1}$ grating with resulting resolution of $\sim 1\,\AA$; see e.g.][]{Dawson:2012ub}.
 However, spectroscopic surveys are observationally intensive often requiring a large amount of time (a few nights) on large telescopes ($\gtrsim$5\,m)\footnote{Take for example the completeness of the spectroscopic survey carried out on the Musket Ball Cluster (see Figure \ref{figure:PhotozSpeczMagDist}) over 1.5 nights using the DEIMOS multi-object spectrograph on the Keck 10\,m telescope.}.
 Thus, many astronomers have developed and used membership identification methods that only require photometric galaxy surveys since these are capable of surveying many more galaxies is a much shorter amount of time even on smaller telescopes \citep[e.g. the DLS,][]{Wittman:2002cp}. 
 
@@ -123,34 +123,21 @@ It is often the case that there is not enough photometric coverage of a system t
 The third challenge is estimating the galaxy population location is that there are often only a few hundred galaxies that trace a given DM halo's potential.
 Thus a certain amount of intrinsic scatter between the location of the galaxy population and the underlying DM distribution is to be expected simply due to Poisson noise.
 This source of galaxy location noise is often at direct odds with the noise from galaxy cluster membership.
-
-
-This is in addition to the intrinsic scatter that is due to galaxies being dynamic tracers of an ever evolving DM halo. 
-
-%----------- Poisson Noise
-since the spec-z errors are typically of order XXX km/s their probability distribution can be treated as a delta function.
-
-% Donimant components of unceartainty
-
-Two critical components to this measurement: 1) determining cluster galaxy member ship, limited number of galaxies, and what weight to apply to galaxies when 
-
-two dominant components to the uncertainty: 1) Poisson noise, simply attempting to measure a global property (center of the galaxy distribution) with a discrete number of samples, 2) systematic error due to cluster membership uncertainty
-
-Information for determining membership is limited to spectroscopic and photometric redshift information
-
-Difficult to obtain spectroscopic redshifts for a large number of galaxies and often limited to magnitudes R<23. Reasons why hard...
-Easier to obtain photometric redshifts for a large number of galaxies, compare the sample magnitude distribution of galaxies in the area of a spectroscopic survey of the Musket Ball Cluster (Figure \ref{figure:PhotozSpeczMagDist}).
-
+As one attempts to increase the number of cluster members (i.e. completeness) used in the centroid calculation to reduce they Poisson noise, they often must sacrifice purity (fraction of true cluster members to the assumed number of cluster members) which increases the noise due to cluster membership error.
+For example, the systematic error due to contamination can be decreased by placing strict membership requirements, e.g. only using galaxies that have spectroscopic redshifts within some small factor (e.g. 3) of the cluster velocity dispersion.
+However this will reduce the number of galaxies that are used to estimate the centroid and the Poisson noise will increase.
+At the outset there is not a clear what the optimal choice of membership selection criteria should be to minimize the joint membership noise and Poisson noise, however it is conceivable that this could be empirically determined for a given dataset.
 
 \subsection{Estimating the Musket Ball Cluster's Galaxy Location}
 
 \subsubsection{Musket Ball Cluster Galaxy Location Data}
 
-Brief refresher on observations (reference sections in chapter 2)
-
-include magnidtude histogram and specz vs photoz
-
-However photomety errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  For the DLS it is found that the photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
+Most of the available data to constrain the galaxy locations of the Musket Ball Cluster is presented in detail in Chapters \ref{chapter:2} and \ref{chapter:3}, however we review some of the important information now.
+Because the Musket Ball Cluster is within the DLS \citep{Wittman:2002cp} it has 4-broad-band photometry ($BVRz$) to limiting magnitudes of $\sim26$ (see e.g. Figure \ref{figure:PhotozSpeczMagDist}).
+Additionally we also observed the cluster in three medium-width optical bands ($g,h,$ and $i$ from the BATC filter set), bracketing the redshifted $4000$\,\AA\, feature.
+This coverage has enabled photometric redshifts to be estimated for most of the galaxies in the cluster field with $R\lesssim26$, however photometric errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  
+For the DLS it is found that $\sigma_{\rm z-phot}\approx$0.07(1+$z_{\rm phot}$ for galaxies with $R\leq24$; photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
+Thus in all our analyses of the Musket Ball Cluster's galaxy locations we only use galaxies with$R\leq24$.
 
 \begin{figure}
 	\centering
@@ -162,23 +149,28 @@ However photomety errors increase for fainter galaxies and this in turn increase
 	\label{figure:PhotozSpeczMagDist}
 \end{figure}
 
-There is a balancing act between these two components of the uncertainty
+In addition to the deep photometric data we have carried out an extensive spectroscopic survey of the Musket Ball Cluster (see \S\ref{section:MusketBallSpectroscopy} and \S\ref{sec_MBCzcat}).
+We have obtained a sample of 738 spectroscopically confirmed galaxy redshifts within an $\sim 18\arcmin \times 18\arcmin$ area centered on the Musket Ball Cluster ($139.05\deg$, $+29.85\deg$).
+This survey covers a significant fraction of the galaxies in the area brighter than $R=23$, see Figure \ref{figure:PhotozSpeczMagDist}.
+This spectroscopic sample has also provided important information of the accuracy of the photometric redshifts, see Figure \ref{figure:photzVSspecz}, in particular their accuracy of determining cluster galaxy membership.
 
-The systematic error due to contamination can be decreased by placing strict membership requirements, e.g. only using galaxies that have spectroscopic redshifts within some small factor (e.g. 3) of the cluster velocity dispersion.
-However this will reduce the number of galaxies that are used to estimate the centroid and the Poisson noise will increase.
-Conversely...
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Chapter4/photVSspec.png}
+\caption[Spectroscopic verses photometric redshift for the Musket Ball Cluster.]{
+Spectroscopic redshifts verses photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R<$23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2} and \S\ref{sec_MBCzcat}).
+The horizontal dashed blue lines highlight the 0.43$\leq z_{\rm phot} \leq$0.63 range.
+63\% of the surveyed galaxies within this range are cluster members.
+The verticle dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54 or three times the cluster velocity dispersion.
+}
+\label{figure:photzVSspecz}
+\end{figure}
 
-Bootstrap method should account for both of these error components.
-
-We consider two different methods of membership identification...
 
 \subsubsection{Fully Probabilistic Membership Determination}
 
-This method is rooted in the desire to treat both samples in a consistent manner. It also is more towards minimizing the Poisson noise while still trying to address the systematic contamination error. 
-
-Note that \citep{George:2011kv} have introduced a method to potentially mitigate this problem of field galaxies (see section 2.2 of \citet{George:2012uo})
-
-The find that they are able to acheive 84\% purity and 92\% efficiency although as part of the COSMOS field they have over 30 bands spaning from UV--IR.
+The first of two membership determination methods applied to the Musket Ball Cluster is rooted in the desire to treat both spectroscopic and photometric redshift samples in a consistent manner. 
+It also is more towards minimizing the Poisson noise while still trying to address the systematic contamination error. 
 
 
 \begin{equation}
@@ -224,6 +216,9 @@ Perhaps include figures providing and example of the weighting functions. Also c
 
 
 \subsubsection{Hard Redshift Bounds}
+
+The second method of membership determiniation
+
 Hard redshift cut... why? 1) we are more concerned with purity 
 
 Spectroscopic galaxies should not really be penalized 
@@ -251,17 +246,7 @@ Photo-z Penalization Factor
 This penalization factor is based in the fact that from our magnitude limited survey\footnote{The survey was magnitude limited in regards to the fact that we targeted any galaxy with $R$<23.5, if galaxies had a 0.43$\leq z_{\rm phot} \leq$0.63 there likelihood of being target was twice that of other galaxies. This should not bias the conclusions of this section since we are limiting ourselves to considering just the range 0.43$\leq z_{\rm phot} \leq$0.63. Figure \ref{figure:PhotozSpeczMagDist} shows the approximate completeness of this survey.} (R<23.5) of the Musket Ball we targeted 355 galaxies between 0.43= 3) and 210 of these spectra were between 0.525<specz<0.54 (with quality>=3), see for example the figure below. This translates to a sample purity of 63\%.  Thus I will multiply all of the photo-z galaxy weights by a penalization factor of 0.63.
 
 
-\begin{figure}
-\centering
-\includegraphics[width=5in]{Chapter4/photVSspec.png}
-\caption[Spectroscopic verses photometric redshift for the Musket Ball Cluster.]{
-Spectroscopic redshifts verses photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R$<23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2}).
-The horizontal dashed blue lines highlight the 0.43$\leq z_{\rm phot} \leq$0.63 range.
-63\% of the surveyed galaxies within this range are cluster members.
-The verticle dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54 or three times the cluster velocity dispersion.
-}
-\label{figure:photzVSspecz}
-\end{figure}
+
 
 \begin{figure}
 \centering
@@ -287,6 +272,8 @@ Similar, but an alternative, to Figure \ref{figure:NormWeightDist} this distribu
 \subsection{Galaxy Location Results}
 
 Perhaps include a table with the actual coordinates and confidence limit values.
+
+Note that we have disregarded the noise caused by subcluster to subcluster contamination. One could consider something like the Walker et al. method (see two component dwarf galaxy).
 
 \begin{figure}
 \centering
@@ -489,6 +476,8 @@ One thing that hasn't been discussed is the typical intrinsic scatter in the len
 importance of using multiple systems (beat down intrinsic scatter in galaxy-DM offset as well as other sources of noise)
 
 importance of simulations, not only for quantifying the cross-section constraints but also for studying systematic effects (e.g. the intrinsic galaxy-DM offset, both in relaxed cluster as well as merging clusters)
+
+tweak the cluster membership criteria in order to simultainously minimize the joint uncertainty due to cluster membership noise and Poisson noise of the centroid estimate.
 
 \section{Conclusions}
 
