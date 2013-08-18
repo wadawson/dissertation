@@ -3,20 +3,31 @@
 
 \noindent Portions of this chapter were originally published in the article titled \emph{Discovery of a Dissociative Galaxy Cluster Merger with Large Physical Separation} which was published in the March 2012 issue of the Astrophysical Journal Letters (Volume 747, pp. L42). \\
 
-Chapter abstract text
-
 \section{Introduction}
 
+As introduced in \S\ref{section:DMconstraintWithMergers} there are four methods of constraining $\sigma_{\rm SIDM}$ with observations of dissociative mergers.
+In this chapter we apply two of those methods to observations of the Musket Ball Cluster.
+First we will consider the gas-DM offset, and second we will consider the galaxy-DM offset.
+As discussed in \S\ref{section:DMconstraintWithMergers} these two methods are believed to be the most robust.
+In both cases we will depend on the WL measurements to ascertain the location of the DM.
+The galaxy location will be determined from optical spectroscopic and photometric observations of the galaxies.
+The gas location will be determined from X-ray observations of the cluster.
+Of the three location measurements... (the galaxy is the most difficult???)
 
+We note that the exercise of comparing the galaxy-WL offset will be incomplete in this analysis, since simulations of mergers with varying $\sigma_{\rm SIDM}$ are necessary to turn any observed offset (or lack of offset) into a quantitative constraint on$\sigma_{\rm SIDM}$ (see \S\ref{section:DMgalaxyOffsetIntro}). 
+However we chose to present the observation portion of this analysis for two reasons.
+First, it is a necessary first step towards applying this constraint.
+Secondly, if a significant offset is observed then one could still conclude that $\sigma_{\rm SIDM}$>0, which would be a significant finding since this would imply that DM is self-interacting via a new force.
 
-Intro text \citep{Dawson:2012dl}
+For both the gas-DM offset and galaxy-DM offset methods the primary measurements necessary are the location of the galaxies (\S\ref{section:GalaxyLocation}), gas (\S\ref{section:GasLocation}), and DM (\S\ref{section:WLLocation}).
+Much of this chapter will focus on how there measurements are made with the later sections (\S\ref{section:GasWLOffset} and \S\ref{section:GalaxyWLOffset}) discussing the offset measurement and their implications for $\sigma_{\rm SIDM}$.
 
 \subsection{Location Estimation}
 For the original work of \citet{Dawson:2012dl} (see Chapter 2) I estimated the weak lensing subcluster positions and errors on their positions by using the location of the peak signal in a region and estimated the variance on the peak by measuring the peak location of each bootstrap iteration within the selected region.  
-For this chapter, rather than using the location of the peak and variance of the peak, I have adopted an iterative centroid estimation scheme, similar to \citet{Randall:2008hs}. 
+For this chapter, rather than using the location of the peak and variance of the peak, I have adopted an iterative centroid estimation scheme, similar to \citet{Randall:2008hs} (and often used in N-body simulations). 
 I begin by calculating the centroid of a large aperture that encompasses one subcluster, but excludes the other.
 I then decrease the aperture, recenter on the previously calculated centroid, and estimate the centroid of the new aperture.
-This process is repeated until the aperture is decreased to a radius of XXX kpc.
+This process is repeated until the aperture is decreased to a radius of $\sim200$\,kpc.
 To estimate the uncertainty on the location I perform this process on each iteration of a random bootstrap sample map, resulting in a array of centroid values.
  The uncertainty on the location is then inferred from the variance of this array of centroid values.
 
@@ -24,11 +35,64 @@ To estimate the uncertainty on the location I perform this process on each itera
 %-------------------------------------------------------
 %-------------------------------------------------------
 %-------------------------------------------------------
-\section{Galaxy Location}
+\section{Galaxy Location}\label{section:GalaxyLocation}
 
+Galaxies are expected to populate dark matter subhalos (Yao et al) and from dark matter simulations these subhalos are found to be the building blocks of clusters.
+Thus galaxies are believed to be tracers of the underlying dark matter distribution.
+Evidence for this is found accross all cosmological mass scales from dwarf speroidals (REF), to galaxies (REF ami), groups (REF Matt), clusters (REF), and large scale structures (REF filament work).
+So the location of galaxies is expected to coincide with the location of the DM in $\Lambda$CDM, to within some amount of intrinsic scatter.
+It is precisely this phenomenon that we wish to challenge with observations of merging galaxy clusters, since for some non-zero $\sigma_{\rm SIDM}$ the location of the galaxy population is not expected to coincide precisely with the underlying DM distribution.
+As far as the location of the galaxy population (i.e. center) is concerned there are three main challenges.
+First, there are many ambiguous definitions the galaxy population location and these definitions often result in different estimates, sometimes even outside the uncertainty of each measurement \citep{George:2012uo}.
+Second, due to inherent observational limitations in determining galaxy positions and velocities it can be difficult to determine which galaxies are members of a given DM halo (and expected tracers of that DM halo).
+Third, even if galaxies are a fair sample of the underlying DM halo there are often only a few hundred to trace a given halo.
+Thus a certain amount of intrinsic scatter between the location of the galaxy population and the underlying DM distribution is to be expected simply due to Poisson noise.
+This is in addition to the intrinsic scatter that is due to galaxies being dynamic tracers of an ever evolving DM halo. 
+
+\subsection{Definition of Galaxy Location}
+
+There are many different definitions of the location of the galaxy population.  
+One that is commonly used is simply defining the location to be at the position of the brightest cluster galaxy \citep[e.g.][]{Gladders:2000ca, Koester:2007en, Hao:2010kz}.
+This method is often straightforward and for relaxed systems seems to agree well with other cluster location measures such as the X-ray location \citep{Sheldon:2001kk, Koester:2007en, Sanderson:2009hi,George:2012uo}.
+In relaxed cool-core clusters the location of the BCG is found to agree with the location of the gas to within $\leq$15\,kpc, however in non-cool core and potentially disturbed clusters the locations can be offset by $\sim100$\,kpc \citep{Sanderson:2009hi}.
+It is unclear in the case of the \citet{Sanderson:2009hi} non-cool core clusters which if either location is a better tracer of the DM location.
+The disadvantage of the BCG location method is that not all clusters have a dominant BCG ($\sim$1--2 magnitudes brighter than the next brightest cluster galaxy).
+This is the case with the Musket Ball Cluster.
+In such cases the BCG is found to provide an unreliable location \citep[see e.g.][]{George:2012uo}
+
+An obvious alternative to choosing a single galaxy to represent the central location of the population is to use the whole or a subsample of the galaxy population to estimate a central location.
+This is often done by estimating the weighted galaxy centroid \citep[e.g.][]{Berlind:2006dy, Carlberg:2001fp, Jee:2011we, George:2012uo},
+
+\begin{displaymath}
+\vec{x}_{\rm centroid} = \frac{\sum_{i=1}^N w_i\vec{x}_i}{\sum_{i=1}^N w_i},
+\end{displaymath} 
+
+where $\vec{x}_{\rm centroid}$ is the calculated centroid coordinates (right ascension and declination in the case of observations) for a population of $N$ galaxies with $\vec{x}_i$ the coordinate of galaxy $i$ and $w_i$ is the weight assigned to that galaxy.
+In the case of a simple galaxy number density centroid $w_i$=1.
+It is common to weight galaxies by their luminosity or stellar mass.
+\citet{George:2012uo} find that for groups of galaxies centroid based location estimates typically have larger uncertainties ($\sim50$\,kpc) and appear to be offset more from the underlying DM distribution than BCG (or in their case brightest group galaxy, BGG) location estimates.
+However, it is important to note that this work was performed on groups of galaxies (typically $\sim$1 order of magnitude less massive and with $\sim$1 order of magnitude fewer galaxies than galaxy clusters).
+Since the the centroid measurement error will scale proportional to the number of member galaxies like $N^{-1/2}$, this will result in a noisier estimate in the case of galaxy groups.
+In support of this reasoning, \citet{Jee:2011we} found that clusters in their sample with high lensing signal (i.e. more massive) that the galaxy centroids ``agree well with the mass peaks''.
+However in the same sample they find that clusters where the lensing signal is weak they observe offsets >20'' between the mass and galaxies.
+The \citet{George:2012uo} and \citet{Jee:2011we} results suggest that the systematic offset of the galaxy centroid estimate can be a strong function of the mass of the group or cluster.
+Because the Musket Ball Cluster does not have a dominant BCG in either subcluster we will adopt the centroid location estimate method.
+Finally smoothing based methods are an alternative population based location estimate, and while not used in this dissertation they are worth future consideration.
+Typically in these methods the projected distribution of galaxy members are smoothed by a signal matched smoothing kernel and then the peak of this smoothed distribution is used as the location \citep[see e.g.][]{Merritt:1994fc, Gonzalez:2002kl, Randall:2008hs}.
+
+
+\subsection{Cluster Membership}
+
+reference \citep{George:2011kv} when discussing galaxy membership selection
+
+
+\subsection{Galaxy Location Noise}
+%----------- Poisson Noise
 since the spec-z errors are typically of order XXX km/s their probability distribution can be treated as a delta function.
 
 % Donimant components of unceartainty
+
+Two critical components to this measurement: 1) determining cluster galaxy member ship, limited number of galaxies, and what weight to apply to galaxies when 
 
 two dominant components to the uncertainty: 1) Poisson noise, simply attempting to measure a global property (center of the galaxy distribution) with a discrete number of samples, 2) systematic error due to cluster membership uncertainty
 
@@ -38,10 +102,18 @@ Difficult to obtain spectroscopic redshifts for a large number of galaxies and o
 Easier to obtain photometric redshifts for a large number of galaxies, compare the sample magnitude distribution of galaxies in the area of a spectroscopic survey of the Musket Ball Cluster (Figure \ref{figure:PhotozSpeczMagDist}).
 However photomety errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  For the DLS it is found that the photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
 
+\subsection{Data}
+
+Brief refresher on observations (reference sections in chapter 2)
+
+include magnidtude histogram and specz vs photoz
+
 \begin{figure}
 	\centering
 	\includegraphics[width=5in]{Chapter4/AnalysisFiles/magdist.png}
-	\caption[Musket Ball Cluster spectroscopic and photometric magnitude distribution.]{Gives some idea of the galaxy sample magnitude distribution. DLS photometry.
+	\caption[Musket Ball Cluster spectroscopic and photometric magnitude distribution.]{
+	The Musket Ball Cluster spectroscopic (blue) and photometric (red) galaxy magnitude distribution in the $\sim$15'$\times$15' spectroscopic survey area.
+	While the DLS photometric survey is complete to $R\sim26$ photometric redshifts are only reliable to $R\sim24$.
 		}
 	\label{figure:PhotozSpeczMagDist}
 \end{figure}
@@ -58,7 +130,11 @@ We consider two different methods of membership identification...
 
 \subsubsection{Fully Probabilistic Membership Determination}
 
-This method is rooted in the desire to treat both samples in a consistent manner.
+This method is rooted in the desire to treat both samples in a consistent manner. It also is more towards minimizing the Poisson noise while still trying to address the systematic contamination error. 
+
+Note that \citep{George:2011kv} have introduced a method to potentially mitigate this problem of field galaxies (see section 2.2 of \citet{George:2012uo})
+
+The find that they are able to acheive 84\% purity and 92\% efficiency although as part of the COSMOS field they have over 30 bands spaning from UV--IR.
 
 
 \begin{equation}
@@ -82,7 +158,7 @@ w(draw)_i = \int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot_{i}}\sqrt{2\pi}}e^{\fr
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/cumnormwghtdist.png}
 \caption[Probabilistic scheme; cumulative normalized weight distribution for galaxies being in the Musket Ball Cluster.]{
-This weight distribution is used to perform a weighted random draw of cluster galaxies.
+This weight distribution is used to perform a weighted random draw of cluster galaxies (e.g. the green distribution of Figure \ref{figure:ProbWeightDist}) for the galaxy centroid bootstrap analysis.
 This distribution is determined by Equations \ref{equation:specz_weight} and \ref{equation:photoz_weight}.
 During the bootstrap sampling process a random number between 0 and 1 is drawn from a uniform distribution, where this random number intersects the weight distribution determines the randomly selected galaxy.
 Note that the catalog is sorted such that the spectroscopic members are first, thus the noticeably steeper slope for the early galaxy numbers.
@@ -94,10 +170,14 @@ Note that the catalog is sorted such that the spectroscopic members are first, t
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/zdist_randomweightdraw_reformat.png}
 \caption[Comparison of parent galaxy redshift distribution with weighted random draw distribution.]{
-
+The redshift (spectroscopic if available, otherwise photometric) distribution of all the galaxies in a 9'$\times$9' area surrounding the Musket Ball Cluster with $R$<24 (blue); and a single bootstrap sample (green) drawn from the fully probabilistic weighted distribution (Figure \ref{figure:NormWeightDist}).
+While the probabilistic scheme does work to increase the number of galaxies selected at the cluster redshift ($z=0.53$) it still selects a disproportionate number of galaxies with photometric redshifts outside of the cluster redshift; see that in Figure \ref{figure:photzVSspecz} only 1 galaxy of our spectroscopic survey sample with $z_{\rm phot}$>0.7 is actually at the cluster redshift and only 1 galaxy with $z_{\rm phot}$<0.43 is at the cluster redshift.
 }
 \label{figure:ProbWeightDist}
 \end{figure}
+
+Perhaps include figures providing and example of the weighting functions. Also comparing the weight values for a galaxy at 0.53 and one at 0.79 and show that the 0.53 is only 10 times as likely to be selected
+
 
 \subsubsection{Hard Redshift Bounds}
 Hard redshift cut... why? 1) we are more concerned with purity 
@@ -143,7 +223,10 @@ The verticle dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54 o
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/cumnormwghtdist_zclip_photozpenalty.png}
 \caption[Photometric redshift penalization scheme; cumulative normalized weight distribution for galaxies being in the Musket Ball Cluster.]{
-
+The photometric redshift penalization scheme cumulative normalized weight distribution (blue step curve) for galaxies being in the Musket Ball Cluster. 
+Galaxies that are spectroscopically confirmed cluster members (0.525$\leq z_{\rm spec} \leq$0.54) are given a weight of 1 and are left of the dashed red line in this sorted sample.
+Galaxies that are from the photometric redshift only sample and are within the range 0.43$\leq z_{\rm phot} \leq$0.63 are given a weight of 0.63 and fall to the right of the red dashed line.
+Similar, but an alternative, to Figure \ref{figure:NormWeightDist} this distribution is used to perform a weighted random draw of cluster galaxies for the galaxy centroid bootstrap analysis.
 }
 \label{figure:NormPenaltyWeightDist}
 \end{figure}
@@ -180,7 +263,7 @@ The dashed green ellipses show the approximate galaxy centroid 68\% and 95\% con
 %--------------------------------------------------------
 %--------------------------------------------------------
 %--------------------------------------------------------
-\section{Gas Location}
+\section{Gas Location}\label{section:GasLocation}
 
 When estimating the central gas centroid (black circles of Figure \ref{figure:XrayCentroid}), all detected point sources (small green circles with red dashes of Figure \ref{figure:XrayCentroid}) are excluded.
 Additionally the diffuse southern gas concentration is excluded (large green rectangular box of Figure \ref{figure:XrayCentroid}).
@@ -207,7 +290,9 @@ The image field-of-view is the same as Figure \ref{fig1}.
 %-------------------------------------------------------
 %-------------------------------------------------------
 
-\section{Weak Lensing Location}
+\section{Weak Lensing Location}\label{section:WLLocation}
+
+Compare different analysis methods (e.g. james maximum entropy method and my tomography method)
 
 \subsubsection{Noise and Systematic effects}
 
@@ -234,7 +319,7 @@ Based our findings we confidently rule out any line of sight structures with $M_
 For the galaxy density centroid errors we take 1000 bootstrap samples of the spectroscopically confirmed cluster galaxies and remaining galaxies with $0.43<z_{\rm phot}<0.63$ (roughly the cluster redshift $\pm\sigma_{z_{\rm phot}}$).
 Similarly we estimate the weak lensing centroid errors by analyzing 1000 bootstrap samples of the lensed background galaxies.
 
-\section{Gas--Weak Lensing Offset}
+\section{Gas--Weak Lensing Offset}\label{section:GasWLOffset}
 
 %copied from \citep{Dawson:2012dl}
 The peak of the gas distribution ($09\fh16\fm15\fs\pm5.5\fs, 29\fdg50\farcm59\farcs\pm5.0\farcs$) derived from X-rays is offset $1.4\arcmin\pm0.49$ from the North HST WL mass peak ($09\fh16\fm10\fs\pm30\fs, 29\fdg52\farcm10\farcs\pm30\farcs$), and $1.4\arcmin\pm0.14$ from the South HST WL mass peak ($09\fh16\fm15\fs\pm8.0\fs, 29\fdg49\farcm34\farcs\pm6.9\farcs$), and is located near a local minimum in the mass (see Figure \ref{fig3}).
@@ -257,7 +342,7 @@ The majority of the cluster gas is centered $\sim1.4\arcmin$ between the North a
 \end{figure}
 
 
-\section{Galaxy--Weak Lensing Offset}
+\section{Galaxy--Weak Lensing Offset}\label{section:GalaxyWLOffset}
 
 The offset is now 20.5''
 
@@ -341,11 +426,17 @@ better modeling of the gas mass and its effect on the systematic centroid offset
 
 note alternatives to centroid estimation, both in measuring the galaxy-dark matter offset as well as just other ways to measure the galaxy centroid, e.g. \citep{Randall:2008hs}
 
+note other means of estimating the offset independent of centroid measurements
+
 For galaxy centroid consider other measurements of the galaxy population location, other than number density, for example weighting the galaxies by luminosity or stellar mass.
 
 Discuss work of \citep{Kahlhoefer:2013wp}
 
+One thing that hasn't been discussed is the typical intrinsic scatter in the lensing centroid. Reference the George, M. work noting that they find that the galaxy center is often $\sim$50kpc from the lensing center. There are a number of problems with directly translating this result to the work discussed here. Since they were dealing with groups of galaxies (typically $\sim$1 order of magnitude less massive and $\sim$1 order of magnitude fewer galaxies than galaxy cluster) they 1) have fewer galaxies with which to beat down the Poisson noise of the centroid estimate, 2) their result is based on which center maximizes the lensing signal of 129 galaxy groups. 
 
+importance of using multiple systems (beat down intrinsic scatter in galaxy-DM offset as well as other sources of noise)
+
+importance of simulations, not only for quantifying the cross-section constraints but also for studying systematic effects (e.g. the intrinsic galaxy-DM offset, both in relaxed cluster as well as merging clusters)
 
 \section{Conclusions}
 
