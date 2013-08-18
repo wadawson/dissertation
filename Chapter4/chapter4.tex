@@ -244,17 +244,6 @@ photo-z bounds, and justification
 
 photo-z normalization
 
-\textbf{Normalizing based on overlapping probability distribution functions...}
-
-%\begin{equation}
-%w(draw)_i = \frac{\int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot_{i}}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm phot_{i}})^2}{2\sigma_{\rm z-phot_{i}}^2}} \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z}{\int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot}(z_{\rm cluster})\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm z-phot}(z_{\rm cluster})^2}}\frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z}
-%\label{equation:NormalizedPhotozWeight}
-%\end{equation}
-%
-%Note that because of the dependence of $\sigma_{\rm z-phot_{i}}$ on $z$, see Equation \ref{equation:SigmazPhot}, the maximum photometric weight actually occurs at a redshift slightly lower than the cluster redshift. For the case of the Musket Ball redshift $z=0.53$ and $\bar{\sigma}=0.07$ the maximum occurs at $z=0.523$. We will not bother to go into these details since we will argue for a more appropriate weighting scheme.
-%
-%\textbf{Normalizing based on empirical data}
-
 Photo-z Penalization Factor
 
 This penalization factor is based in the fact that from our magnitude limited survey\footnote{The survey was magnitude limited in regards to the fact that we targeted any galaxy with $R$<23.5, if galaxies had a 0.43$\leq z_{\rm phot} \leq$0.63 there likelihood of being target was twice that of other galaxies. This should not bias the conclusions of this section since we are limiting ourselves to considering just the range 0.43$\leq z_{\rm phot} \leq$0.63. Figure \ref{figure:PhotozSpeczMagDist} shows the approximate completeness of this survey.} (R<23.5) of the Musket Ball we targeted 355 galaxies between 0.43= 3) and 210 of these spectra were between 0.525<specz<0.54 (with quality>=3), see for example the figure below. This translates to a sample purity of 63\%.  Thus I will multiply all of the photo-z galaxy weights by a penalization factor of 0.63.
