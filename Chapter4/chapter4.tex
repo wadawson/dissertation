@@ -66,7 +66,6 @@ This is often done by estimating the weighted galaxy centroid \citep[e.g.][]{Ber
 \begin{displaymath}
 \vec{x}_{\rm centroid} = \frac{\sum_{i=1}^N w_i\vec{x}_i}{\sum_{i=1}^N w_i},
 \end{displaymath} 
-
 where $\vec{x}_{\rm centroid}$ is the calculated centroid coordinates (right ascension and declination in the case of observations) for a population of $N$ galaxies with $\vec{x}_i$ the coordinate of galaxy $i$ and $w_i$ is the weight assigned to that galaxy.
 In the case of a simple galaxy number density centroid $w_i$=1.
 It is common to weight galaxies by their luminosity or stellar mass.
@@ -83,10 +82,51 @@ Typically in these methods the projected distribution of galaxy members are smoo
 
 \subsection{Cluster Membership}
 
-reference \citep{George:2011kv} when discussing galaxy membership selection
+Another major challenge in determining the galaxy population location is separating the sample of galaxies that are gravitationally bound to a DM halo from foreground and background galaxy samples.
+This contamination of the cluster sample by fore/background galaxies and the dilution of the cluster sample by improperly assigning cluster members to the fore/background galaxy sample will both act to decrease the signal-to-noise of the galaxy centroid measurements.
+In the case of isolated clusters these effects should not induce a directional bias in the centroid measurement, however in the case of merging clusters it is possible to induce such a bias.
+In a dissociative merger the two subclusters are often in close proximity to one another, both in projected space (often within each others' virial radii) and redshift space (often within each others' velocity dispersion).
+Thus the galaxy centroid estimate of one subcluster will be biased away from the true galaxy centroid of that subcluster towards the other subcluster.
+This may cancel to some degree with a similar directional bias in the WL estimate of the DM location (see \S\ref{section:WLLocation}) although studies of these relative biases have not been performed.  
+
+The challenge in determining cluster galaxy membership lies with the inherently limited observational information that one can obtain of galaxies.
+While it is relatively easy to constrain the projected position of galaxies to sub-arcsecond precision, it is much more difficult to constrain the position of galaxies along the line-of-sight.
+The best than can be done in this regard are spectroscopic redshifts of the galaxies, which can often constrain the line-of-sight velocities to a few km\,s$^{-1}$ \citep[in the case of a 1200 line mm^${-1}$ grating with resulting resolution of $\sim1\,\AA$; see e.g.][]{Dawson:2012ub}.
+However, spectroscopic surveys are observationally intensive often requiring a large amount of time (a few nights) on large telescopes ($\gtrsim$5\,m)\footnote{Take for example the completeness of the spectroscopic survey carried out on the Musket Ball Cluster (see Figure \ref{figure:PhotozSpeczMagDist}) over 1.5 nights using the DEIMOS multi-object spectrograph on the Keck 10\,m telescope.}.
+Thus, many astronomers have developed and used membership identification methods that only require photometric galaxy surveys since these are capable of surveying many more galaxies is a much shorter amount of time even on smaller telescopes \citep[e.g. the DLS,][]{Wittman:2002cp}. 
+
+Even in the idealized case of having spectroscopic redshift information for all galaxies two major problems remain when estimating galaxy cluster membership in dissociative mergers.
+The first challenge is the ``finger of god effect''.
+The typical velocity dispersion of cluster galaxies is $\sim$1000\,km\,s$^{-1}$, and since a velocity difference ($\Delta v$) is related to a redshift difference ($\Delta z$) by,
+\begin{displaymath}
+\Delta z = \frac{\Delta v (1+\bar{z})}{c},
+\end{displaymath}
+the member galaxies of a cluster will often have $\Delta z\sim$0.015 (for a cluster at $z$=0.5).
+This corresponds to a Hubble flow separation of $\sim$30\,Mpc, which is roughly an order of magnitude larger than the cluster size.
+Thus it is nearly impossible to distinguish between cluster galaxies and projected fore/background galaxies within $\sim\pm$30\,Mpc of the cluster redshift.
+Fortunately clusters are $\sim$20-70 times more dense than other cosmic structures \citep[e.g. filaments, walls and voids;][]{AragonCalvo:2010cq}, thus this should not be a dominant source of noise.
+Potentially more problematic is the second challenge to determining cluster membership which is specific to dissociative mergers.
+This challenge is that the typical relative merger velocity of the two subclusters in a dissociative merger is of order the velocity dispersion of each subcluster.
+Thus it is difficult to disengangle the members of each subcluster.
+While similar to the ``finger of god effect'' this effect is potentially more serious since the central densities of each subcluster are of the same order of magnitude; for mergers just after first pass through this will be more of an issue than further progressed mergers with larger projected separations between the two subclusters.
+As previously mentioned this effect can potentially lead to a directional bias in the galaxy centroid estimate.
+ 
+In the less ideal scenario where limited spectroscopic information is available we must attempt to determine cluster membership with only photometric data.
+In cases where multi-band ($\gtrsim 4$) observations have been carried out photometric redshift estimates can be made for most of the galaxies detected with moderate signal-to-noise ($\sim$20).
+However, photometric redshift uncertainties ($\sigma_{\rm z-phot}\sim$0.07(1+$z_{\rm phot}$)) are typically many orders of magnitude larger than spectroscopic redshift uncertainties and a couple orders of magnitude larger than the typical redshift velocity dispersion of a cluster.
+Thus, even if a galaxy has the exact same $z_{\rm phot}$ as the cluster there is still considerable uncertainty in whether that galaxy is a member of the cluster.
+In extreme cases of extreme photometric coverage (30-bands from ultraviolet to infrared) it is possible to identify 92\% of cluster member (down to the limiting magnitude) with 84\% purity \citep{George:2011kv}.
+It is often the case that there is not enough photometric coverage of a system to obtain reliable photometric redshifts and astronomers have used prior information about the properties of galaxies (e.g. luminosity, color, and stellar mass)  in cluster environments to improve membership identification \citep[see][for a review]{George:2012uo}. 
+
+\subsection{Galaxy Location Poisson Noise}
+
+The third challenge is estimating the galaxy population location is that there are often only a few hundred galaxies that trace a given DM halo's potential.
+Thus a certain amount of intrinsic scatter between the location of the galaxy population and the underlying DM distribution is to be expected simply due to Poisson noise.
+This source of galaxy location noise is often at direct odds with the noise from galaxy cluster membership.
 
 
-\subsection{Galaxy Location Noise}
+This is in addition to the intrinsic scatter that is due to galaxies being dynamic tracers of an ever evolving DM halo. 
+
 %----------- Poisson Noise
 since the spec-z errors are typically of order XXX km/s their probability distribution can be treated as a delta function.
 
@@ -100,13 +140,17 @@ Information for determining membership is limited to spectroscopic and photometr
 
 Difficult to obtain spectroscopic redshifts for a large number of galaxies and often limited to magnitudes R<23. Reasons why hard...
 Easier to obtain photometric redshifts for a large number of galaxies, compare the sample magnitude distribution of galaxies in the area of a spectroscopic survey of the Musket Ball Cluster (Figure \ref{figure:PhotozSpeczMagDist}).
-However photomety errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  For the DLS it is found that the photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
 
-\subsection{Data}
+
+\subsection{Estimating the Musket Ball Cluster's Galaxy Location}
+
+\subsubsection{Musket Ball Cluster Galaxy Location Data}
 
 Brief refresher on observations (reference sections in chapter 2)
 
 include magnidtude histogram and specz vs photoz
+
+However photomety errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  For the DLS it is found that the photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
 
 \begin{figure}
 	\centering
@@ -294,6 +338,11 @@ The image field-of-view is the same as Figure \ref{fig1}.
 
 Compare different analysis methods (e.g. james maximum entropy method and my tomography method)
 
+to some degree WL faces the same challenge as the galaxy location in that it is necessary to determine to position of galaxies along the line-of-sight.
+however WL is not quite as sensitive due to the broad WL kernel.
+
+However the breadth of this WL kernel is also a hinderance when determining the WL centroid since line of sight massive structures can induce additional noise in WL centroid estimate of the DM halo centroid.
+
 \subsubsection{Noise and Systematic effects}
 
 \textit{Copied from Chandra/HST proposal. Need to edit.}
@@ -419,6 +468,9 @@ The galaxy-WL centroid offset is measured along the merger axis direction ($x'$)
 \section{Discussion}
 
 Discussion text
+
+simulations to study the directional bias of galaxy centroid and WL centroid measurements in dissociative mergers
+
 
 note importance of fitting both subcluster simultaneously
 
