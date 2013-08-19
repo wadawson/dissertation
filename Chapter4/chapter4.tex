@@ -350,25 +350,33 @@ However unlike with the galaxy centroid estimate, spectroscopic redshifts help v
 This is because most of the lensing information comes from the large number of faint ($R\gtrsim23$) galaxies that predominately make up the lensed source population.
 There is negligible spectroscopic information available for this population. 
 So we rely almost entirely on photometric magnitude, color, and redshift information.
-Fortunately WL is not quite as sensitive to these errors as the galaxy membership determination due to the relatively broad lensing redshift kernel (see Equation \ref{equation:WLshear})\footnote{However as previously noted the breadth of this WL kernel is also a hindrance when determining the WL centroid since line-of-sight massive structures can induce additional noise in WL centroid estimate of the DM halo centroid.}.
+Fortunately WL is not quite as sensitive to these errors as the galaxy membership determination due to the relatively broad lensing redshift kernel (see Equation \ref{equation:WLshear})\footnote{However as previously noted, the breadth of this WL kernel is also a hindrance when determining the WL centroid, since line-of-sight massive structures can induce additional noise in WL centroid estimate of the DM halo centroid.}.
 However it is still important to properly account for the inherently large errors associated with photometric redshifts.
 The full $p(z)$ tomographic lensing method introduced in \S\ref{section:Chap2WL} is designed to do just that.
 The method's effectiveness has recently been show in the case of Abell 781 (Wittman, Dawson, \& Benson, 2013) where it increased the signal-to-noise of the Abell 781-D subcluster by $\sim$40\%, thereby resolving the missing WL mass mystery \citep{Cook:2012ka}.
 
 
-\subsection{Noise and Systematic effects}
+\subsection{Dissociative Merger Systematic Errors}\label{section:MergerSysError}
 
-duffy et al concentration scaling relation
+To estimate the systematic error associated with using the WL centroid to estimate the DM centroid in dissociative mergers we have developed simple simulations.
+In these simulations we model the projected surface mass density of each subcluster assuming NFW halo properties measured from the WL analysis (\S\ref{section:Chap2WL}) and locate the NFW halos at the projected locations of the galaxy centroid of each subcluster.
+The we also model the projected surface mass density of the gas by placing NFW halos at the location of the south and central location.
+It is highly unlikely that the gas concentrations of the Musket Ball cluster take the form of NFW halos, however it is also unlikely that the specific distribution of the gas mass matters as much as the location and magnitude of the gas mass\footnote{A more thorough analysis should attempt to use the observed X-ray luminosity map to model a projected gas density distribution.}.
+We then apply the same iterative centroid estimate procedure to the simulated projected surface density map at the locations of the north and south subclusters.
+We then compare the estimated centroid of the total surface density map with the known location of the subcluster's simulated DM halo.
+In all cases we find that each subcluster's estimated centroid is biased from the true centroid towards the center of the merger.
+In the case of the southern subcluster we find that the centroid offset is 7.6'' for the best fit mass estimates of the subclusters and south and central gas concentrations.
+For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$
+In the case of the northern subcluster the bias is actually less, ranging from (0.7'' to 1.5'').
+Unlike the southern subcluster that has a significant gas concentration just offset from the galaxies and DM of the subcluster (see e.g. Figure \ref{figure:LensingXrayOverlay}) in addition to the dissociated central gas concentration, the closest significant gas concentration to the northern subcluster is the central gas concentration.
+Since the magnitude of the WL-DM centroid bias decreases rapidly with mass separation the northern subcluster is much less affected.
 
-\textbf{(1)} We model the surface mass density of the north and south subclusters with three NFW halos using masses determined by \citet{Dawson:2012dl}. We recursively estimate the centroid of this model and find an offset $3.4''$ from the true centroid towards the northern subcluster. 
+\subsection{Weak Lensing Location Results}
 
-
-\textbf{(2)} We then combine estimated surface mass densities of the
-Central and South gas concentrations with the previous DM surface
-densities from step (1) which results in a $7.6''$ centroid offset (dashed red curve of Figure \ref{fig3}).  
-For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$ (light red region of Figure \ref{fig3}). 
-With the proposed Chandra observations we can better constrain the gas mass by approximately a factor of 10 and constrain the distribution of the gas mass so that the resulting uncertainty in the modeled centroid offset is reduced by at least a factor of 2 (dark red region of Figure \ref{fig3}).
-
+We find that the location of the HST WL north subcluster is ($09\fh16\fm11\fs\pm7\fs, 29\fdg52\farcm05\farcs\pm13\farcs$) and the south subcluster is ($09\fh16\fm15\fs\pm5\fs, 29\fdg49\farcm34\farcs\pm11\farcs$).
+These uncertainties are plotted as dashed ellipses in Figures \ref{figure:LensingXrayOverlay} and \ref{figure:LensingGalaxyOverlay}.
+The centroid uncertainty in the northern cluster is slightly larger as a result of the northern subcluster being approximately half as massive as the northern subcluster (see Chapter \ref{chapter:2}).
+Note that these uncertainties do not include the effects of line-of-sight structures or the systematic effects discusses in \S\ref{section:MergerSysError}.
 
 
 \section{Gas--Weak Lensing Offset}\label{section:GasWLOffset}
@@ -424,8 +432,7 @@ The first principle component axis of two distributions (dot-dashed green line) 
 \label{figure:CentroidDist_South}
 \end{figure}
 
-Both centroids in the northern subcluster are less well defined than the centroids in the southern subcluster.
-This is likely due to the northern subcluster being approximately half as massive as the northern subcluster.
+
 
 
 \begin{figure}
