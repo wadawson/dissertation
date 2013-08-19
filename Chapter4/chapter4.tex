@@ -37,9 +37,9 @@ To estimate the uncertainty on the location I perform this process on each itera
 %-------------------------------------------------------
 \section{Galaxy Location}\label{section:GalaxyLocation}
 
-Galaxies are expected to populate dark matter subhalos (Yao et al) and from dark matter simulations these subhalos are found to be the building blocks of clusters.
+Galaxies are expected to populate dark matter subhalos (Yao et al REF) and from dark matter simulations these subhalos are found to be the building blocks of clusters.
 Thus galaxies are believed to be tracers of the underlying dark matter distribution.
-Evidence for this is found accross all cosmological mass scales from dwarf speroidals (REF), to galaxies (REF ami), groups (REF Matt), clusters (REF), and large scale structures (REF filament work).
+Evidence for this is found across all cosmological mass scales from dwarf speroidals (REF), to galaxies (REF ami), groups (REF Matt), clusters (REF), and large scale structures (REF filament work).
 So the location of galaxies is expected to coincide with the location of the DM in $\Lambda$CDM, to within some amount of intrinsic scatter.
 It is precisely this phenomenon that we wish to challenge with observations of merging galaxy clusters, since for some non-zero $\sigma_{\rm SIDM}$ the location of the galaxy population is not expected to coincide precisely with the underlying DM distribution.
 As far as the location of the galaxy population (i.e. center) is concerned there are three main challenges.
@@ -323,39 +323,53 @@ The image field-of-view is the same as Figure \ref{fig1}.
 
 \section{Weak Lensing Location}\label{section:WLLocation}
 
-Compare different analysis methods (e.g. james maximum entropy method and my tomography method)
+As discussed in Chapter \ref{chapter:1} the best means of determining the location of the DM is with gravitational lensing since it is capable of mapping the total projected mass, which is predominately DM.
+Generically the major sources of error when mapping the location of DM with WL are galaxy shape measurement error, intrinsic ellipticity of galaxies, projected line-of-sight massive structures, and discrimination of foreground and cluster galaxies from the lensed source population of galaxies.
+These sources of error are discussed at great length elsewhere \citep[see e.g.][]{Schneider:2006tp, Dietrich:2011gs} and for the specific case of the Musket Ball Cluster in Chapter \ref{chapter:2}.
+However there are a number of sources of error unique to dissociative mergers.
+First the DM mass of the one subcluster will cause a directional bias in the WL estimate of the DM location of the other subcluster away from the true DM location towards the first subcluster.
+Similarly the dissociated gas will cause a directional bias of the WL estimated DM location of one subcluster towards the center of the merger.
+Both of these directional biases will mimic the expected affect of SIDM.
+In this section we will review how we account for the generic WL errors and go into detail on how we estimate the directional biases to the DM centroid location.
 
-to some degree WL faces the same challenge as the galaxy location in that it is necessary to determine to position of galaxies along the line-of-sight.
-however WL is not quite as sensitive due to the broad WL kernel.
-(Much of this discuss is unecessary here and the Chapter 2 WL tomography dicussion can be reference)
-Might be worth referencing the work of Dietrich et al.
+\subsection{Generic WL Errors}
 
-However the breadth of this WL kernel is also a hinderance when determining the WL centroid since line of sight massive structures can induce additional noise in WL centroid estimate of the DM halo centroid.
+Details of the galaxy shape measurement for the Musket Ball Cluster are discussed in Chapter \ref{chapter:2}.
+We account for the effects of shape measurement and intrinsic ellipticity errors on the WL location in much the same way as we estimate the signal-to-noise of our WL mass maps as a whole (see \S\ref{section:Chap2WL}).
+This is done by generating 10,000 bootstrap realizations of the HST WL mass map, where each realization is created with a random sample of the lensed source galaxy population.
+Then just as we do for the galaxy centroid location (see \S\ref{section:GalaxyLocation}) we iteratively determine the centroid of each subcluster in each bootstrap realization of the mass map.
+The distributions of centroids in these bootstrap realizations is then used to  calculate bias-corrected percent confidence limits \citep{Beers:1990kg} of the marginalized right ascension and declination distributions.
 
-\subsubsection{Noise and Systematic effects}
+As for the effects of projected line of sight structures, \citet{Dietrich:2011gs} find that in their simulations line-of-sight structures contribute slightly ($\sim$2'') to the lensing centroid uncertainty.
+Furthermore we find no evidence of significant line of sight structures using our full sample of 654 spectroscopic redshifts (with uniform selection over $0<z<1.0$) as well as photometric redshifts (see further discussion in Chapter \ref{chapter:2}). 
+Based on our findings we confidently rule out any line of sight structures with $M_{\rm 200}\gtrsim1\times10^{12} M_\odot$.
+Any undetected structure will have negligible impact on the offset.
 
-\textit{Copied from Chandra/HST proposal. Need to edit.}
+Just as redshift uncertainties affect the galaxy centroid estimate (see \S\ref{section:ClusterMembership}) they too affect the WL centroid estimate.
+However unlike with the galaxy centroid estimate, spectroscopic redshifts help very little to improve the WL centroid estimate.
+This is because most of the lensing information comes from the large number of faint ($R\gtrsim23$) galaxies that predominately make up the lensed source population.
+There is negligible spectroscopic information available for this population. 
+So we rely almost entirely on photometric magnitude, color, and redshift information.
+Fortunately WL is not quite as sensitive to these errors as the galaxy membership determination due to the relatively broad lensing redshift kernel (see Equation \ref{equation:WLshear})\footnote{However as previously noted the breadth of this WL kernel is also a hindrance when determining the WL centroid since line-of-sight massive structures can induce additional noise in WL centroid estimate of the DM halo centroid.}.
+However it is still important to properly account for the inherently large errors associated with photometric redshifts.
+The full $p(z)$ tomographic lensing method introduced in \S\ref{section:Chap2WL} is designed to do just that.
+The method's effectiveness has recently been show in the case of Abell 781 (Wittman, Dawson, \& Benson, 2013) where it increased the signal-to-noise of the Abell 781-D subcluster by $\sim$40\%, thereby resolving the missing WL mass mystery \citep{Cook:2012ka}.
 
-Several sources of noise and systematic effect could cause such an offset:
-(1) the mass of the northern subcluster pulling off the overall mass
-centroid; (2) the gas mass just to the north doing the same; and (3)
-unrelated structures along the line of sight. We show below that (2)
-is the primary concern and can be solved with Chandra data, and that
-(4) HST data are required to tighten up the statistical uncertainty on
-the size of offset.  Together, these data will enable measurement of
-$\sigma_{\rm DM}m_{\rm DM}^{-1}$.
+
+\subsection{Noise and Systematic effects}
+
+duffy et al concentration scaling relation
 
 \textbf{(1)} We model the surface mass density of the north and south subclusters with three NFW halos using masses determined by \citet{Dawson:2012dl}. We recursively estimate the centroid of this model and find an offset $3.4''$ from the true centroid towards the northern subcluster. 
+
+
 \textbf{(2)} We then combine estimated surface mass densities of the
 Central and South gas concentrations with the previous DM surface
 densities from step (1) which results in a $7.6''$ centroid offset (dashed red curve of Figure \ref{fig3}).  
 For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$ (light red region of Figure \ref{fig3}). 
 With the proposed Chandra observations we can better constrain the gas mass by approximately a factor of 10 and constrain the distribution of the gas mass so that the resulting uncertainty in the modeled centroid offset is reduced by at least a factor of 2 (dark red region of Figure \ref{fig3}).
-\textbf{(3)} As discussed in \citet{Dawson:2012dl} we find no evidence of significant line of sight structures using our full sample of 654 spectroscopic redshifts (with uniform selection over $0<z<1.0$) as well as photometric redshifts. 
-Based our findings we confidently rule out any line of sight structures with $M_{\rm 200}\gtrsim1\times10^{12} M_\odot$; any undetected structure will have negligible impact on the offset.
-\textbf{(4)} We estimate the noise of the galaxy density and weak lensing centroids by performing the recursive centroid analysis on bootstrap samples of each.
-For the galaxy density centroid errors we take 1000 bootstrap samples of the spectroscopically confirmed cluster galaxies and remaining galaxies with $0.43<z_{\rm phot}<0.63$ (roughly the cluster redshift $\pm\sigma_{z_{\rm phot}}$).
-Similarly we estimate the weak lensing centroid errors by analyzing 1000 bootstrap samples of the lensed background galaxies.
+
+
 
 \section{Gas--Weak Lensing Offset}\label{section:GasWLOffset}
 
@@ -364,8 +378,7 @@ The peak of the gas distribution ($09\fh16\fm15\fs\pm5.5\fs, 29\fdg50\farcm59\fa
 Given the significant offset between the WL and gas locations we are able to use the first method of \citet{Markevitch:2004dl} and place a rough limit on the DM self-interaction cross-section, $\sigma_{\rm DM}$.
 This method compares the scattering depth of the dark matter, $\tau_{\rm DM}=\sigma_{\rm DM}m^{-1}_{\rm DM} \Sigma_{\rm DM}$, with that of the ICM gas, $\tau_{\rm ICM}\approx 1$, where $m_{\rm DM}$ is the DM particle mass and $\Sigma_{\rm DM}$ is the surface mass density of the DM particles.
 $\Sigma_{\rm DM}$ is approximately the WL measured surface mass density, $\Sigma$, since $\sim80\%$ of a typical cluster's mass is DM \citep{Diaferio:2008js}.
-For ease of comparison with the results of \citet{Markevitch:2004dl} and \citet{Merten:2011gu} we examine the surface density averaged over the face of the subcluster within $r$=125\,kpc, which is $\Sigma\approx0.15$\,g\,cm$^{-2}$; thus we find $\sigma_{\rm DM} m_{\rm DM}^{-1} \lesssim 7$\,cm$^2$\,g$^{-1}$.  
-Note that we cannot apply the velocity-dependent $\sigma_{\rm DM}$ constraint methods outlined by \citet{Markevitch:2004dl} since our analytic model assumes $\sigma_{\rm DM}$\,=\,0 \citep{Dawson:2012dl, Dawson:2012ub}.
+For ease of comparison with the results of \citet{Markevitch:2004dl} and \citet{Merten:2011gu} we examine the surface density averaged over the face of the subcluster within $r$=125\,kpc, which is $\Sigma\approx0.15$\,g\,cm$^{-2}$; thus we find $\sigma_{\rm DM} m_{\rm DM}^{-1} \lesssim 7$\,cm$^2$\,g$^{-1}$. 
 
 
 \begin{figure}
