@@ -366,7 +366,7 @@ We then apply the same iterative centroid estimate procedure to the simulated pr
 We then compare the estimated centroid of the total surface density map with the known location of the subcluster's simulated DM halo.
 In all cases we find that each subcluster's estimated centroid is biased from the true centroid towards the center of the merger.
 In the case of the southern subcluster we find that the centroid offset is 7.6'' for the best fit mass estimates of the subclusters and south and central gas concentrations.
-For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$
+For perspective, if we double the gas mass the total offset increases to $10''$, or if we account for the uncertainty in our distribution of the gas mass the modeled centroid offset ranges from $3.4''$ to $9.4''$.
 In the case of the northern subcluster the bias is actually less, ranging from (0.7'' to 1.5'').
 Unlike the southern subcluster that has a significant gas concentration just offset from the galaxies and DM of the subcluster (see e.g. Figure \ref{figure:LensingXrayOverlay}) in addition to the dissociated central gas concentration, the closest significant gas concentration to the northern subcluster is the central gas concentration.
 Since the magnitude of the WL-DM centroid bias decreases rapidly with mass separation the northern subcluster is much less affected.
@@ -403,9 +403,12 @@ The majority of the cluster gas is centered $\sim1.4\arcmin$ between the North a
 
 \section{Galaxy--Weak Lensing Offset}\label{section:GalaxyWLOffset}
 
-The offset is now 20.5''
-
-Section text
+As discussed previously it is interesting to study the galaxy-WL offset since the WL is expected to largely map the DM distribution (accounting for the biases discussed in \S\ref{section:WLLocation}) and if the nearly collisionless galaxies are found to lead the DM in the merger then this could provide evidence of SIDM.
+Here we consider the measured galaxy-WL offset in both the north and south subclusters of the Musket Ball Cluster.
+We plot the WL (dashed black) and galaxy (solid black)  centroid confidence intervals on the HST WL signal-to-noise mass map in Figure \ref{figure:LensingGalaxyOverlay}.
+Interestingly there is an offset of 20.5'' (129\,kpc at $z=0.53$) in the southern subcluster where the galaxies appear to be leading the WL determined mass.
+There also exists an offset (7.4''; 47\,kpc at $z=0.53$) in the northern subcluster but in the opposite direction (in the sense that the WL determined mass appears to be leading the galaxies).
+As noted previously the larger centroid uncertainties in the northern cluster are primarily due to it being less massive and having fewer galaxies than the southern subcluster.
 
 \begin{figure}
 \centering
@@ -414,11 +417,17 @@ Section text
 HST space-based WL mass signal-to-noise map of the Musket Ball Cluster with the spectroscopic and photometric redshift based galaxy number density overlay (white contours).
 The 68\% and 95\% centroid confidence intervals are shown for the north and south subcluster WL centroids (dashed black ellipses) as well as north and south galaxy number density centroids (solid black ellipses).
 Note the 20.5'' offset between the galaxies and the WL mass in the South subcluster.
+However also note the 7.4'' offset between the two in the North subcluster, but in the opposite direction (in the sense that the galaxies are trailing the WL).
 }
 \label{figure:LensingGalaxyOverlay}
 \end{figure}
 
-
+In Figure \ref{figure:CentroidDist_South} we highlight the the bootstrap distributions of the galaxy centroid and WL centroid in the southern subcluster looking at a region 1.5' by 1.5'.
+For perspective we have shown the merger axis (purple dashed line), which is defined by drawing a straight line between the galaxy centroids of the north and south subclusters\footnote{It is entirely possible that the actual merger trajectory is curved or that the actual axis does not pass directly through the centers of the galaxy locations.}.
+The outgoing merger axis direction is towards the south.
+Under this definition the merger axis has a position angle (PA; positive from north towards east) of 153\,degrees.
+Interestingly the first principle component axis of the joint galaxy WL distributions has a PA=159\,degrees (green dot-dashed line).
+This offset seems to very closely match the expectations of SIDM.
 
 \begin{figure}
 \centering
@@ -432,8 +441,34 @@ The first principle component axis of two distributions (dot-dashed green line) 
 \label{figure:CentroidDist_South}
 \end{figure}
 
+While the southern centroids are offset by more than their respective 68\% confidence intervals there remains the question of how significant this offset is, especially in light of the directional biases (\S\ref{section:MergerSysError}) expected with such a measurement.
+To estimate this significance we pose the question:
+if the estimated WL and galaxy two-dimensional PDF's coincide how often would one expect the observed offset (20.5'') of the galaxies leading the WL along the merger axis\footnote{This is a one-tailed test}.
+Assuming the two centroids are expected to coincide in the CDM scenario then the complement of the previous probability is the confidence that $\sigma_{\rm DM}>0$.
+Also assuming no systematic errors or random noise not captured by the bootstrap analysis.
+For the case of zero expected offset between the two centroids, the observed offset suggests that $\sigma_{\rm DM}>0$ with $\sim$97\% confidence (see where the blue curve of Figure \ref{figure:CentroidSignificance_South}).
+However as we pointed out in \S\ref{section:MergerSysError} the directional biases due to the mass of the northern subcluster and the mass of the gas can cause the WL centroid to be offset away from the true DM centroid towards the center of the merger by $\sim3.4''$ to $9.4''$ (red region) with an expectation of $\sim$7.6'' (dashed red line).
+Once these biases are taken into account the confidence that $\sigma_{\rm DM}>0$ falls to $\sim$83\%
 
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Chapter4/AnalysisFiles/GalDenVsHSTWL_pzpen_delxPC_south_reformat.png}
+\caption[Musket Ball southern subcluster galaxy and weak lensing centroid offset significance.]{
+Musket Ball southern galaxy-WL centroid offset significance, in terms of confidence that $\sigma_{\rm DM}>0$.
+If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$97\% confidence).
+The red region shows the expected offset caused by the directional biases of the mass of the northern subcluster and the mass of the gas (see \S\ref{section:MergerSysError}) with the most likely offset represented by the dashed red line.
+Since the non-SIDM effects are expected to cause an offset the confidence of $\sigma_{\rm DM}>0$ fall to $\sim$83\%.
+The galaxy-WL centroid offset is measured along the merger axis direction ($x'$) with positive offsets being when the galaxies lead the DM (as expected in the case of SIDM).
+}
+\label{figure:CentroidSignificance_South}
+\end{figure}
 
+However there remains the observation that the galaxies appear to be trailing the DM slightly in the northern subcluster (see Figure \ref{figure:LensingGalaxyOverlay}).
+Figure \ref{figure:CentroidDist_North} for the northern subcluster is analogous to Figure \ref{figure:CentroidDist_South} for the southern subcluster.
+It also shows a region 1.5' by 1.5', note however in this case that the outgoing merger axis direction is towards the north.
+Neither distribution is as well defined as the distributions in the south and the first principle component axis of the joint galaxy and WL centroid distributions has a PA = 116\,degrees (v.s. the merger axis PA = 153\,degrees).
+Despite this, it appears as though the galaxy centroid distribution is trailing the WL centroid distribution.
+Other than noise there is no physical explanation for such an offset, and it is clearly at odds with the SIDM expectations.
 
 \begin{figure}
 \centering
@@ -442,34 +477,30 @@ The first principle component axis of two distributions (dot-dashed green line) 
 Musket Ball northern subcluster WL (blue) and galaxy number density (red) centroid probability density distribution functions constructed from 10,000 respective bootstrap realizations.
 The 68\% (dark contours) and 95\% (light contours) confidence intervals are shown for each.
 The region shown is 1.5' by 1.5' ($567\times 567\,kpc^2$ at $z$=0.53), the same scale as Figure \ref{figure:CentroidDist_South}.
-The merger axis of the cluster (as inferred from a line intersecting the two galaxy centroids) is plotted as a dashed purple line.
-Unlike the southern subcluster (Figure \ref{figure:CentroidDist_South}) there does not appear to be a significant offset between between the locations.
+The merger axis of the cluster (as inferred from a line intersecting the two galaxy centroids) is plotted as a dashed purple line; its position angle is 153\,degrees.
+The first principle component of the joint distributions has a position angle of 116\,degrees.
+Unlike the southern subcluster (Figure \ref{figure:CentroidDist_South}) there does not appear to be as significant of an offset between between the locations, however what offset there is, is contrary to the SIDM expectations or any physical expectations.
 Both centroids in the northern subcluster are less well defined than the centroids in the southern subcluster; most notably the galaxy density centroid which appears bimodal.
 }
 \label{figure:CentroidDist_North}
 \end{figure}
 
-Perhaps include some figures discussing systematic offset tests.
-
-The statistical question we pose is:
-If the WL and galaxy parent distributions coincide how often would one expect the observed offset of the galaxies leading the WL along the mergers axis\footnote{This is a one-tailed test}.
-Assuming the two centroids are expected to coincide in the CDM scenario then the complement of the previous probability is the confidence that $\sigma_{\rm DM}>0$.
-Also assuming no systematic errors or random noise not captured by the bootstrap analysis.
-
-\begin{figure}
-\centering
-\includegraphics[width=5in]{Chapter4/AnalysisFiles/GalDenVsHSTWL_pzpen_delxPC_south_reformat.png}
-\caption[Musket Ball southern subcluster galaxy and weak lensing centroid offset significance.]{
-
-The galaxy-WL centroid offset is measured along the merger axis direction ($x'$) with positive offsets being when the galaxies lead the DM (as expected in the case of SIDM).
-}
-\label{figure:CentroidSignificance_South}
-\end{figure}
+Given that the northern galaxy-WL offset appears at odds with galaxy-WL offset in the south (in regards to the observed offset in the south being evidence for SIDM), it seems reasonable to jointly analyze the observed offsets when attempting to make inference on the confidence that $\sigma_{\rm DM}>0$. 
+It is note entirely clear on the best way to do this, however a conservative option is to simply add the galaxy-WL offsets of the north an south subcluster ($\Delta x'_{\rm North}+\Delta x'_{\rm South}$) in each bootstrap realization, then compare this distribution.
+Where the galaxy-WL offset in each cluster is defined to be positive when the galaxies are leading the WL in the respective outgoing merger axis direction ($x'$) of each subcluster.
+Thus if the galaxies in the north trail the WL by 7'' and the galaxies in the south lead the WL by 20'' for a given realization then $\Delta x'_{\rm North}+\Delta x'_{\rm South}$ will equal 13'' for that bootstrap realization.
+The result of this convention is shown as the blue curve in Figure \ref{figure:CentroidSignificance_NorthPlusSouth}.
+Comparing with the confidence curve for just the south subcluster shows that the confidence that $\sigma_{\rm DM}>0$ has dropped by a factor of $\sim$0.7.
+Furthermore the region of the expected centroid offset due to non-SIDM bias has been increase slightly to account for both the offset bias in the north and south (see \S\ref{section:MergerSysError}).
 
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/NorthSouthJointAnalysis_delxPC.png}
 \caption[Musket Ball joint northern and southern subcluster galaxy and weak lensing centroid offset significance.]{
+Musket Ball joint north and south galaxy-WL centroid offset significance, in terms of confidence that $\sigma_{\rm DM}>0$.
+If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$78\% confidence).
+The red region shows the expected offset caused by the directional biases of the mass of the other subcluster and the mass of the gas (see \S\ref{section:MergerSysError}) with the most likely offset represented by the dashed red line.
+Since the non-SIDM effects are expected to cause an offset the confidence of $\sigma_{\rm DM}>0$ fall to $\sim$55\%.
 }
 \label{figure:CentroidSignificance_NorthPlusSouth}
 \end{figure}
