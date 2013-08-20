@@ -468,7 +468,7 @@ Figure \ref{figure:CentroidDist_North} for the northern subcluster is analogous 
 It also shows a region 1.5' by 1.5', note however in this case that the outgoing merger axis direction is towards the north.
 Neither distribution is as well defined as the distributions in the south and the first principle component axis of the joint galaxy and WL centroid distributions has a PA = 116\,degrees (v.s. the merger axis PA = 153\,degrees).
 Despite this, it appears as though the galaxy centroid distribution is trailing the WL centroid distribution.
-Other than noise there is no physical explanation for such an offset, and it is clearly at odds with the SIDM expectations.
+Other than noise there is no physical explanation for such an offset\footnote{Care has been taken to make sure that the multi-wavelength astrometry is accurate. Thus there should \textit{not} be a translational shift from one map to another, which could cause an offset similar to what is observed.}, and it is clearly at odds with the SIDM expectations.
 
 \begin{figure}
 \centering
@@ -492,6 +492,7 @@ Thus if the galaxies in the north trail the WL by 7'' and the galaxies in the so
 The result of this convention is shown as the blue curve in Figure \ref{figure:CentroidSignificance_NorthPlusSouth}.
 Comparing with the confidence curve for just the south subcluster shows that the confidence that $\sigma_{\rm DM}>0$ has dropped by a factor of $\sim$0.7.
 Furthermore the region of the expected centroid offset due to non-SIDM bias has been increase slightly to account for both the offset bias in the north and south (see \S\ref{section:MergerSysError}).
+While this analysis is conservative it does serve to place an approximate bookend on confidence that $\sigma_{\rm DM}>0$, suggesting that the confidence should be between $\sim$55--85\%.
 
 \begin{figure}
 \centering
@@ -507,35 +508,78 @@ Since the non-SIDM effects are expected to cause an offset the confidence of $\s
 
 \section{Summary}
 
--summarize different centroid accuracy relative to one another
--
+In this chapter we presented our measurements of the gas, galaxy, and WL centroids of the Musket Ball Cluster.
+We are able to constrain the central gas distribution's projected centroid to within 9'' (57\,kpc at $z$=0.53), see \S\ref{section:GasLocation}.
+Using both the extensive spectroscopic and photometric redshifts we are able to constrain the galaxy centroid of the northern subcluster to within 5.3" (33\,kpc at $z$=0.53) and the galaxy centroid of the southern subcluster to within 3.3" (21\,kpc at $z$=0.53), see \S\ref{section:GalaxyLocation}.
+Using our tomographic WL method applied to the HST measure shapes we are able to constrain the projected WL centroid of the northern subcluster to within 13'' (82\,kpc at $z$=0.53) and the WL centroid of the southern subcluster to within 11'' (69\,kpc at $z$=0.53), see \S\ref{section:WLLocation}.
+
+Given the accuracy of the gas and WL centroid measurement we are able to confidently state that 1.4' offset of the central gas concentration halfway between the north and south WL subclusters is clear evidence of the Musket Ball Cluster being a dissociative merger, see \S\ref{section:GasWLOffset}.
+Furthermore we use these measurements in conjunction with gas-WL offset method of \citet{Markevitch:2004dl} to place a constraint on $\sigma_{\rm DM} m_{\rm DM}^{-1} \lesssim 7$\,cm$^2$\,g$^{-1}$.
+Since this method has an inverse dependence on the surface mass density of DM it is not surprising that this constraint from the Musket Ball is looser than existing similar constraints from more massive clusters \citep{Markevitch:2004dl, Bradac:2008gw, Merten:2011gu}.
+
+Upon investigating the galaxy-WL offset we find that galaxies in the southern subcluster appear to be leading the WL centroid by $\sim$20.5'' (129\,kpc at $z$=0.53), see \S\ref{section:GalaxyWLOffset}.
+The 159\,degree position angle of this offset is inline with the 153\,degree merger axis.
+Such an offset could be cause by SIDM.
+However, such an offset could be cause by several directional biases inherent in the WL estimate of the DM location, see \S\ref{section:MergerSysError}.
+Although we find that these directional biases could account for at most an offset of 9.4''.
+Given this and the centroid uncertainties we find that such a large offset due to non-SIDM physics should occur less than 5--15\% of the time, suggesting that $\sigma_{\rm DM}>0$ with $\sim$85\% confidence.
+
+Interestingly though we find that galaxy-WL centroid offset in the north seems to contradict the SIDM scenario, see \S\ref{section:GalaxyWLOffset}.
+For this subcluster we find that the galaxies are trailing the WL centroid along the merger axis by $\sim$7.4'' (47\,kpc at $z$=0.53).
+Other than noise there is no physical explanation for such an offset.
+We conservatively adjust the $\sigma_{\rm DM}>0$ confidence from the observed offset in the southern subcluster by directly combining the countering offsets in the north and south along the merger axis during.
+This analysis suggests that the confidence of $\sigma_{\rm DM}>0$ should be lowered to $\sim$55\%.
+Given that this estimate is conservative the true confidence should be between $\sim$55--85\%.
+
 
 \section{Discussion}
 
-Discussion text
+It is difficult to make any definitive conclusions about SIDM from the observed galaxy-WL offsets in the Musket Ball Cluster.
+While the SIDM scenario is slightly preferred over the CDM scenario it is not significantly so.
+There are a number of actions that can be taken to help clarify the situation.
 
-simulations to study the directional bias of galaxy centroid and WL centroid measurements in dissociative mergers
+\textit{(i)} CDM and SIDM simulations of the Musket Ball Cluster merger, similar to the \citet{Randall:2008hs} simulations of the Bullet Cluster.
+Not only are these necessary to translate the observed offsets into quantitative constraints on $\sigma_{\rm DM}$, but they should prove invaluable in helping to quantify the systematic errors that have been approximated in this analysis, as well as identify possible systematic errors that have to this point been disregarded.
+
+\textit{(ii)} A better measure of the expected SIDM effects.
+While the offset of the galaxy-WL centroids is a reasonable measure it is not likely to be the best measure of the expected SIDM effect.
+The centroid measurement heavily bins the raw lensing and galaxy information, and data binning is always a lossy process.
+Thus it is conceivable to reduce the current uncertainties with methods that more directly compare the galaxy and WL surface mass distributions.
+Evidence for this can be seen in the recent SIDM simulations of \citet{Kahlhoefer:2013wp}, where they find that peaks of the galaxy and SIDM distributions shift  negligibly during mergers however there are notable shifts in the outer half of the  two distributions.
+As far as the centroid measurement is concerned it would be worth investigating the effects of weighting the galaxies by luminosity or stellar mass in addition to membership probability.
+
+\textit{(iii)} Study more dissociative mergers.
+Taking an ensemble approach to measuring the galaxy-WL offset will not only help reduce the random errors associated with the measurement but will potentially help with our understanding of the intrinsic scatter in such measurement.
+Also as \citet{Kahlhoefer:2013wp} the magnitude of SIDM effect is expected to vary among mergers.
+So there in not only the possibility of finding another merger where the offset is larger, but the varying magnitude of the observed offsets from merger to merger can be used as a consistency check for a given SIDM model.
+
+\textit{(iv)} Better understand the intrinsic scatter of the galaxy-WL offset in all mergers.
+
+\textit{()} More observations of the Musket Ball Cluster.
+lensing and gas
+
+\textit{()} Better galaxy membership estimation.
+tweak the cluster membership criteria in order to simultaneously minimize the joint uncertainty due to cluster membership noise and Poisson noise of the centroid estimate.
+ 
+
+Lessons learned 
+-limitations due to centroid uncertainties
 
 
-note importance of fitting both subcluster simultaneously
+-- note importance of fitting both subcluster simultaneously
+-note what was ignored/assumed in the analysis
+-- galaxy centroid bias
+--- about half of the expected offset bias comes from the mass of the gas and about half comes from the mass of the other subcluster, so even in this case the confidence should only be adjusted to 0.7--0.9
 
-better modeling of the gas mass and its effect on the systematic centroid offset
 
-note alternatives to centroid estimation, both in measuring the galaxy-dark matter offset as well as just other ways to measure the galaxy centroid, e.g. \citep{Randall:2008hs}
-
-note other means of estimating the offset independent of centroid measurements
-
-For galaxy centroid consider other measurements of the galaxy population location, other than number density, for example weighting the galaxies by luminosity or stellar mass.
 
 Discuss work of \citep{Kahlhoefer:2013wp}
+- note that observed south offset is far larger than that predicted by their recent simulation, what about average of two offsets (20.5, -7.44) = 6.5' = 41 kpc
+- if there work is correct then unlikely to make this measurement given the calculated galaxy and WL centroid accuracies XXX\,kpc and YYY\,kpc, respectively.
 
-One thing that hasn't been discussed is the typical intrinsic scatter in the lensing centroid. Reference the George, M. work noting that they find that the galaxy center is often $\sim$50kpc from the lensing center. There are a number of problems with directly translating this result to the work discussed here. Since they were dealing with groups of galaxies (typically $\sim$1 order of magnitude less massive and $\sim$1 order of magnitude fewer galaxies than galaxy cluster) they 1) have fewer galaxies with which to beat down the Poisson noise of the centroid estimate, 2) their result is based on which center maximizes the lensing signal of 129 galaxy groups. 
 
-importance of using multiple systems (beat down intrinsic scatter in galaxy-DM offset as well as other sources of noise)
 
-importance of simulations, not only for quantifying the cross-section constraints but also for studying systematic effects (e.g. the intrinsic galaxy-DM offset, both in relaxed cluster as well as merging clusters)
 
-tweak the cluster membership criteria in order to simultaneously minimize the joint uncertainty due to cluster membership noise and Poisson noise of the centroid estimate.
 
 Talk about Subaru WL as more evidence that south only is an optimistic
 
