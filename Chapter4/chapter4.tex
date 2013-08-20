@@ -10,9 +10,7 @@ In this chapter we apply two of those methods to observations of the Musket Ball
 First we will consider the gas-DM offset, and second we will consider the galaxy-DM offset.
 As discussed in \S\ref{section:DMconstraintWithMergers} these two methods are believed to be the most robust.
 In both cases we will depend on the WL measurements to ascertain the location of the DM.
-The galaxy location will be determined from optical spectroscopic and photometric observations of the galaxies.
-The gas location will be determined from X-ray observations of the cluster.
-Of the three location measurements... (the galaxy is the most difficult???)
+The galaxy location will be determined from optical spectroscopic and photometric observations of the galaxies, and the gas location will be determined from X-ray observations of the cluster.
 
 We note that the exercise of comparing the galaxy-WL offset will be incomplete in this analysis, since simulations of mergers with varying $\sigma_{\rm SIDM}$ are necessary to turn any observed offset (or lack of offset) into a quantitative constraint on$\sigma_{\rm SIDM}$ (see \S\ref{section:DMgalaxyOffsetIntro}). 
 However we chose to present the observation portion of this analysis for two reasons.
@@ -553,35 +551,30 @@ Taking an ensemble approach to measuring the galaxy-WL offset will not only help
 Also as \citet{Kahlhoefer:2013wp} the magnitude of SIDM effect is expected to vary among mergers.
 So there in not only the possibility of finding another merger where the offset is larger, but the varying magnitude of the observed offsets from merger to merger can be used as a consistency check for a given SIDM model.
 
-\textit{(iv)} Better understand the intrinsic scatter of the galaxy-WL offset in all mergers.
+\textit{(iv)} Better understand the intrinsic scatter of the galaxy-DM offset.
+In this work it has been presumed that the galaxies trace the DM distribution. 
+It is not known at what level this will breakdown, however it is possible to get some handle on this by studying the galaxy-DM offset in relaxed cluster, both in observed and simulated systems.
+Any offset scatter observed in these relaxed systems can be assumed as the base noise level for merging systems.
 
-\textit{()} More observations of the Musket Ball Cluster.
-lensing and gas
+\textit{(v)} Account for the galaxy centroid directional offset bias (see \S\ref{section:GalaxyLocation}).
+This bias should act in a positive manner to counter some of the directional offset bias of the WL measurement (which has been accounted for in the current analysis).
+About half of the expected WL offset bias comes from the mass of the gas and about half comes from the mass of the other subcluster.
+If the galaxies perfectly trace the DM then the galaxy centroid should also be biased towards the center of the merger by the same amount that the WL measurement is biased towards the center by the mass of the other subcluster.
+Thus the expected systematic galaxy-WL offset should only be $\sim$5'' instead of $\sim$9''.
+In this case the confidence that $\sigma_{\rm DM}>0$ should be adjusted to $\sim$0.7--0.9. 
 
-\textit{()} Better galaxy membership estimation.
-tweak the cluster membership criteria in order to simultaneously minimize the joint uncertainty due to cluster membership noise and Poisson noise of the centroid estimate.
+\textit{(vi)} More observations of the Musket Ball Cluster.
+While the current HST observations are sufficiently deep that further observations will not increase the number of source galaxies significantly It is possible to improve the purity and completeness of the lensed source population, thereby improving the WL signal-to-noise.
+Additionally deeper X-ray observations would enable better modeling of the gas mass and associated directional galaxy-WL bias. 
+However neither of these are expected to improve the confidence of the measurements to such a degree that the problem of $\sigma_{\rm DM}$ will be solved.
+
+\textit{(vii)} Better galaxy membership estimation.
+As previously noted there is potential for improving the galaxy membership estimation by attempting to adjust the cluster membership criteria in order to simultaneously minimize the joint uncertainty due to cluster membership noise and Poisson noise of the centroid estimate.
+This should improve the galaxy centroid measurement, and my become even more important as new galaxy location schemes based more strongly on the galaxy population as a whole are developed (see point \textit{ii}).
  
-
-Lessons learned 
--limitations due to centroid uncertainties
-
-
--- note importance of fitting both subcluster simultaneously
--note what was ignored/assumed in the analysis
--- galaxy centroid bias
---- about half of the expected offset bias comes from the mass of the gas and about half comes from the mass of the other subcluster, so even in this case the confidence should only be adjusted to 0.7--0.9
-
-
-
-Discuss work of \citep{Kahlhoefer:2013wp}
-- note that observed south offset is far larger than that predicted by their recent simulation, what about average of two offsets (20.5, -7.44) = 6.5' = 41 kpc
-- if there work is correct then unlikely to make this measurement given the calculated galaxy and WL centroid accuracies XXX\,kpc and YYY\,kpc, respectively.
-
-
-
-
-
-Talk about Subaru WL as more evidence that south only is an optimistic
+ 
+Finally, one of the most important lessons learned from this analysis is that both subclusters of the merger should be used when estimating the significance of the offsets between galaxies, gas, and WL.
+Especially in the case of near-equal mass mergers.
 
 
 %\bibliographystyle{apj}
