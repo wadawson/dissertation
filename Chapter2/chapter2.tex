@@ -117,17 +117,10 @@ The cluster's WL shear signal, $\gamma$, depends not only on the projected surfa
 %\gamma \propto \frac{\Delta\Sigma}{\Sigma_{cr}} = \Delta\Sigma \frac{4\pi G}{c^2} \frac{D_{ls}(z_l,z_s)D_l(z_l)}{D_s(z_s)} \mathcal{H}\left(\frac{z_s}{z_l}-1\right),
 %\end{displaymath}
 where $\Sigma_{\rm cr}$ is the critical surface density, $\mathcal{H}$ is the Heaviside step function,  and $D_l$, $D_s$, \& $D_{ls}$ are the angular diameter distances to the lens, source, and between the lens and source, respectively.
-Since we do not have exact redshift measurements of the source galaxies we use each galaxy's photometric redshift probability distribution function, $p(z)$, to estimate a respective $\Sigma_{\rm cr}$ for a given lens redshift,
+In addition to weights based on shape measurement errors, we also weight by each galaxy's photometric redshift probability distribution function, $p(z)$,
 \begin{displaymath}
-\Sigma_{cr}(z_l)\approx\langle\Sigma_{cr}(z_l)\rangle=\int\Sigma_{cr}( z_l,z_s)p(z_s)dz_s.
+w_{\gamma}(z_l) = \Sigma_{cr}^{-1}(z_l)\approx\langle\Sigma_{cr}^{-1}(z_l)\rangle=\int\Sigma_{cr}^{-1}( z_l,z_s)p(z_s)\mathcal{H}\left(\frac{z_s}{z_l}-1\right)dz_s.
 \end{displaymath}
-In addition to weights based on shape measurement errors, we also weight the shear of each galaxy based on its $p(z)$,
-\begin{displaymath}
-w_{\gamma}(z_l)=\frac{1}{\int\left[\Sigma_{cr}(z_l,z_s)-\langle\Sigma_{cr}(z_l)\rangle\right]^2p(z_s)dz_s}.
-\end{displaymath}
-%\begin{displaymath}
-%w_{\gamma}(z_l)=\frac{1}{\sigma^2_{\Sigma_{cr}}}=\frac{1}{\int\left[\Sigma_{cr}(z_l,z_s)-\langle\Sigma_{cr}(z_l)\rangle\right]^2p(z_s)dz_s}.
-%\end{displaymath}
 This method increases the signal-to-noise of the measurement \citep[see e.g.][]{Hennawi:2005ig}, and more accurately accounts for the errors inherent in the photometric redshift estimates, compared to single-point estimates.
 We estimate uncertainties using 100 bootstrap resamplings.
 
