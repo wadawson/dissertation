@@ -18,7 +18,7 @@ Firstly, it is a necessary first step towards applying this constraint.
 Secondly, if a significant offset is observed then one could still conclude that $\sigma_{\rm SIDM}>0$, which would be a significant finding since this would imply that DM is self-interacting via a new force.
 
 For both the gas-DM offset and galaxy-DM offset methods the primary measurements necessary are the location of the galaxies (\S\ref{section:GalaxyLocation}), gas (\S\ref{section:GasLocation}), and DM (\S\ref{section:WLLocation}).
-Much of this chapter will focus on how there measurements are made with the later sections (\S\ref{section:GasWLOffset} and \S\ref{section:GalaxyWLOffset}) discussing the offset measurement and their implications for $\sigma_{\rm SIDM}$.
+Much of this chapter will focus on how their measurements are made with the later sections (\S\ref{section:GasWLOffset} and \S\ref{section:GalaxyWLOffset}) discussing the offset measurement and their implications for $\sigma_{\rm SIDM}$.
 
 \subsection{Location Estimation}\label{section:LocationEstimation}
 For the original work of \citet{Dawson:2012dl} (see Chapter 2) we estimated the weak lensing subcluster positions and errors on their positions by using the location of the peak signal in a region surrounding just the area of interest (e.g. one subcluster) and estimated the variance on the peak by measuring the peak location of each bootstrap iteration within the selected region.  
@@ -26,7 +26,7 @@ For this chapter, rather than using the location of the peak and variance of the
 We begin by calculating the centroid of a large aperture that encompasses one subcluster, but excludes the other.
 We then decrease the aperture, recenter on the previously calculated centroid, and estimate the centroid of the new aperture.
 This process is repeated until the aperture is decreased to a radius of $\sim200$\,kpc.
-To estimate the uncertainty on the location I perform this process on each iteration of a random bootstrap sample map, resulting in a array of centroid values.
+To estimate the uncertainty on the location I perform this process on each iteration of a random bootstrap sample map, resulting in an array of centroid values.
  The uncertainty on the location is then inferred from the variance of this array of centroid values.
 
 
@@ -41,7 +41,7 @@ Evidence for this is found across all cosmological mass scales from dwarf speroi
 So the location of galaxies is expected to coincide with the location of the DM in $\Lambda$CDM, to within some amount of intrinsic scatter.
 It is precisely this phenomenon that we wish to challenge with observations of merging galaxy clusters, since for some non-zero $\sigma_{\rm SIDM}$ the location of the galaxy population is not expected to coincide precisely with the underlying DM distribution.
 As far as the location of the galaxy population (i.e. its center) is concerned there are three main challenges.
-First, there are many ambiguous definitions the galaxy population location and these definitions often result in different estimates, sometimes even outside the uncertainty of each measurement \citep{George:2012uo}.
+First, there are many ambiguous definitions of the galaxy population location and these definitions often result in different estimates, sometimes even outside the uncertainty of each measurement \citep{George:2012uo}.
 Second, due to inherent observational limitations in determining galaxy positions and velocities it can be difficult to determine which galaxies are members of a given DM halo (and expected tracers of that DM halo).
 Third, even if galaxies are a fair sample of the underlying DM halo there are often only a few hundred members to trace the distribution of a given DM halo.
 Thus a certain amount of intrinsic scatter between the location of the galaxy population and the underlying DM distribution is to be expected simply due to Poisson noise.
@@ -70,7 +70,7 @@ In the case of a simple galaxy number density centroid $w_i$=1.
 It is common to weight galaxies by their luminosity or stellar mass.
 \citet{George:2012uo} find that for groups of galaxies, centroid based location estimates typically have larger uncertainties ($\sim50$\,kpc) and appear to be offset more from the underlying DM distribution than the BCG (or in their case brightest group galaxy, BGG) location estimates.
 However, it is important to note that this work was performed on groups of galaxies (typically $\sim$1 order of magnitude less massive and with $\sim$1 order of magnitude fewer galaxies than galaxy clusters).
-Since the the centroid measurement error will scale proportional to the number of member galaxies like $N^{-1/2}$, this will result in a noisier estimate in the case of galaxy groups.
+Since the the centroid measurement error will scale with the number of member galaxies like $N^{-1/2}$, this will result in a noisier estimate in the case of galaxy groups.
 In support of this reasoning, \citet{Jee:2011we} found that clusters in their sample with high lensing signal (i.e. more massive) had galaxy centroids that ``agree well with the mass peaks''.
 However in the same study, they find that in clusters where the lensing signal is weak offsets can be $>$20'' between the mass and galaxies.
 The \citet{George:2012uo} and \citet{Jee:2011we} results suggest that the systematic offset of the galaxy centroid estimate can be a strong function of the mass of the group or cluster.
@@ -115,7 +115,7 @@ As previously mentioned this effect can potentially lead to a directional bias i
  
 In the less ideal scenario where limited spectroscopic information is available we must attempt to determine cluster membership with only photometric data.
 In cases where multi-band ($\gtrsim 4$) observations have been carried out, photometric redshift estimates can be made for most of the galaxies detected with moderate signal-to-noise ($\sim$20).
-However, photometric redshift uncertainties ($\sigma_{\rm z-phot}\sim$0.07(1+$z_{\rm phot}$)) are typically many orders of magnitude larger than spectroscopic redshift uncertainties and a couple orders of magnitude larger than the typical redshift velocity dispersion of a cluster.
+However, photometric redshift uncertainties ($\sigma_{\rm z-phot}\sim$0.07(1+$z_{\rm phot}$)) are typically many orders of magnitude larger than spectroscopic redshift uncertainties and a few orders of magnitude larger than the typical redshift velocity dispersion of a cluster.
 Thus, even if a galaxy has the exact same photometric redshift as the cluster there is still considerable uncertainty in whether that galaxy is a member of the cluster.
 In cases of extreme photometric coverage (e.g. the COSMOS survey with 30-bands from ultraviolet to infrared) it is possible to identify 92\% of cluster members (down to the limiting magnitude) with 84\% purity \citep{George:2011kv}.
 More common is the case that there is not enough photometric coverage of a system to obtain reliable photometric redshifts and astronomers have used prior information about the properties of galaxies (e.g. luminosity, color, and stellar mass)  in cluster environments to improve membership identification \citep[see][for a review]{George:2012uo}. 
@@ -138,7 +138,7 @@ Most of the available data to constrain the galaxy locations of the Musket Ball 
 Because the Musket Ball Cluster is within the DLS \citep{Wittman:2002cp} it has 4-broad-band photometry ($BVRz$) to limiting magnitudes of $\sim26$ (see e.g. Figure \ref{figure:PhotozSpeczMagDist}).
 Additionally we observed the cluster in three medium-width optical bands ($g,h,$ and $i$ from the BATC filter set), bracketing the redshifted $4000$\,\AA\, feature.
 This coverage has enabled photometric redshifts to be estimated for most of the galaxies in the cluster field with $R\lesssim26$, however photometric errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  
-For the DLS it is found that $\sigma_{\rm z-phot}\approx$0.07(1+$z_{\rm phot}$) for galaxies with $R\leq24$; photo-z's become unreliable fainter than $R\sim$24 \citep{Schmidt:2013ig}.
+For the DLS it is found that $\sigma_{\rm z-phot}\approx$0.07(1+$z_{\rm phot}$) for galaxies with $R\leq24$; photometric redshifts become not well verified fainter than $R\sim$24 \citep{Schmidt:2013ig}.
 Thus in all our analyses of the Musket Ball Cluster's galaxy locations we only use galaxies with $R\leq24$.
 
 \begin{figure}
@@ -146,7 +146,7 @@ Thus in all our analyses of the Musket Ball Cluster's galaxy locations we only u
 	\includegraphics[width=5in]{Chapter4/AnalysisFiles/magdist.png}
 	\caption[Musket Ball Cluster spectroscopic and photometric magnitude distribution.]{
 	The Musket Ball Cluster spectroscopic (blue) and photometric (red) redshift galaxy magnitude distribution in the $\sim$15'$\times$15' spectroscopic survey area.
-	While the DLS photometric survey is complete to $R\sim26$ photometric redshifts are only reliable to $R\sim24$.
+	While the DLS photometric survey is complete to $R\sim26$ photometric redshifts are not well verified fainter than $R\sim$24.
 		}
 	\label{figure:PhotozSpeczMagDist}
 \end{figure}
@@ -159,8 +159,8 @@ This spectroscopic sample has also provided important information on the accurac
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Chapter4/photVSspec.png}
-\caption[Spectroscopic verses photometric redshift for the Musket Ball Cluster.]{
-Spectroscopic redshifts verses photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R<$23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2} and \S\ref{sec_MBCzcat}).
+\caption[Spectroscopic versus photometric redshift for the Musket Ball Cluster.]{
+Spectroscopic redshifts versus photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R<$23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2} and \S\ref{sec_MBCzcat}).
 The horizontal dashed blue lines highlight the 0.43$\leq z_{\rm phot} \leq$0.63 range;
 63\% of the surveyed galaxies within this range are cluster members.
 The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, approximately plus or minus three times the cluster velocity dispersion.
@@ -173,7 +173,7 @@ The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, 
 
 The first of two membership determination methods applied to the Musket Ball Cluster is rooted in the desire to treat both spectroscopic and photometric redshift samples in a consistent manner. 
 This method slightly favors minimizing the Poisson noise while still trying to address the systematic contamination error. 
-The basic approach is to assign a weight to each galaxy roughly based on its probability of being a cluster member.
+The basic approach is to assign a weight to each galaxy based on its probability of being a cluster member.
 This weight is defined as the inner product of the redshift probability density function (PDF) of a galaxy $p(z)_i$ and the redshift velocity dispersion ($\sigma_{\rm vdisp}$assumed to be Gaussian) of the cluster at redshift $z_{\rm cluster}$,
 \begin{equation}
 w_i = \int_{0}^{\infty} p(z)_i \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
