@@ -37,7 +37,7 @@ To estimate the uncertainty on the location I perform this process on each itera
 
 Galaxies are expected to populate dark matter subhalos \citep[e.g.][]{Yang:2012gg} and from dark matter simulations these subhalos are found to be the building blocks of clusters.
 Thus stars and galaxies are believed to be tracers of the underlying dark matter distribution.
-Evidence for this is found across all cosmological mass scales from dwarf speroidals (REF), to galaxies \citep[e.g.][]{Choi:2011wv, Choi:2012uo}, groups \citep[e.g.][]{George:2012uo}, clusters \citep[e.g.][]{Dahle:2000uz}, and large scale structures (REF filament work).
+Evidence for this is found across all cosmological mass scales from dwarf spheroidals \citep[e.g.,][]{Walker:2013ha}, to galaxies \citep[e.g.,][]{Choi:2011wv, Choi:2012uo}, groups \citep[e.g.,][]{George:2012uo}, clusters \citep[e.g.,][]{Dahle:2000uz, vonderLinden:2012vq}, and large scale structures \citep[e.g.,][]{Dietrich:2012jq}.
 So the location of galaxies is expected to coincide with the location of the DM in $\Lambda$CDM, to within some amount of intrinsic scatter.
 It is precisely this phenomenon that we wish to challenge with observations of merging galaxy clusters, since for some non-zero $\sigma_{\rm SIDM}$ the location of the galaxy population is not expected to coincide precisely with the underlying DM distribution.
 As far as the location of the galaxy population (i.e. its center) is concerned there are three main challenges.
@@ -128,7 +128,7 @@ This source of galaxy location noise is often at direct odds with the noise from
 As one attempts to increase the number of cluster members (i.e. completeness) used in the centroid calculation to reduce the Poisson noise, they often must sacrifice purity (fraction of true cluster members to the assumed number of cluster members) which increases the noise due to cluster membership error.
 For example, the systematic error due to contamination can be decreased by placing strict membership requirements, e.g. only using galaxies that have spectroscopic redshifts within some small factor (e.g. 3) of the cluster velocity dispersion.
 However this will reduce the number of galaxies that are used to estimate the centroid and the Poisson noise will increase.
-At the outset there is not a clear what the optimal choice of membership selection criteria should be to minimize the joint membership noise and Poisson noise, however it is conceivable that this could be empirically optimized for a given dataset.
+At the outset there is not a clear what the optimal choice of membership selection criteria should be to minimize the joint membership noise and Poisson noise, however it is conceivable that this could be empirically optimized for a given dataset since the joint uncertainty can be determined ex post facto.
 
 \subsection{Estimating the Musket Ball Cluster's Galaxy Location}
 
@@ -138,7 +138,7 @@ Most of the available data to constrain the galaxy locations of the Musket Ball 
 Because the Musket Ball Cluster is within the DLS \citep{Wittman:2002cp} it has 4-broad-band photometry ($BVRz$) to limiting magnitudes of $\sim26$ (see e.g. Figure \ref{figure:PhotozSpeczMagDist}).
 Additionally we observed the cluster in three medium-width optical bands ($g,h,$ and $i$ from the BATC filter set), bracketing the redshifted $4000$\,\AA\, feature.
 This coverage has enabled photometric redshifts to be estimated for most of the galaxies in the cluster field with $R\lesssim26$, however photometric errors increase for fainter galaxies and this in turn increases the photometric redshift uncertainty.  
-For the DLS it is found that $\sigma_{\rm z-phot}\approx$0.07(1+$z_{\rm phot}$) for galaxies with $R\leq24$; photometric redshifts become not well verified fainter than $R\sim$24 \citep{Schmidt:2013ig}.
+For the DLS $\sigma_{\rm z-phot}\approx$0.07(1+$z_{\rm phot}$) for galaxies with $R\leq24$; photometric redshifts become not well verified fainter than $R\sim$24 \citep{Schmidt:2013ig}.
 Thus in all our analyses of the Musket Ball Cluster's galaxy locations we only use galaxies with $R\leq24$.
 
 \begin{figure}
@@ -163,7 +163,7 @@ This spectroscopic sample has also provided important information on the accurac
 Spectroscopic redshifts versus photometric redshift estimates for the galaxies observed in the Musket Ball Cluster $R<$23.5 magnitude limited survey (discussed in Chapter \ref{chapter:2} and \S\ref{sec_MBCzcat}).
 The horizontal dashed blue lines highlight the 0.43$\leq z_{\rm phot} \leq$0.63 range;
 63\% of the surveyed galaxies within this range are cluster members.
-The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, approximately plus or minus three times the cluster velocity dispersion.
+The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, approximately plus or minus three times the cluster velocity dispersion at a redshift of 0.53.
 }
 \label{figure:photzVSspecz}
 \end{figure}
@@ -174,16 +174,16 @@ The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, 
 The first of two membership determination methods applied to the Musket Ball Cluster is rooted in the desire to treat both spectroscopic and photometric redshift samples in a consistent manner. 
 This method slightly favors minimizing the Poisson noise while still trying to address the systematic contamination error. 
 The basic approach is to assign a weight to each galaxy based on its probability of being a cluster member.
-This weight is defined as the inner product of the redshift probability density function (PDF) of a galaxy $p(z)_i$ and the redshift velocity dispersion ($\sigma_{\rm vdisp}$assumed to be Gaussian) of the cluster at redshift $z_{\rm cluster}$,
+This weight is defined as the inner product of the redshift probability density function (PDF) of a galaxy $p_i(z)$ and the redshift velocity dispersion ($\sigma_{\rm vdisp}$assumed to be Gaussian) of the cluster at redshift $z_{\rm cluster}$,
 \begin{equation}
-w_i = \int_{0}^{\infty} p(z)_i \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
+w_i = \int_{0}^{\infty} p_i(z) \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
 \label{equation:genericz_weight}
 \end{equation}
-Since the redshift uncertainty of a spectroscopically observed galaxy with $z_{\rm spec_{i}}$ is $\ll \sigma_{\rm vdisp}$, its redshift PDF can be treated as a delta-function and Equation \ref{equation:genericz_weight} reduces to
+Since the redshift uncertainty of a spectroscopically observed galaxy with $z_{\rm spec_{i}}$ is $\ll \sigma_{\rm vdisp} (1+z_{\rm cluster}) c^{-1}$, its redshift PDF can be treated as a delta-function and Equation \ref{equation:genericz_weight} reduces to
 \begin{equation}
 w_i = \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z_{\rm spec_{i}}-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}.
 \end{equation}\label{equation:specz_weight}
-Under the assumption of Gaussian photometric redshift errors ($\sigma_{\rm z-phot_{i}} \approx \bar{\sigma}(1+z_{\rm phot_{i}})$; $\bar{\sigma}$=0.07 for the Musket Ball Cluster) Equation \ref{equation:genericz_weight} takes the form
+Under the assumption of Gaussian photometric redshift errors\footnote{In reality there are a small fraction of galaxies, known as catastrophic outliers, that violate this assumption \citep[see][for a detailed discussion]{Schmidt:2013ig}. For the case of DLS photometric redshifts the outlier fraction is $\lesssim$5\%, thus they should not significantly violate the assumptions of this method.} ($\sigma_{\rm z-phot_{i}} \approx \bar{\sigma}(1+z_{\rm phot_{i}})$; $\bar{\sigma}$=0.07 for the Musket Ball Cluster) Equation \ref{equation:genericz_weight} takes the form
 \begin{equation}
 w_i = \int_{0}^{\infty} \frac{1}{\sigma_{\rm z-phot_{i}}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm phot_{i}})^2}{2\sigma_{\rm z-phot_{i}}^2}} \frac{1}{\sigma_{\rm vdisp}\sqrt{2\pi}}e^{\frac{-(z-z_{\rm cluster})^2}{2\sigma_{\rm vdisp}^2}}\mathrm{d}z.
 \label{equation:photoz_weight}
@@ -208,7 +208,7 @@ Note that the catalog is sorted such that the spectroscopic members are first, t
 \label{figure:NormWeightDist}
 \end{figure}
 
-Comparing the galaxy redshift distribution of a random bootstrap realization with the redshift distribution of the parent population (Figure \ref{figure:ProbWeightDist}) it is apparent that the fully probabilistic membership determination scheme still includes a large number of galaxies with photometric redshift estimates well outside the cluster redshift velocity dispersion ($z_{\rm cluster}\pm\sigma_{\rm vdisp} \approx 0.53\pm0.004$).
+Comparing the galaxy redshift distribution of a random bootstrap realization with the redshift distribution of the parent population (Figure \ref{figure:ProbWeightDist}) it is apparent that the fully probabilistic membership determination scheme still includes a large number of galaxies with photometric redshift estimates well outside the cluster redshift velocity dispersion ($z_{\rm cluster}\pm\sigma_{\rm vdisp} (1+z_{\rm cluster}) c^{-1} \approx 0.53\pm0.004$).
 The reason for this is simply that the photometric redshift uncertainties are so large compared to all other pertinent redshift scales.
 Thus, galaxies that have the exact same photometric redshift as the cluster are not weighted dramatically more than galaxies with photometric redshift estimates well in front of or behind the cluster.
 Take for example two photometric redshift galaxies, one at the cluster redshift ($z=0.53$) and one well behind the cluster at $z_{\rm phot}=0.79$.
@@ -234,7 +234,7 @@ While the probabilistic scheme does work to increase the number of galaxies sele
 
 The second method of membership determination is considerably less elegant but more empirically based and aims at higher cluster membership purity.
 If a galaxy has a spectroscopic redshift within the 3$\sigma_{\rm vdisp}$ range of the cluster redshift (0.525$<z_{\rm spec}<$0.54 for the Musket Ball Cluster) it is given a weight of 1\footnote{
-Note that this ignores the ``finger of god effect'', although since it is reasonable to assume that the number of cluster galaxies should dominate the number of fore/background galaxies within $\pm$30\,Mpc of the cluster redshift this effect should not dominate the centroid uncertainty.}.
+Note that this ignores the ``finger of god effect'', although it is reasonable to assume that the number of cluster galaxies should dominate the number of fore/background galaxies within $\pm$30\,Mpc of the cluster redshift this effect should not dominate the centroid uncertainty.}.
 If galaxies only have a photometric redshift and that happens to be within the range 0.43$\leq z_{\rm phot} \leq$0.63 (approximately the Musket Ball Cluster redshift $\pm \sigma_{\rm z-phot}$) they are given a weight of 0.63.
 All remaining galaxies are given a weight of 0.
 The cumulative normalized weight distribution function for this weighting scheme is shown in Figure \ref{figure:NormPenaltyWeightDist}.
@@ -313,6 +313,7 @@ However both are significantly offset between the northern and southern galaxy a
 Chandra ACIS-I 40\,ks adaptively smoothed X-ray image of DLSCL J0916.2+2951 (the same as Figure \ref{figure:MusketBallXray}).
 The green circles and boxes are the SAOImageDS9 inclusion and exclusion regions used in conjunction with the Chandra Interactive Analysis of Observations (CIAO) software package.
 The unsmoothed central gas centroid 68\% and 95\% confidence intervals are represented by the black circles.
+The gas centroid is shifted towards the southwest away from the peak by the extended gas distribution in that direction.
 The smoothed central gas centroid is represented by the black `x'.
 The image field-of-view is the same as Figure \ref{fig1}.
 }
@@ -456,7 +457,7 @@ Once these biases are taken into account the confidence that $\sigma_{\rm DM}>0$
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/GalDenVsHSTWL_pzpen_delxPC_south_reformat.png}
 \caption[Musket Ball southern subcluster galaxy and weak lensing centroid offset significance.]{
 Musket Ball southern galaxy-WL centroid offset significance, in terms of confidence that $\sigma_{\rm DM}>0$.
-If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$97\% confidence).
+If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$97\% confidence), which as discussed in the body of this section is an improper assumption to make.
 The red region shows the expected offset caused by the directional biases of the mass of the northern subcluster and the mass of the gas (see \S\ref{section:MergerSysError}) with the most likely offset represented by the dashed red line.
 Since the non-SIDM effects are expected to cause an offset the confidence of $\sigma_{\rm DM}>0$ fall to $\sim$83\%.
 The galaxy-WL centroid offset is measured along the merger axis direction ($x'$) with positive offsets being when the galaxies lead the DM (as expected in the case of SIDM).
@@ -487,7 +488,7 @@ Both centroids in the northern subcluster are less well defined than the centroi
 \end{figure}
 
 Given that the northern galaxy-WL offset appears at odds with galaxy-WL offset in the south (in regards to the observed offset in the south being evidence for SIDM), it seems reasonable to jointly analyze the observed offsets when attempting to infer the confidence that $\sigma_{\rm DM}>0$. 
-It is not entirely clear on the best way to do this, since the two measurements are not necessarily independent (due to their mutual dependence on the gas mass and the possibility that there is a global astrometry shift between the optical and lensing maps). 
+Beyond fully simulating the system it is not entirely clear on the best way to do this, since the two measurements are not necessarily independent (due to their mutual dependence on the gas mass and the possibility that there is a global astrometry shift between the optical and lensing maps). 
 However, a conservative option is to simply add the galaxy-WL offsets of the north and south subcluster ($\Delta x'_{\rm North}+\Delta x'_{\rm South}$) in each bootstrap realization, then compare this distribution, where the galaxy-WL offset in each cluster is defined to be positive when the galaxies are leading the WL in the respective outgoing merger axis direction ($x'$) of each subcluster.
 Thus if the galaxies in the north trail the WL by 7'' and the galaxies in the south lead the WL by 20'' for a given realization then $\Delta x'_{\rm North}+\Delta x'_{\rm South}$ will equal 13'' for that bootstrap realization.
 The result of this convention is shown as the blue curve in Figure \ref{figure:CentroidSignificance_NorthPlusSouth}.
@@ -500,7 +501,7 @@ While this analysis is conservative it does serve to place an approximate booken
 \includegraphics[width=5in]{Chapter4/AnalysisFiles/NorthSouthJointAnalysis_delxPC.png}
 \caption[Musket Ball joint northern and southern subcluster galaxy and weak lensing centroid offset significance.]{
 Musket Ball joint north and south galaxy-WL centroid offset significance, in terms of confidence that $\sigma_{\rm DM}>0$.
-If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$78\% confidence).
+If there is no physical reason, other than SIDM, to expect an offset where the galaxies lead the WL ($+\Delta x'$) then confidence that $\sigma_{\rm DM}>0$ should where the blue curve crosses $\Delta x'=0$ ($\sim$78\% confidence), which as discussed in the body of this section is an improper assumption to make.
 The red region shows the expected offset caused by the directional biases of the mass of the other subcluster and the mass of the gas (see \S\ref{section:MergerSysError}) with the most likely offset represented by the dashed red line.
 Since the non-SIDM effects are expected to cause an offset the confidence of $\sigma_{\rm DM}>0$ fall to $\sim$55\%.
 }
@@ -536,7 +537,7 @@ Given that this estimate is conservative the true confidence should be between $
 \section{Discussion}
 
 It is difficult to make any definitive conclusions about SIDM from the observed galaxy-WL offsets in the Musket Ball Cluster.
-While the SIDM scenario is slightly preferred over the CDM scenario it is not significantly so.
+While the SIDM scenario is slightly preferred over the CDM scenario, given the many assumptions noted in this chapter, it is not significantly so.
 There are a number of actions that can be taken to help clarify the situation.
 
 \textit{(i)} CDM and SIDM simulations of the Musket Ball Cluster merger, similar to the \citet{Randall:2008hs} simulations of the Bullet Cluster.
