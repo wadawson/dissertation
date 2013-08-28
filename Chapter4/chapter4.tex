@@ -177,7 +177,7 @@ The vertical dashed blue lines highlight the 0.525$\leq z_{\rm spec} \leq$0.54, 
 
 \subsubsection{Empirically Based Membership Determination}\label{section:EmpiricalWeightScheme}
 
-The second method of membership determination is considerably less elegant but more empirically based and aims at higher cluster membership purity.
+This method of membership determination is empirically based and leverages the galaxies that have overlapping spectroscopic and photometric coverage to inform the selection of cluster members that only have photometric redshifts.
 If a galaxy has a spectroscopic redshift within the 3$\sigma_{\rm vdisp}$ range of the cluster redshift (0.525$<z_{\rm spec}<$0.54 for the Musket Ball Cluster) it is given a weight of 1\footnote{
 Note that this ignores the ``finger of god effect'', although it is reasonable to assume that the number of cluster galaxies should dominate the number of fore/background galaxies within $\pm$30\,Mpc of the cluster redshift this effect should not dominate the centroid uncertainty.}.
 If galaxies only have a photometric redshift and that happens to be within the range 0.43$\leq z_{\rm phot} \leq$0.63 (approximately the Musket Ball Cluster redshift $\pm \sigma_{\rm z-phot}$) they are given a weight of 0.63.
@@ -482,9 +482,10 @@ Other than noise there is no physical explanation for such an offset.
 We adjust the $\sigma_{\rm DM}>0$ confidence from the observed offset in the southern subcluster by directly combining the countering offsets in the north and south along the merger axis.
 This analysis suggests that the confidence of $\sigma_{\rm DM}>0$ should be lowered to $\sim$55\%.
 
-Perhaps on a related note, the Subaru WL mass map shows that the southern peak is actually leading the galaxies to some degree (see Figure \ref{fig3}). 
-While the uncertainty of the ground-based WL peak is $\sim$5 times larger than the uncertainty of the HST measured centroid, this information should still be incorporated in to the offset significance analysis.
-However, this is beyond the immediate scope of this dissertation.
+On a final note, Figure \ref{fig3} shows that the southern mass peak in the Subaru WL map is actually leading the galaxies to some degree.
+However this is likely just a result of the the ground-based WL peak uncertainty being $\sim$5 times larger than the uncertainty of the HST measured centroid.
+A good indication of this is that the HST centroid lies within the high-likelihood region of the Subaru data, but the Subaru centroid does not lie within the high-likelihood region of the HST data.
+While disregarding the Subaru data for the current analysis is reasonable, future analyses should incorporate this data for completeness.
 
 \section{Discussion}
 
