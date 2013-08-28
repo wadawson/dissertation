@@ -41,9 +41,44 @@
 
 %override the marings in the original template.
 \usepackage[margin=1.01in]{geometry}
-\def\apjs{{ApJS}}
-\def\nat{{Nature}}
-\def\prd{{Phys. Rev. D}}
+
+% Will Dawson's modifications:
+
+%\def\apjs{{ApJS}}
+%\def\nat{{Nature}}
+%\def\prd{{Phys. Rev. D}}
+
+% sty files designed to get tex documents that use aastex to work in dissertation
+% copied from http://casa.colorado.edu/~danforth/comp/tex/thesistex.html
+\usepackage{deluxetable} % standalone version of aastex's deluxetable
+\usepackage{aastex_hack}
+\usepackage{mydefs}
+
+    \usepackage{color}
+    \definecolor{darkblue}{RGB}{0,0,74}
+    \usepackage[linktocpage,bookmarksnumbered,% For PDF navigation
+                colorlinks=true,urlcolor=darkblue,      % and URL hyperlinks
+                citecolor=darkblue,linkcolor=darkblue,      % and PDF information
+                breaklinks,  %allow citations to wrap to the next line
+                pdftitle={PhD Dissertation, William A Dawson}, % Insert your title
+                pdfauthor={William Anthony Dawson}, % Insert your name
+                pdfsubject={UC Davis Ph.D. Doctoral Thesis},%
+                pdfkeywords={UC Davis Ph.D. Doctoral Thesis}]{hyperref}
+
+    \newcommand{\newchapter}[3] % for typesetting new chapters with the
+    {                           % correct initial page numbering style
+      % Arguments: (#1) Short name for chapter, which is used in 
+      %            any running headers
+      %            (#2) Medium length name for chapter, which is
+      %            used in the table of contents
+      %            (#3) Long name for chapter, which is typeset at 
+      %            the starting the chapter
+      \chapter[#2]{#3}
+      \chaptermark{#1}
+%      \thispagestyle{myheadings}
+    }
+
+% End Will Dawson's modifications
 
 \hyphenation{dis-ser-ta-tion blue-print man-u-script pre-par-ing} %add hyphenation rules for words TeX doesn't know
 
@@ -57,14 +92,14 @@
 %                                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title          {The Universe Under a Magnifying Glass:\\
-		Measuring and Predicting Large-scale Structure Statistics}
+\title          {Constraining Dark Matter Through the Study of Merging Galaxy Clusters}
 %Exact title of your thesis. Indicate italics where necessary by underlining or using italics. Please capitalize the first letter of each word that would normally be capitalized in a title.
 
-\author         {Christopher Brian Morrison}
+\author         {William Anthony Dawson}
 %Your full name as it appears on University records. Do not use initials.
 
-\authordegrees  {B.S. (University of Cincinnati) 2007}
+\authordegrees  {B.S. Maritime Systems Engineering (Texas A\& M University, Galveston) 2002\\
+  M.S. Physics (University of California, Davis) 2008}
 %Indicate your previous degrees conferred.
 
 \officialmajor  {Physics}
@@ -76,10 +111,10 @@
 \degreeyear     {2013}
 % Indicate the year in which your degree will be officially conferred.
 
-\degreemonth    {June}
+\degreemonth    {August}
 % Indicate the month in which your degree will be officially conferred. Used for UMI abstract.
 
-\committee{J. Anthony Tyson, Chair}{David Wittman}{Maru\v{s}a Brada\v{c}}{}{}
+\committee{Professor David M. Wittman, Chair}{Professor J. Anthony Tyson}{Professor Maru{\v s}a Brada{\v c}}{}{}
 % These are your committee members. The command accepts up to five committee members so be sure to have five sets of braces, even if there are empties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,21 +124,68 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\dedication{\textsl{To anyone who has ever been supportive of me...\\ Thank you.}}
+\dedication{\textsl{To my wife Kerri,\\who has sacrificed more for this dissertation than anyone.}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\abstract{In this dissertation, we describe observational and theoretical work related to the large-scale clustering of matter in the universe. Such work is crucial in constraining models of the Universe in future surveys and is one of the most powerful probes of the nature of dark energy. In Chapter \ref{magnification}, we present work performed using the Deep Lens Survey (DLS) to measure the growth of structure over cosmic time using weak lensing magnification. This is the first time such a measurement has been performed and represents a significant step forward for this relatively new probe of large-scale structure (LSS) which is known to be complementary to other weak lensing measurements. Later in Chapter \ref{conclusions}, we discuss steps needed for magnification become a competitive, precision probe of cosmology. Chapter \ref{covariance} presents a model for the emulation cosmology dependent error covariances in LSS probes. Estimating these covariances are necessary in order to compare models to the data and require a large amount of computational time to create the simulations required. Tools to reduce the number of simulations required and model the cosmology dependence are needed. We utilize a novel decomposition of LSS error covariances that allows for construction of a emulator that fulfills both of these criteria. In order for future surveys to reach their goals, methods to model measurement error and new probes of LSS complementary to those planned are required.
+\abstract{
+\noindent\textbf{Context:} 
+The majority ($\sim85$\%) of the matter in the universe is composed of dark matter, a mysterious particle that does not interact via the electromagnetic force yet does interact with all other matter via the gravitational force.
+Many direct detection experiments have been devoted to finding interactions of dark matter with baryonic matter via the weak force.
+To date only tentative and controversial evidence for such interactions has been found.
+While such direct detection experiments have ruled out the possibility that dark matter interacts with baryonic matter via a strong scale force, it is still possible that dark matter interacts with itself via a strong scale force and has a self-scattering cross-section of $\sim0.5$\,cm$^2$\,g$^{-1}$.
+In fact such a strong scale scattering force could resolve several outstanding astronomical mysteries: a discrepancy between the cuspy density profiles seen in $\Lambda$CDM simulations and the cored density profiles observed in low surface brightness galaxies, dwarf spheroidal galaxies, and galaxy clusters, as well as the discrepancy between the significant number of massive Milky Way dwarf spheroidal halos predicted by $\Lambda$CDM and the dearth of observed Milky Way dwarf spheroidal halos.
+ 
 
-The conclusions of this dissertation in Chapter \ref{conclusions} address the future outlook for this work and research that must be done between now and when the next set of survey data is available. Many systematic errors need to be addressed in magnification before it can be considered a precision cosmology tool. For the error covariances, additional methods to reduce the required number of simulations to estimate the matrices are required. In the Appendix, we present a high level description of an open sourced software package that we developed and implemented over the course of these two projects.}
+% Need: What you want is not what you have
+
+\noindent\textbf{Need:} 
+While such observations are in conflict with $\Lambda$CDM and suggest that dark matter may self-scatter, each suffers from a \emph{baryonic degeneracy}, where the observations might be explained by various baryonic processes (e.g., AGN or supernove feedback, stellar winds, etc.)\footnote{At the heart of this is a current lack of knowledge of the influence of baryons on structure formation.} rather than self-interacting dark matter (SIDM).
+In fact, the important scales of these observations often coincide with baryonic scales (e.g., the core size in clusters is few factors smaller than the radius of the brightest cluster galaxy).
+What is needed is a probe of SIDM where the expected effect cannot be replicated by the same processes responsible for the baryonic degeneracy in the aforementioned probes.
+Merging galaxy clusters are such a probe.
+During the merging process the effectively collisionless galaxies ($\sim$2\% of the cluster mass) become dissociated from the collisional intracluster gas ($\sim$15\% of the cluster mass).
+A significant fraction of the gas self-interacts during the merger and slows down at the point of collision.
+If dark matter lags behind the effectively collisionless galaxies then this is clear evidence that dark matter self-interacts.
+The expected galaxy-dark matter offset is typically $>$25\,kpc (for cross-sections that would explain the other aforementioned issues with $\Lambda$CDM), this is larger than the scales of that are plagued by the baryonic degeneracies.
+
+%Task: What I did to address the need
+\noindent\textbf{Task:} 
+To test whether dark matter self-interacts we have carried out a comprehensive survey of the dissociative merging galaxy cluster DLSCL J0916.2+2951 (also known as the Musket Ball Cluster).
+This survey includes photometric and spectroscopic observations to quantify the position and velocity of the cluster galaxies,
+weak gravitational lensing observations to map and weigh the mass (i.e., dark matter which comprises $\sim$85\% of the mass) of the cluster,
+Sunyaev-Zel'dovich effect and X-ray observations to map and quantify the intracluster gas,
+and finally radio observations to search for associated radio relics, which had they been observed would have helped constrain the properties of the merger.
+Using this information in conjunction with a Monte Carlo analysis model I quantify the dynamic properties of the merger, necessary to properly interpret constraints on the SIDM cross-section.
+I compare the locations of the galaxies, dark matter and gas to constrain the SIDM cross-section.
+This dissertation presents this work.
+
+% Findings: What I found doing the task
+\noindent\textbf{Findings:} 
+We find that the Musket Ball is a merger with total mass of  $4.8^{+3.2}_{-1.5}\times 10^{14}$M$_\sun$.
+However, the dynamic analysis shows that the Musket Ball is being observed $1.1^{+1.3}_{-0.4}$\,Gyr after first pass through and is much further progressed in its merger process than previously identified dissociative mergers (for example it is $3.4^{+3.8}_{-1.4}$ times further progressed that the Bullet Cluster). 
+By observing that the dark matter is significantly offset from the gas we are able to place an upper limit on the dark matter cross-section of $\sigma_{\rm SIDM}m^{-1}_{\rm DM} <$8\,cm$^2$\,g$^{-1}$.
+However, we find an that the galaxies appear to be leading the weak lensing (WL) mass distribution by 20.5'' (129\,kpc at $z$=0.53) in southern subcluster, which might be expected to occur if dark matter self-interacts.
+Contrary to this finding though the WL mass centroid appears to be leading the galaxy centroid by 7.4'' (47\,kpc at $z$=0.53) in the northern subcluster. 
+
+
+% Conclusion: What these findings mean to me
+\noindent\textbf{Conclusion:}
+The southern offset alone suggests that  dark matter self-interacts with $\sim$83\% confidence.
+However, when we account for the observation that the galaxy centroid appears to trail the WL centroid in the north the confidence falls to $\sim$55\%.
+While the SIDM scenario is slightly preferred over the CDM scenario it is not significantly so.
+
+% Perspectives: What we should do next
+\noindent\textbf{Perspectives:}
+The galaxy-dark matter offset measurement is dominated by random errors in each cluster.
+Thus measuring this offset in other dissociative mergers holds the promise of reducing our uncertainty and enabling us to: 1) state confidently whether dark matter self-interacts via a new dark sector force, or 2) constrain the dark matter cross-section to such a degree that SIDM cannot explain the aforementioned mysteries\footnote{In the case of a null detection of an offset between the galaxies and the DM, SIDM simulations will be necessary to place a quantitative constraint on the SIDM cross-section \citep[see e.g.,][]{Randall:2008hs}.}.
+To this end we have established the Merging Cluster Collaboration to observe and simulate an ensemble of dissociative merging clusters.
+We are currently in the process of analyzing six dissociative mergers with existing data, and carrying out multi-wavelength observations of a new sample of 15 radio relic identified dissociative mergers.
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\acknowledgments{I would like to thank the people who made the completion of his Ph.D. possible. First, and foremost, I would like to thank my family especially my mother Kathy and brother Jeff. Their support throughout my graduate career made all of this possible.
-
-I thank my advisors Ryan Scranton and Tony Tyson for their mentoring and advice. Ryan was absolutely indispensable for his expertise and graciousness chatting about research at odd hours. Tony's experience was invaluable and his intuition on a variety of topics helped to move my research forward. Another thank you to the other members of my thesis committee David Wittman and Marusa Bradac for their time and suggestions on improvements to this document. I would also like to thank Sam Schmidt for allowing me to sit in his office, talk research, and various other topics. Thanks to Martin Dubcovsky for making the office a great place to work, his software advice, and for his expertise in Aikido. Another thank you to Ami Choi for similar reasons, helpful input, and for being a great gChat buddy for slow days. Many thanks also to my Deep Lens Survey collaborators: Jim Bosch, Will Dawson, James Jee, Perry Gee, Russell Ryan, Paul Thorman, 
-
-Thanks to Rion Graham and Greg Zeimann for their friendship and the entertaining times. Thank you to Lori, Chris, Bob, and Widget for being my ever "loving" astronomy "family"  away from home. A heartfelt thank you also to all of my friends outside the Physics Department especially Ben, Liv, and Danny for giving me refuge outside of academia. To defunct my trivia team, thank you for all the good times and records set. Thanks also to the staff at Sophia's including Kevin, Jim, Jen, Asa, and Jeremy, for making Friday happy hour something to always look forward to. If I've forgotten anyone I should thank, thank you and sorry for forgetting you.}
+\acknowledgments{Insert acknowledgement text here.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -121,14 +203,16 @@ Thanks to Rion Graham and Greg Zeimann for their friendship and the entertaining
 
 \makeintropages %Processes/produces the preliminary pages
 
-\include{Chapter1}
-\include{Chapter2}
-\include{Paper1/dls_magnification}
-\include{Paper2/main}
-\include{Chapter5}
-\include{Appendix}
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+\include{Chapter3/chapter3}
+\include{Chapter4/chapter4}
+\include{Chapter5/chapter5}
+\appendix
+\include{Appendix1/appendix1}
+\include{Appendix2/appendix2}
 
-\bibliography{thesis}
+\bibliography{dissertation}
 
 % The UMI abstract uses square brackets!
 %\UMIabstract[In this dissertation, we describe observational and theoretical work related to the large-scale clustering of matter in the universe. Such work is crucial in constraining models of the Universe in future surveys and is one of the most powerful probes of the nature of dark energy. In Chapter \ref{magnification}, we present work performed using the Deep Lens Survey (DLS) to measure the growth of structure over cosmic time using weak lensing magnification. This is the first time such a measurement has been performed and represents a significant step forward for this relatively new probe of large-scale structure (LSS) which is known to be complementary to other weak lensing measurements. Later in Chapter \ref{conclusions}, we discuss steps needed for magnification become a competitive, precision probe of cosmology. Chapter \ref{covariance} presents a model for the emulation cosmology dependent error covariances in LSS probes. Estimating these covariances are necessary in order to compare models to the data and require a large amount of computational time to create the simulations required. Tools to reduce the number of simulations required and model the cosmology dependence are needed. We utilize a novel decomposition of LSS error covariances that allows for construction of a emulator that fulfills both of these criteria. In order for future surveys to reach their goals, methods to model measurement error and new probes of LSS complementary to those planned are required.
