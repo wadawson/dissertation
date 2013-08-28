@@ -26,8 +26,8 @@ For this chapter, rather than using the location of the peak and variance of the
 We begin by calculating the centroid of a large aperture that encompasses one subcluster, but excludes the other.
 We then decrease the aperture, recenter on the previously calculated centroid, and estimate the centroid of the new aperture.
 This process is repeated until the aperture is decreased to a radius of $\sim200$\,kpc.
-To estimate the uncertainty on the location I perform this process on each iteration of a random bootstrap sample map, resulting in an array of centroid values.
- The uncertainty on the location is then inferred from the variance of this array of centroid values.
+To estimate the uncertainty on the location we perform this process on each iteration of a random bootstrap sample map, resulting in an array of centroid values.
+The uncertainty on the location is then inferred from the variance of this array of centroid values.
 
 
 %-------------------------------------------------------
@@ -326,11 +326,14 @@ These uncertainties are plotted as dashed ellipses in Figures \ref{figure:Lensin
 The centroid uncertainty in the northern cluster is slightly larger as a result of the northern subcluster being approximately half as massive as the southern subcluster (see Chapter \ref{chapter:2}).
 Note that these uncertainties do not include the effects of line-of-sight structures or the systematic effects discusses in \S\ref{section:MergerSysError}.
 
+As an aside, the above WL centroids are based on the iterative centroid location estimation process (see \S\ref{section:LocationEstimation}), while the WL location estimates reported in \citet{Dawson:2012dl} were based on the peak of the lensing distribution. 
+The WL locations based on those peaks were  $09\fh16\fm10\fs\pm30\fs, 29\fdg52\farcm10\farcs\pm30\farcs$ for the north subcluster, and $09\fh16\fm15\fs\pm8.0\fs, 29\fdg49\farcm34\farcs\pm6.9\farcs$ for the south subcluster.
+The results for the southern subcluster are in excellent agreement, while the increased uncertainty the northern subcluster can be attributed to originally including the small northwestern mass peak in the region used to search for the peak.
 
 \section{Gas--Weak Lensing Offset}\label{section:GasWLOffset}
 
 %copied from \citep{Dawson:2012dl}
-The peak of the gas distribution ($09\fh16\fm15\fs\pm5.5\fs, 29\fdg50\farcm59\farcs\pm5.0\farcs$) derived from X-rays is offset $1.4\arcmin\pm0.49$ from the North HST WL mass peak ($09\fh16\fm10\fs\pm30\fs, 29\fdg52\farcm10\farcs\pm30\farcs$), and $1.4\arcmin\pm0.14$ from the South HST WL mass peak ($09\fh16\fm15\fs\pm8.0\fs, 29\fdg49\farcm34\farcs\pm6.9\farcs$), and is located near a local minimum in the mass (see Figure \ref{fig3}).
+The peak of the gas distribution ($09\fh16\fm15\fs\pm5.5\fs, 29\fdg50\farcm59\farcs\pm5.0\farcs$) derived from X-rays is offset $1.4\arcmin\pm0.49$ from the North HST WL mass peak ($09\fh16\fm11\fs\pm7\fs, 29\fdg52\farcm05\farcs\pm13\farcs$), and $1.4\arcmin\pm0.14$ from the South HST WL mass peak ($09\fh16\fm15\fs\pm5\fs, 29\fdg49\farcm34\farcs\pm11\farcs$), and is located near a local minimum in the mass (see Figure \ref{fig3}).
 Given the significant offset between the WL and gas locations we are able to use the first method of \citet{Markevitch:2004dl} and place a rough limit on the DM self-interaction cross-section, $\sigma_{\rm DM}$.
 This method compares the scattering depth of the dark matter, $\tau_{\rm DM}=\sigma_{\rm DM}m^{-1}_{\rm DM} \Sigma_{\rm DM}$, with that of the ICM gas, $\tau_{\rm ICM}\approx 1$, where $m_{\rm DM}$ is the DM particle mass and $\Sigma_{\rm DM}$ is the surface mass density of the DM particles.
 $\Sigma_{\rm DM}$ is approximately the WL measured surface mass density, $\Sigma$, since $\sim80\%$ of a typical cluster's mass is DM \citep{Diaferio:2008js}.
