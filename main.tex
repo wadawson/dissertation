@@ -1,0 +1,138 @@
+\documentclass[12pt]{ucdavisthesis}
+
+% PLEASE READ THE MANUAL - ucdavisthesis.pdf (in the package installation directory)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%               LATEX COMMANDS FOR DOCUMENT SETUP                      %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{bookmark}
+\usepackage[us,nodayofweek,12hr]{datetime}
+\usepackage{graphicx}
+\usepackage[square,comma,numbers,sort&compress]{natbib}
+\usepackage{epsfig}
+%\usepackage{hypernat}
+% Other useful packages to try
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{multirow}
+
+% Different fonts to try (uncomment only fontenc and one font at a time)
+% (you may need to install these first)
+%\usepackage[T1]{fontenc} %enable fontenc package if using one of the fonts below
+%\usepackage[adobe-utopia]{mathdesign}
+%\usepackage{tgschola}
+%\usepackage{tgbonum}
+%\usepackage{tgpagella}
+%\usepackage{tgtermes}
+%\usepackage{fourier}
+%\usepackage{fouriernc}
+%\usepackage{kmath,kerkis}
+%\usepackage{kpfonts}
+%\usepackage[urw-garamond]{mathdesign}
+%\usepackage[bitstream-charter]{mathdesign}
+%\usepackage[sc]{mathpazo}
+%\usepackage{mathptmx}
+%\usepackage[varg]{txfonts}
+
+%override the marings in the original template.
+\usepackage[margin=1.01in]{geometry}
+\def\apjs{{ApJS}}
+\def\nat{{Nature}}
+\def\prd{{Phys. Rev. D}}
+
+\hyphenation{dis-ser-ta-tion blue-print man-u-script pre-par-ing} %add hyphenation rules for words TeX doesn't know
+
+
+%\renewcommand{\rightmark}{\scriptsize A University of California Davis\ldots \hfill Rev.~\#1.0 \quad Compiled: \currenttime, \today}
+% a fancier running header that can be used with draftcls options
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%        DOCUMENT SETUP AND INFORMATION FOR PRELIMINARY PAGES          %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title          {The Universe Under a Magnifying Glass:\\
+		Measuring and Predicting Large-scale Structure Statistics}
+%Exact title of your thesis. Indicate italics where necessary by underlining or using italics. Please capitalize the first letter of each word that would normally be capitalized in a title.
+
+\author         {Christopher Brian Morrison}
+%Your full name as it appears on University records. Do not use initials.
+
+\authordegrees  {B.S. (University of Cincinnati) 2007}
+%Indicate your previous degrees conferred.
+
+\officialmajor  {Physics}
+%This is your official major as it appears on your University records.
+
+\graduateprogram{Physics}
+%This is your official graduate program name. Used for UMI abstract.
+
+\degreeyear     {2013}
+% Indicate the year in which your degree will be officially conferred.
+
+\degreemonth    {June}
+% Indicate the month in which your degree will be officially conferred. Used for UMI abstract.
+
+\committee{J. Anthony Tyson, Chair}{David Wittman}{Maru\v{s}a Brada\v{c}}{}{}
+% These are your committee members. The command accepts up to five committee members so be sure to have five sets of braces, even if there are empties.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\copyrightyear{2020}
+%\nocopyright
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dedication{\textsl{To anyone who has ever been supportive of me...\\ Thank you.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{In this dissertation, we describe observational and theoretical work related to the large-scale clustering of matter in the universe. Such work is crucial in constraining models of the Universe in future surveys and is one of the most powerful probes of the nature of dark energy. In Chapter \ref{magnification}, we present work performed using the Deep Lens Survey (DLS) to measure the growth of structure over cosmic time using weak lensing magnification. This is the first time such a measurement has been performed and represents a significant step forward for this relatively new probe of large-scale structure (LSS) which is known to be complementary to other weak lensing measurements. Later in Chapter \ref{conclusions}, we discuss steps needed for magnification become a competitive, precision probe of cosmology. Chapter \ref{covariance} presents a model for the emulation cosmology dependent error covariances in LSS probes. Estimating these covariances are necessary in order to compare models to the data and require a large amount of computational time to create the simulations required. Tools to reduce the number of simulations required and model the cosmology dependence are needed. We utilize a novel decomposition of LSS error covariances that allows for construction of a emulator that fulfills both of these criteria. In order for future surveys to reach their goals, methods to model measurement error and new probes of LSS complementary to those planned are required.
+
+The conclusions of this dissertation in Chapter \ref{conclusions} address the future outlook for this work and research that must be done between now and when the next set of survey data is available. Many systematic errors need to be addressed in magnification before it can be considered a precision cosmology tool. For the error covariances, additional methods to reduce the required number of simulations to estimate the matrices are required. In the Appendix, we present a high level description of an open sourced software package that we developed and implemented over the course of these two projects.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgments{I would like to thank the people who made the completion of his Ph.D. possible. First, and foremost, I would like to thank my family especially my mother Kathy and brother Jeff. Their support throughout my graduate career made all of this possible.
+
+I thank my advisors Ryan Scranton and Tony Tyson for their mentoring and advice. Ryan was absolutely indispensable for his expertise and graciousness chatting about research at odd hours. Tony's experience was invaluable and his intuition on a variety of topics helped to move my research forward. Another thank you to the other members of my thesis committee David Wittman and Marusa Bradac for their time and suggestions on improvements to this document. I would also like to thank Sam Schmidt for allowing me to sit in his office, talk research, and various other topics. Thanks to Martin Dubcovsky for making the office a great place to work, his software advice, and for his expertise in Aikido. Another thank you to Ami Choi for similar reasons, helpful input, and for being a great gChat buddy for slow days. Many thanks also to my Deep Lens Survey collaborators: Jim Bosch, Will Dawson, James Jee, Perry Gee, Russell Ryan, Paul Thorman, 
+
+Thanks to Rion Graham and Greg Zeimann for their friendship and the entertaining times. Thank you to Lori, Chris, Bob, and Widget for being my ever "loving" astronomy "family"  away from home. A heartfelt thank you also to all of my friends outside the Physics Department especially Ben, Liv, and Danny for giving me refuge outside of academia. To defunct my trivia team, thank you for all the good times and records set. Thanks also to the staff at Sophia's including Kevin, Jim, Jen, Asa, and Jeremy, for making Friday happy hour something to always look forward to. If I've forgotten anyone I should thank, thank you and sorry for forgetting you.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Each chapter can be in its own file for easier editing and brought in with the \include command.
+% Then use the \includeonly command to speed compilation when working on a particular chapter.
+%%% \includeonly{ucdavisthesis_example_Chap1}
+
+\begin{document}
+
+\renewcommand{\bibfont}{\singlespacing}
+% need this command to keep single spacing in the bibliography when using natbib
+ 
+\bibliographystyle{apj}
+%many other bibliography styles are available (IEEEtran, mla, etc.). Use one appropriate for your field.
+
+\makeintropages %Processes/produces the preliminary pages
+
+\include{Chapter1}
+\include{Chapter2}
+\include{Paper1/dls_magnification}
+\include{Paper2/main}
+\include{Chapter5}
+\include{Appendix}
+
+\bibliography{thesis}
+
+% The UMI abstract uses square brackets!
+%\UMIabstract[In this dissertation, we describe observational and theoretical work related to the large-scale clustering of matter in the universe. Such work is crucial in constraining models of the Universe in future surveys and is one of the most powerful probes of the nature of dark energy. In Chapter \ref{magnification}, we present work performed using the Deep Lens Survey (DLS) to measure the growth of structure over cosmic time using weak lensing magnification. This is the first time such a measurement has been performed and represents a significant step forward for this relatively new probe of large-scale structure (LSS) which is known to be complementary to other weak lensing measurements. Later in Chapter \ref{conclusions}, we discuss steps needed for magnification become a competitive, precision probe of cosmology. Chapter \ref{covariance} presents a model for the emulation cosmology dependent error covariances in LSS probes. Estimating these covariances are necessary in order to compare models to the data and require a large amount of computational time to create the simulations required. Tools to reduce the number of simulations required and model the cosmology dependence are needed. We utilize a novel decomposition of LSS error covariances that allows for construction of a emulator that fulfills both of these criteria. In order for future surveys to reach their goals, methods to model measurement error and new probes of LSS complementary to those planned are required.
+
+%The conclusions of this dissertation in Chapter \ref{conclusions} address the future outlook for this work and research that must be done between now and when the next set of survey data is available. Many systematic errors need to be addressed in magnification before it can be considered a precision cosmology tool. For the error covariances, additional methods to reduce the required number of simulations to estimate the matrices are required. In the Appendix, we present a high level description of an open sourced software package that we developed and implemented over the course of these two projects.]
+
+\end{document} 
